@@ -6,7 +6,7 @@ export default {
 			'primary': "var(--primary)",
 			'secondary': 'var(--secondary)',
 			'accent':'var(--accent)',
-			'base': 'var(--base)',
+			'white': 'var(--white)',
 		},
 		fontFamily:{
 			'Jakarta':['"Plus Jakarta Sans", serif'],

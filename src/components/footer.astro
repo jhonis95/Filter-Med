@@ -1,13 +1,55 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import emailIcon from '../assets/email-icon.svg'
+import instagramIcon from '../assets/instagram-icon.svg'
+import whatsappIcon from '../assets/whatsapp-icon.svg'
 
-import logo from '../assets/logo-filter-med.svg'
+const icons=[
+    emailIcon,
+    instagramIcon,
+    whatsappIcon,
+]
+
+const navdata=[
+    {
+        link:'/product',
+        title:'Produto'
+    },{
+        link:'/service',
+        title:'Serviço'
+    },{
+        link:'/about',
+        title:'Sobre'
+    }
+]
 ---
-<section>
-    <div class=" container">
-        <div>
-            <img src="" alt="">
+<footer class=" bg-primary w-full h-[328px] flex flex-col justify-evenly items-center">
+    <div class=" container mx-auto flex flex-row items-center justify-center gap-32">
+        <div class="flex flex-col gap-5 items-center">
+            <h3 class=" font-Inter  font-bold text-4xl text-white">Filter Med</h3>
+            <div class=" flex flex-row gap-4">
+                {
+                    icons.map((icon)=>{
+                        return <img src={icon.src} alt={icon.name}>
+                    })
+                }
+            </div>
+        </div>
+        <div class="flex gap-14">
+            <div class="flex flex-col text-white gap-6">
+                <h3 class=" text-2xl font-bold font-Jakarta">Navegue</h3>
+                {
+                    navdata.map((linkdata)=>{
+                        return <a class="font-Jakarta text-xl" href={linkdata.link}>{linkdata.title}</a>
+                    })
+                }
+            </div>
+            <div class="text-2xl text-white font-Jakarta font-bold flex flex-col gap-4">
+                <h4>Endereço</h4>
+                <h4>Av. Tiradentes, 573-401 - Zona 01, Maringá, PR</h4>
+                <h4>Telefone</h4>
+                <h4>(00) 00000-0000</h4>
+            </div>
         </div>
     </div>
-</section>
+    <h3 class=" font-Jakarta text-xl text-white">copyright © 2024 all rights reserved</h3>
+</footer>
