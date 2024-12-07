@@ -1,0 +1,15 @@
+---
+interface Linkdata{
+    link:string,
+    title:string
+}
+const navdata=Astro.props;
+
+---
+<nav class="flex gap-28 items-center">
+    {
+        navdata.navlist.map((linkdata:Linkdata)=>{
+            return <a class="font-Inter font-bold text-2xl" href={linkdata.link}>{linkdata.title}</a>
+        })
+    }
+</nav>

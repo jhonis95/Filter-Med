@@ -1,16 +1,28 @@
 ---
-import logo from '../assets/logo-filter-med.svg'
+import Logo from './logo.astro'
+import Navigation from './navigation.astro'
+
+const navdata=[
+    {
+        link:'/product',
+        title:'Produto'
+    },{
+        link:'/service',
+        title:'Serviço'
+    },{
+        link:'/about',
+        title:'Sobre'
+    }
+]
 ---
 <section class=" w-full h-[101px] flex items-center">
     <div class=" container mx-auto flex flex-row justify-between">
-        <div class=" flex flex-row items-center gap-2">
-            <img src={logo.src} class=" w-[59px] h-[59px]" alt="filter-med-logo">
-            <h3 class=" font-Inter  font-bold text-4xl">Filter Med</h3>
-        </div>
-        <div class="flex gap-28 items-center">
+        <Logo/>
+        <!-- <div class="flex gap-28 items-center">
             <p class=" font-Inter font-bold text-2xl">Produtos</p>
             <p class=" font-Inter font-bold text-2xl">Serviços</p>
             <p class=" font-Inter font-bold text-2xl">Sobre</p>
-        </div>
+        </div> -->
+        <Navigation navlist={navdata}/>
     </div>
 </section>
