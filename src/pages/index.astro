@@ -1,5 +1,5 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/header.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +7,11 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<!-- <Welcome /> -->
+	 <Header/>
+	 <main class="flex flex-col items-center">
+		<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Serviços</h3>
+		<p class="font-Jakarta text-[32px] font-bold">containers com filtros para filtração chorume ou aterro sanitário</p>
+		<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Produtos</h3>
+		<p class="font-Jakarta text-[32px] font-bold">filtros de placas e lenticulares</p>
+	 </main>
 </Layout>

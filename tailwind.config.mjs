@@ -4,13 +4,14 @@ export default {
 	theme: {
 		colors:{
 			'primary': "var(--primary)",
+			'primary-tp':'var(--primary-transparent)',
 			'secondary': 'var(--secondary)',
 			'accent':'var(--accent)',
 			'white': 'var(--white)',
 		},
 		fontFamily:{
-			'Jakarta':['"Plus Jakarta Sans", serif'],
-			'Inter':['"Inter", sans-serif']
+			'Jakarta':['"Plus Jakarta Sans"', 'sans-serif'],
+			'Inter':['"Inter"', 'sans-serif']
 		},
 		extend: {
 		},
