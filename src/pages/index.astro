@@ -2,16 +2,57 @@
 import Header from '../components/header.astro';
 import Layout from '../layouts/Layout.astro';
 
+import continerImg1 from '../assets/containerimg1.png'
+import continerImg2 from '../assets/containerimg2.png'
+import continerImg3 from '../assets/containerimg3.png'
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+const containerImgData=[
+	{
+		img:continerImg1,
+		content:'Container prontos para o serviço'
+	},
+	{
+		img:continerImg2,
+		content:'Produtos de alta quilidade'
+	},
+	{
+		img:continerImg3,
+		content:'Calibrados e ajustados sobre medida'
+	},
+]
 ---
 
 <Layout>
 	 <Header/>
-	 <main class="flex flex-col items-center">
-		<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Serviços</h3>
-		<p class="font-Jakarta text-[32px] font-bold">containers com filtros para filtração chorume ou aterro sanitário</p>
-		<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Produtos</h3>
-		<p class="font-Jakarta text-[32px] font-bold">filtros de placas e lenticulares</p>
+	 <main class="flex flex-col items-center gap-28">
+		<div class=" w-[1433px] h-[532px] bg-accent rounded-[20px]">
+		
+		</div>
+
+		<section class=" flex flex-col gap-7 items-center">
+			<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Serviços</h3>
+			<p class="font-Jakarta text-[32px] font-bold">containers com filtros para filtração chorume ou aterro sanitário</p>
+		</section>
+		
+		<section class="w-full flex gap-6 justify-center">
+			{
+				containerImgData.map((container)=>{
+					return(
+						<div class="w-[531px] h-[468px] relative flex flex-col items-center">
+							<img class=" w-full h-full rounded-[20px]" src={container.img.src} alt="container img">
+							<h5 class=" absolute w-[447px] text-center text-white font-Jakarta font-bold text-[32px] z-10 top-[353px]">{container.content}</h5>
+						</div>
+					)
+				})
+			}
+		</section>
+
+		<section class=" flex flex-col gap-7 items-center">
+			<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Produtos</h3>
+			<p class="font-Jakarta text-[32px] font-bold">filtros de placas e lenticulares</p>
+		</section>
 	 </main>
 </Layout>
