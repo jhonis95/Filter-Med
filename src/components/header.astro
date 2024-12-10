@@ -1,11 +1,18 @@
 ---
 import Herosection from '../components/herosection.astro';
+import ContactBtn from './contactBtn.astro';
 ---
 <section class=" h-screen top-[101px]">
     <Herosection/>
     <div class=" flex justify-center pt-[63px]">
-        <div class=" self-center w-[1435px] h-[173px] bg-primary rounded-3xl">
-    
+        <div class=" relative self-center w-[1435px] h-[173px] bg-primary rounded-3xl">
+            <div class=" relative left-16 top-[27px]">
+                <h5 class="font-Jakarta font-bold text-white text-4xl">Nome – produto de venda principal</h5>
+                <p class="font-Jakarta font-bold text-white text-xl">pequena descrição do produto</p>
+            </div>
+            <div class="absolute bottom-[-10px] left-16">
+                <ContactBtn btnContent="Saiba Mais"/>
+            </div>
         </div>
     </div>
 </section>
