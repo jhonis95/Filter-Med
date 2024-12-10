@@ -1,0 +1,20 @@
+---
+const componentData=Astro.props
+console.log(componentData)
+---
+
+<div>
+    <div class=" bg-primary w-[468px] h-[405px] rounded-xl relative">
+        <div class=" absolute w-[279px] h-[329px] top-9 left-[-150px]">
+            <img
+                class="rounded-2xl w-full h-full" 
+                src={componentData.componentData.img}
+                alt=""
+            >
+        </div>
+        <div class=" relative left-[170px] top-9 w-[277px] max-h-[350px] overflow-y-scroll no-scrollbar ">
+            <h5 class=" text-white font-bold text-[32px]">{componentData.componentData.title}</h5>
+            <h6 class=" text-white font-bold text-base text-justify">{componentData.componentData.content}</h6>
+        </div>
+    </div>
+</div>

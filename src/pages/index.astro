@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import continerImg1 from '../assets/containerimg1.png'
 import continerImg2 from '../assets/containerimg2.png'
 import continerImg3 from '../assets/containerimg3.png'
+import Homeproductcard from '../components/homeproductcard.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -23,11 +24,34 @@ const containerImgData=[
 		content:'Calibrados e ajustados sobre medida'
 	},
 ]
+
+const productSectionData=[
+	{
+		img:'https://img.freepik.com/fotos-gratis/recipientes-de-creme-branco-com-laranja_23-2148549102.jpg?t=st=1733765044~exp=1733768644~hmac=873744e6c5b134b1a64876a5e3a160c55ad926b3d567f78a5f134d96693132a7&w=826',
+		title:'Filter Media',
+		content:'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
+	},
+	{
+		img:'https://img.freepik.com/fotos-gratis/recipientes-de-creme-branco-com-laranja_23-2148549102.jpg?t=st=1733765044~exp=1733768644~hmac=873744e6c5b134b1a64876a5e3a160c55ad926b3d567f78a5f134d96693132a7&w=826',
+		title:'Filter Press and Hoisings',
+		content:'This are the Filter presses, Filter housings for lenticular modules, and Filter housings for filter cartridges from our product portfolio – three critical components of many industrial production processes. Filter presses utilize a series of plates and frames to remove solids from liquids. Filter housings for filter modules, can accommodate a stack of lenticular filter modules, allowing for efficient and effective filtration while minimizing the risk of contamination. And finally, filter housings for filter cartridges are widely used in a variety of applications. These housings provide a convenient and cost-effective way to maintain high levels of filtration performance. Whether you’re looking to perform a alluvial or a depth filtration to remove unwanted solids or impurities from your liquid, there is a solution among these three types of filtration technology that can meet your needs.'
+	},
+	{
+		img:'https://img.freepik.com/fotos-gratis/recipientes-de-creme-branco-com-laranja_23-2148549102.jpg?t=st=1733765044~exp=1733768644~hmac=873744e6c5b134b1a64876a5e3a160c55ad926b3d567f78a5f134d96693132a7&w=826',
+		title:'Equipamentos de Filtragem Laboratorial',
+		content:''
+	},
+	{
+		img:'https://img.freepik.com/fotos-gratis/recipientes-de-creme-branco-com-laranja_23-2148549102.jpg?t=st=1733765044~exp=1733768644~hmac=873744e6c5b134b1a64876a5e3a160c55ad926b3d567f78a5f134d96693132a7&w=826',
+		title:'Produtos Complementares',
+		content:'When it comes to depth filtration, there are several complementary products that can help you to enhance the process and achieve better results. In addition to our filter media and filter apparatus, we also offer support sheets for precoat filtration, filter cartridges and filter aids (diatomaceous earth) in our range.'
+	},
+]
 ---
 
 <Layout>
 	 <Header/>
-	 <main class="flex flex-col items-center gap-28">
+	 <main class="flex flex-col items-center gap-28 mb-28 mt-11">
 		<div class=" w-[1433px] h-[532px] bg-accent rounded-[20px]">
 		
 		</div>
@@ -53,6 +77,30 @@ const containerImgData=[
 		<section class=" flex flex-col gap-7 items-center">
 			<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Produtos</h3>
 			<p class="font-Jakarta text-[32px] font-bold">filtros de placas e lenticulares</p>
+		</section>
+
+		<section class=" w-full h-[222px] bg-accent flex items-center justify-evenly">
+			<div>
+				<h3 class="font-Jakarta text-5xl text-primary">Produtos</h3>
+			</div>
+			<div class="flex gap-[103px]">
+				<div class=" flex flex-col gap-9">
+					<h5 class="font-Jakarta text-[28px] text-primary"> > Filter Media</h5>
+					<h5 class="font-Jakarta text-[28px] text-primary"> > Produtos Complementares</h5>
+				</div>
+				<div class=" flex flex-col gap-9">
+					<h5 class="font-Jakarta text-[28px] text-primary"> > Filter Presses and Housings</h5>
+					<h5 class="font-Jakarta text-[28px] text-primary"> > Equipamentos de Filtragem Laboratórial</h5>
+				</div>
+			</div>
+		</section>
+		
+		<section class=" flex flex-wrap h-[909px] w-[1305px] justify-end gap-y-28 gap-x-52">
+			{
+				productSectionData.map((data)=>{
+					return <Homeproductcard componentData={data}/>
+				})
+			}
 		</section>
 	 </main>
 </Layout>
