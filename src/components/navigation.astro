@@ -1,14 +1,45 @@
 ---
+import burgerMenu from '../assets/burger-menu.svg'
+
 interface Linkdata{
     link:string,
     title:string
 }
 const navdata=Astro.props;
 ---
-<nav class="flex gap-28 items-center">
+<nav id="navOptionConatiner" class="flex lg:gap-28 items-center ">
     {
         navdata.navlist.map((linkdata:Linkdata)=>{
-            return <a class="font-Inter font-bold text-2xl" href={linkdata.link}>{linkdata.title}</a>
+            return <a class="font-Inter font-bold xl:text-2xl" href={linkdata.link}>{linkdata.title}</a>
         })
     }
 </nav>
+
+<button id="burgerMenu">
+    <img src={burgerMenu.src} alt="">
+</button>
+
+
+<script>
+    function showBurgeMenu(){
+        const burgerMenuElement= document.getElementById('burgerMenu')
+        const navOptionConatiner= document.getElementById('navOptionConatiner')
+        const hidden='hidden'
+        let reg = new RegExp('(\\s|^)'+hidden+'(\\s|$)')
+
+        let screenW=document.documentElement.clientWidth
+        if(screenW<1024){
+            navOptionConatiner?.classList.add('hidden')
+            if(burgerMenuElement?.className.match(new RegExp('(\\s|^)'+hidden+'(\\s|$)'))){
+                burgerMenuElement.className=burgerMenuElement.className.replace(reg,' ')
+            }
+        }
+        if(screenW>1024){
+            burgerMenuElement?.classList.add('hidden')
+            if(navOptionConatiner?.className.match(new RegExp('(\\s|^)'+hidden+'(\\s|$)'))){
+                navOptionConatiner.className=navOptionConatiner.className.replace(reg,' ')
+            }
+        }
+    }
+    window.addEventListener("resize", showBurgeMenu);
+</script>

@@ -22,28 +22,28 @@ const navdata=[
     }
 ]
 ---
-<footer class=" bg-primary w-full h-[328px] flex flex-col justify-evenly items-center">
-    <div class=" container mx-auto flex flex-row items-center justify-center gap-32">
-        <div class="flex flex-col gap-5 items-center">
-            <h3 class=" font-Inter  font-bold text-4xl text-white">Filter Med</h3>
+<footer class=" bg-primary w-full min-h-[328px] flex flex-col justify-around lg:justify-evenly">
+    <div class="flex flex-col gap-[73px] lg:justify-center lg:flex-row lg:gap-32"> <!-- lg:justify-center lg:flex-row lg:gap-32 -->
+        <div class="flex flex-col gap-5 items-center mt-9">
+            <h3 class=" font-Inter  font-bold text-[32px] text-white xl:text-4xl">Filter Med</h3>
             <div class=" flex flex-row gap-4">
                 {
                     icons.map((icon)=>{
-                        return <img src={icon.src} alt={icon.name}>
+                        return <img class=" size-7 xl:size-11" src={icon.src} alt={icon.name}>
                     })
                 }
             </div>
         </div>
-        <div class="flex gap-14">
+        <div class="flex flex-col items-center gap-[73px] lg:flex-row lg:gap-14">
             <div class="flex flex-col text-white gap-6">
                 <h3 class=" text-2xl font-bold font-Jakarta">Navegue</h3>
                 {
                     navdata.map((linkdata)=>{
-                        return <a class="font-Jakarta text-xl" href={linkdata.link}>{linkdata.title}</a>
+                        return <a class="font-Jakarta text-xl text-center" href={linkdata.link}>{linkdata.title}</a>
                     })
                 }
             </div>
-            <div class="text-2xl text-white font-Jakarta font-bold flex flex-col gap-4">
+            <div class="text-base text-white font-Jakarta font-bold text-center flex flex-col gap-4 xl:text-2xl">
                 <h4>Endereço</h4>
                 <h4>Av. Tiradentes, 573-401 - Zona 01, Maringá, PR</h4>
                 <h4>Telefone</h4>
@@ -51,5 +51,5 @@ const navdata=[
             </div>
         </div>
     </div>
-    <h3 class=" font-Jakarta text-xl text-white">copyright © 2024 all rights reserved</h3>
+    <h3 class=" font-Jakarta text-xl text-white text-center mt-9">copyright © 2024 all rights reserved</h3>
 </footer>
