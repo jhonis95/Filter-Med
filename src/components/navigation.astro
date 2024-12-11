@@ -7,10 +7,10 @@ interface Linkdata{
 }
 const navdata=Astro.props;
 ---
-<nav id="navOptionConatiner" class="flex lg:gap-28 items-center ">
+<nav id="navOptionConatiner" class="flex lg:gap-16 xl:gap-28 items-center ">
     {
         navdata.navlist.map((linkdata:Linkdata)=>{
-            return <a class="font-Inter font-bold xl:text-2xl" href={linkdata.link}>{linkdata.title}</a>
+            return <a class="font-Inter font-bold lg:text-2xl" href={linkdata.link}>{linkdata.title}</a>
         })
     }
 </nav>
@@ -21,7 +21,7 @@ const navdata=Astro.props;
 
 
 <script>
-    function showBurgeMenu(){
+    function toggleNav(){
         const burgerMenuElement= document.getElementById('burgerMenu')
         const navOptionConatiner= document.getElementById('navOptionConatiner')
         const hidden='hidden'
@@ -41,5 +41,7 @@ const navdata=Astro.props;
             }
         }
     }
-    window.addEventListener("resize", showBurgeMenu);
+
+    window.addEventListener('load', toggleNav)
+    window.addEventListener("resize", toggleNav);
 </script>

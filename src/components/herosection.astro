@@ -1,24 +1,21 @@
 ---
-import bg from '../assets/bg-img-home-pg.png'
-import ContactBtn from './contactBtn.astro'
 ---
-<section class=" relative h-[690] w-full z-0">
-    <div class=" absolute text-white z-10 h-full w-full">
-        <div class=" flex justify-center items-center h-full gap-28">
-            <div class=" flex flex-col gap-11 h-full justify-center">
-                <h3 class=" w-[662px] font-Jakarta font-bold text-[64px] text-left">Filter Med é especializada em filtos para resíduos</h3>
-                <h4 class=" w-[861px] text-justify font-Jakarta font-bold text-3xl">Fornecemos assistência técnica especializada e soluções de filtragem para ajudar sua aplicação a ter um desempenho ideal e fornecer a vantagem necessária em seu setor.</h4>
+<section class=" w-full z-0 min-h-64">
+    <div class=" relative text-white z-10 w-full bg-hero-bg-img bg-center bg-cover xl:h-[600px] 2xl:bg-cover 2xl:h-[690px]">
+        <div class=" flex items-center justify-around gap-5 h-auto py-12 md:h-full md:justify-evenly flex-col md:flex-row lg:justify-center lg:gap-14 xl:gap-28">
+            <div class=" flex flex-col h-full justify-center items-center mx-3 gap-4 md:gap-11 md:items-start font-Jakarta font-bold text-center">
+                <h3 class=" text-2xl lg:text-5xl w-[250px] md:text-left lg:w-[500px] 2xl:w-[662px] 2xl:text-[64px]">Filter Med é especializada em filtos para resíduos</h3>
+                <h4 class=" text-base lg:text-2xl max-w-[400px] md:text-justify lg:max-w-[525px] 2xl:max-w-[861px] 2xl:text-3xl">Fornecemos assistência técnica especializada e soluções de filtragem para ajudar sua aplicação a ter um desempenho ideal e fornecer a vantagem necessária em seu setor.</h4>
             </div>
-            <div>
-                <div class=" bg-primary rounded-lg w-[464px] h-[381px] text-center font-Jakarta font-bold flex flex-col gap-8 items-center justify-center">
-                    <h4 class=" text-[40px]">Precisa de ajuda de um profissional?</h4>
-                    <p class=" text-2xl">Encontre flexibilidade para fazer negócios </p>
-                    <button class=" bg-secondary w-[300px] h-[90px] rounded-lg shadow-lg">
-                        <a class=" text-white text-4xl font-Jakarta font-bold" href="">fale com um especialista</a>
+            <div class=" absolute bottom-[-174px] md:relative md:bottom-0">
+                <div class=" bg-primary rounded-lg text-center font-Jakarta font-bold flex flex-col items-center justify-center gap-4 md:py-3 w-[248px] max-h-[381px] lg:w-[370px] lg:p-9 2xl:w-[464px] 2xl:gap-8">
+                    <h4 class=" text-base lg:text-3xl 2xl:text-[40px]">Precisa de ajuda de um profissional?</h4>
+                    <p class=" text-sm lg:text-xl 2xl:text-2xl">Encontre flexibilidade para fazer negócios </p>
+                    <button class=" bg-secondary lg:px-6 lg:py-4 w-[146px] h-[44px] lg:w-auto lg:h-auto 2xl:w-[300px] 2xl:h-[90px] 2xl:px-0 2xl:py-0 rounded-lg shadow-lg">
+                        <a class=" text-white font-Jakarta font-bold text-sm lg:text-base 2xl:text-4xl" href="">fale com um especialista</a>
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    <img class=" h-full w-full" src={bg.src} alt="bg-img-home-pg">
 </section>
