@@ -7,21 +7,22 @@ import ContactBtn from '../components/contactBtn.astro';
 import continerImg1 from '../assets/containerimg1.png'
 import continerImg2 from '../assets/containerimg2.png'
 import continerImg3 from '../assets/containerimg3.png'
+import groupImg from '../assets/group-pic.png'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 
 const containerImgData=[
 	{
-		img:continerImg1,
+		img:'bg-continer-img1',
 		content:'Container prontos para o serviço'
 	},
 	{
-		img:continerImg2,
+		img:'bg-continer-img2',
 		content:'Produtos de alta quilidade'
 	},
 	{
-		img:continerImg3,
+		img:'bg-continer-img3',
 		content:'Calibrados e ajustados sobre medida'
 	},
 ]
@@ -52,32 +53,33 @@ const productSectionData=[
 
 <Layout>
 	 <Header/>
-	 <!-- <main class="flex flex-col items-center gap-28 mb-28 sm:mt-14 2xl:mt-16">
-		<div class=" bg-accent rounded-[20px] flex justify-around items-center p-6 2xl:w-[1433px] 2xl:h-[532px]">
-			<div class=" font-Jakarta w-[467px] flex flex-col gap-8">
+	 <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
+		<div class=" bg-accent rounded flex justify-around items-center p-6 md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
+			<div class=" font-Jakarta sm:w-[467px] flex flex-col items-center gap-8">
 				<div class="flex flex-col gap-4">
-					<p class="text-[22px]">Como Trabalhamos</p>
-					<h3 class=" font-bold text-4xl text-secondary">Nosso Processo</h3>
+					<p class=" text-base sm:text-lg lg:text-[22px]">Como Trabalhamos</p>
+					<h3 class=" text-base sm:text-lg font-bold text-secondary lg:text-4xl">Nosso Processo</h3>
 				</div>
-				<p class=" max-h-[167px] text-lg text-justify">Somos especializados no aconselhamento e fornecimento de sistemas de filtro de água, produtos de tratamento de água, filtração de processo, carcaças de filtro de água, cartuchos de filtro de microfiltração, filtração de partículas, sistemas de desinfecção ultravioleta (UV) e sistemas de osmose reversa.</p>
-				<ContactBtn btnContent="Entre em contato" />
+				<p class=" text-sm text-justify sm:text-base lg:text-lg sm:max-h-[167px]">Somos especializados no aconselhamento e fornecimento de sistemas de filtro de água, produtos de tratamento de água, filtração de processo, carcaças de filtro de água, cartuchos de filtro de microfiltração, filtração de partículas, sistemas de desinfecção ultravioleta (UV) e sistemas de osmose reversa.</p>
+				<div class=" m-auto">
+					<ContactBtn btnContent="Entre em contato" />
+				</div>
 			</div>
-			<div class=" bg-group-img bg-center bg-cover 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]">
+			<img class=" hidden rounded-lg w-[600px] xl:inline 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]" src={groupImg.src} alt="group image">
 			</div>
 		</div>
 
 		<section class=" flex flex-col gap-7 items-center">
-			<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Serviços</h3>
-			<p class="font-Jakarta text-[32px] font-bold">containers com filtros para filtração chorume ou aterro sanitário</p>
+			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Serviços</h3>
+			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">containers com filtros para filtração chorume ou aterro sanitário</p>
 		</section>
 		
-		<section class="w-full flex gap-6 justify-center">
+		<section class="w-full flex flex-wrap gap-6 justify-center">
 			{
 				containerImgData.map((container)=>{
 					return(
-						<div class="w-[531px] h-[468px] relative flex flex-col items-center">
-							<img class=" w-full h-full rounded-[20px]" src={container.img.src} alt="container img">
-							<h5 class=" absolute w-[447px] text-center text-white font-Jakarta font-bold text-[32px] z-10 top-[353px]">{container.content}</h5>
+						<div class={`relative flex flex-col items-center ${container.img} rounded-xl xl:rounded-[20px] w-[298px] h-[263px] xl:w-[531px] xl:h-[468px]`}>
+							<h5 class=" text-center text-white font-Jakarta font-bold z-10 text-lg sm:text-2xl top-[190px] xl:top-[353px] xl:w-[447px] xl:text-[32px] absolute">{container.content}</h5>
 						</div>
 					)
 				})
@@ -85,32 +87,32 @@ const productSectionData=[
 		</section>
 
 		<section class=" flex flex-col gap-7 items-center">
-			<h3 class=" text-secondary font-Jakarta text-4xl font-bold">Produtos</h3>
-			<p class="font-Jakarta text-[32px] font-bold">filtros de placas e lenticulares</p>
+			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Produtos</h3>
+			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">filtros de placas e lenticulares</p>
 		</section>
 
-		<section class=" w-full h-[222px] bg-accent flex items-center justify-evenly">
+		<section class=" w-full h-fit xl:h-[222px] bg-accent flex items-center py-5 xl:py-0 justify-center xl:justify-evenly">
 			<div>
-				<h3 class="font-Jakarta text-5xl text-primary">Produtos</h3>
+				<h3 class=" hidden font-Jakarta xl:inline md:text-5xl text-primary">Produtos</h3>
 			</div>
-			<div class="flex gap-[103px]">
+			<div class="flex flex-wrap justify-start text-base md:text-[28px] max-[951px]:w-2/3 min-[952px]:mx-3 gap-9 xl:gap-[103px]">
 				<div class=" flex flex-col gap-9">
-					<h5 class="font-Jakarta text-[28px] text-primary"> > Filter Media</h5>
-					<h5 class="font-Jakarta text-[28px] text-primary"> > Produtos Complementares</h5>
+					<h5 class="font-Jakarta text-primary"> > Filter Media</h5>
+					<h5 class="font-Jakarta text-primary"> > Produtos Complementares</h5>
 				</div>
 				<div class=" flex flex-col gap-9">
-					<h5 class="font-Jakarta text-[28px] text-primary"> > Filter Presses and Housings</h5>
-					<h5 class="font-Jakarta text-[28px] text-primary"> > Equipamentos de Filtragem Laboratórial</h5>
+					<h5 class="font-Jakarta text-primary"> > Filter Presses and Housings</h5>
+					<h5 class="font-Jakarta text-primary"> > Equipamentos de Filtragem Laboratórial</h5>
 				</div>
 			</div>
 		</section>
 		
-		<section class=" flex flex-wrap h-[909px] w-[1305px] justify-end gap-y-28 gap-x-52">
+		<section class=" hidden 2xl:flex flex-wrap h-[909px] w-[1305px] justify-end gap-y-28 gap-x-52">
 			{
 				productSectionData.map((data)=>{
 					return <Homeproductcard componentData={data}/>
 				})
 			}
 		</section>
-	 </main> -->
+	 </main>
 </Layout>

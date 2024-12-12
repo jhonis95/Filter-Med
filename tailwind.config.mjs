@@ -17,7 +17,9 @@ export default {
 		extend: {
 			backgroundImage: {
 				'hero-bg-img': "url('./src/assets/bg-img-home-pg.png')",
-				'group-img': "url('./src/assets/group-pic.png)"
+				"continer-img1":"url('./src/assets/containerimg1.png')",
+				"continer-img2":"url('./src/assets/containerimg2.png')",
+				"continer-img3":"url('./src/assets/containerimg3.png')"
 			  }
 		},
 	},
