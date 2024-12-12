@@ -7,8 +7,6 @@ import ContactBtn from '../components/contactBtn.astro';
 import continerImg1 from '../assets/containerimg1.png'
 import continerImg2 from '../assets/containerimg2.png'
 import continerImg3 from '../assets/containerimg3.png'
-import groupImg from '../assets/group-pic.png'
-
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -54,8 +52,8 @@ const productSectionData=[
 
 <Layout>
 	 <Header/>
-	 <!-- <main class="flex flex-col items-center gap-28 mb-28 mt-16">
-		<div class=" w-[1433px] h-[532px] bg-accent rounded-[20px] flex justify-around items-center">
+	 <!-- <main class="flex flex-col items-center gap-28 mb-28 sm:mt-14 2xl:mt-16">
+		<div class=" bg-accent rounded-[20px] flex justify-around items-center p-6 2xl:w-[1433px] 2xl:h-[532px]">
 			<div class=" font-Jakarta w-[467px] flex flex-col gap-8">
 				<div class="flex flex-col gap-4">
 					<p class="text-[22px]">Como Trabalhamos</p>
@@ -64,8 +62,7 @@ const productSectionData=[
 				<p class=" max-h-[167px] text-lg text-justify">Somos especializados no aconselhamento e fornecimento de sistemas de filtro de água, produtos de tratamento de água, filtração de processo, carcaças de filtro de água, cartuchos de filtro de microfiltração, filtração de partículas, sistemas de desinfecção ultravioleta (UV) e sistemas de osmose reversa.</p>
 				<ContactBtn btnContent="Entre em contato" />
 			</div>
-			<div class="w-[707px] h-[442]">
-				<img class=" w-full h-full rounded-[20px]" src={groupImg.src} alt="group-img">
+			<div class=" bg-group-img bg-center bg-cover 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]">
 			</div>
 		</div>
 

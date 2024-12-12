@@ -17,6 +17,7 @@ export default {
 		extend: {
 			backgroundImage: {
 				'hero-bg-img': "url('./src/assets/bg-img-home-pg.png')",
+				'group-img': "url('./src/assets/group-pic.png)"
 			  }
 		},
 	},
