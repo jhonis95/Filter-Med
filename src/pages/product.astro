@@ -2,9 +2,39 @@
 import Header from "../components/header.astro";
 import Layout from "../layouts/Layout.astro";
 import BackgroundImg from "../assets/product-img-bg.png"
-import ContactBtn from "../components/contactBtn.astro";
+import ContactBtn from "../components/contactBtn.astro"
 
 import productContainerImg from '../assets/productpg-card-pic.jpg'
+import ProductSectionCard from "../components/productSectionCard.astro";
+
+const productPgData={
+	productSectionCard:[
+		{
+			title:'Filter Media',
+			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
+			img:'',
+			pgLink:'/'
+		},
+		{
+			title:'Produtos Complementares',
+			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
+			img:'',
+			pgLink:'/'
+		},
+		{
+			title:'Equipamentos de Filtragem Laboratórial',
+			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
+			img:'',
+			pgLink:'/'
+		},
+		{
+			title:'Filter Presses and Housings',
+			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
+			img:'',
+			pgLink:'/'
+		},
+	]
+}
 ---
 
 <Layout>
@@ -13,20 +43,40 @@ import productContainerImg from '../assets/productpg-card-pic.jpg'
         subTitle="Opções e especificações tecnológicas para cartuchos de reposição de alta qualidade" 
         background={BackgroundImg}
     />
+
+	<div class=" flex justify-center items-center h-[171px] xl:mt-8">
+		<div class=" flex flex-col items-center justify-around bg-primary w-full mx-3 rounded-lg md:w-4/5 h-[71px] md:h-[100px] md:rounded-3xl xl:h-[173px] 2xl:w-[1435px]">
+			<div class=" w-fit">
+				<h5 class="font-Jakarta font-bold text-white w-fit text-center text-base md:text-2xl xl:text-4xl">Veja nossos produtos e entre em contato conosco</h5>
+			</div>
+			<div class=" sm:bottom-[-20px] lg:bottom-[-20px] left-16">
+				<ContactBtn btnContent="Entre em contato"/>
+			</div>
+		</div>
+	</div>
     <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 
 		<section class=" flex flex-col gap-7 w-full text-primary">
-			<h3 class=" font-Jakarta text-center sm:text-2xl md:text-3xl xl:text-4xl font-bold">Produtos em Diferentes Linhas</h3>
-			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] sm:text-lg md:text-2xl xl:text-[32px] xl:max-w-[259px]">filtros de placas e lenticulares</p>
-			<div class=" bg-accent w-full h-[599px]">
+			<h3 class=" font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl font-bold">Produtos em Diferentes Linhas</h3>
+			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[259px]">filtros de placas e lenticulares</p>
+			<div class=" flex flex-wrap justify-center gap-8 px-5">
 				{
-
+					productPgData.productSectionCard.map((cardData)=>{
+						return (
+							<ProductSectionCard
+								title={cardData.title}
+								description={cardData.description}
+								img=""
+								pgLink=""
+							/>
+						)
+					})
 				}
 			</div>
 		</section>
 
 		<section class=" flex flex-col gap-7 w-full text-primary">
-			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] sm:text-lg md:text-2xl xl:text-[32px] xl:max-w-[556px]">filtros para filtração chorume ou aterro sanitário</p>
+			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[556px]">filtros para filtração chorume ou aterro sanitário</p>
 		</section>
 
 		<div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">

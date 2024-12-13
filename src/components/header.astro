@@ -1,5 +1,4 @@
 ---
-import ContactBtn from "./contactBtn.astro"
 
 const {title, subTitle, background}=Astro.props
 ---
@@ -14,14 +13,3 @@ const {title, subTitle, background}=Astro.props
         <img class=" w-full h-full object-cover" src={background.src} alt="">
     </div>
 </section>
-
-<div class=" flex justify-center items-center h-[171px] xl:mt-8">
-    <div class=" flex flex-col items-center justify-around bg-primary w-full mx-3 rounded-lg md:w-4/5 h-[71px] md:h-[100px] md:rounded-3xl xl:h-[173px] 2xl:w-[1435px]">
-        <div class=" w-fit">
-            <h5 class="font-Jakarta font-bold text-white w-fit text-base md:text-2xl xl:text-4xl">Veja nossos produtos e entre em contato conosco</h5>
-        </div>
-        <div class=" sm:bottom-[-20px] lg:bottom-[-20px] left-16">
-            <ContactBtn btnContent="Entre em contato"/>
-        </div>
-    </div>
-</div>
