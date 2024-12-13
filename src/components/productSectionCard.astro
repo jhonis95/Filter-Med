@@ -1,0 +1,12 @@
+---
+const {title, description, img, pgLink}=Astro.props
+---
+
+<div class="">
+    <h3>{title}</h3>
+    <div>
+        <img src={img.src} alt="">
+        <p>{description}</p>
+        <a href={pgLink}>Ver todos os produtos</a>
+    </div>
+</div>

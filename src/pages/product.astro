@@ -3,6 +3,8 @@ import Header from "../components/header.astro";
 import Layout from "../layouts/Layout.astro";
 import BackgroundImg from "../assets/product-img-bg.png"
 import ContactBtn from "../components/contactBtn.astro";
+
+import productContainerImg from '../assets/productpg-card-pic.jpg'
 ---
 
 <Layout>
@@ -13,31 +15,33 @@ import ContactBtn from "../components/contactBtn.astro";
     />
     <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 
-		<section class=" flex flex-col gap-7 items-center">
-			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Serviços</h3>
-			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">containers com filtros para filtração chorume ou aterro sanitário</p>
-		</section>
+		<section class=" flex flex-col gap-7 w-full text-primary">
+			<h3 class=" font-Jakarta text-center sm:text-2xl md:text-3xl xl:text-4xl font-bold">Produtos em Diferentes Linhas</h3>
+			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] sm:text-lg md:text-2xl xl:text-[32px] xl:max-w-[259px]">filtros de placas e lenticulares</p>
+			<div class=" bg-accent w-full h-[599px]">
+				{
 
-		<section class=" flex flex-col gap-7 items-center">
-			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Produtos</h3>
-			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">filtros de placas e lenticulares</p>
-		</section>
-
-		<section class=" w-full h-fit xl:h-[222px] bg-accent flex items-center py-5 xl:py-0 justify-center xl:justify-evenly">
-			<div>
-				<h3 class=" hidden font-Jakarta xl:inline md:text-5xl text-primary">Produtos</h3>
-			</div>
-			<div class="flex flex-wrap justify-start text-base md:text-[28px] max-[951px]:w-2/3 min-[952px]:mx-3 gap-9 xl:gap-[103px]">
-				<div class=" flex flex-col gap-9">
-					<h5 class="font-Jakarta text-primary"> > Filter Media</h5>
-					<h5 class="font-Jakarta text-primary"> > Produtos Complementares</h5>
-				</div>
-				<div class=" flex flex-col gap-9">
-					<h5 class="font-Jakarta text-primary"> > Filter Presses and Housings</h5>
-					<h5 class="font-Jakarta text-primary"> > Equipamentos de Filtragem Laboratórial</h5>
-				</div>
+				}
 			</div>
 		</section>
+
+		<section class=" flex flex-col gap-7 w-full text-primary">
+			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] sm:text-lg md:text-2xl xl:text-[32px] xl:max-w-[556px]">filtros para filtração chorume ou aterro sanitário</p>
+		</section>
+
+		<div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
+			<div class=" z-10 font-Jakarta sm:w-[267px] xl:w-[467px] flex flex-col items-center gap-8 mb-5 md:mb-0">
+				<div class="flex flex-col gap-4">
+					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">Fazemos os contêiner com os químicos perfeitos para cada tipo de caso em que sua empresa necessita</h3>
+				</div>
+				<div class=" m-auto">
+					<button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
+						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">entre em contato</a>
+					</button>
+				</div>
+			</div>
+			<img class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productContainerImg.src} alt="group image">
+		</div>
 	
 	 </main>
 </Layout>

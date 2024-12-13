@@ -9,6 +9,7 @@ export default {
 			'secondary': 'var(--secondary)',
 			'accent':'var(--accent)',
 			'white': 'var(--white)',
+			'black': 'var(--black)'
 		},
 		fontFamily:{
 			'Jakarta':['"Plus Jakarta Sans"', 'sans-serif'],
