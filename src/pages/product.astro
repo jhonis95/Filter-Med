@@ -1,0 +1,43 @@
+---
+import Header from "../components/header.astro";
+import Layout from "../layouts/Layout.astro";
+import BackgroundImg from "../assets/product-img-bg.png"
+import ContactBtn from "../components/contactBtn.astro";
+---
+
+<Layout>
+    <Header 
+        title="Nossos Produtos" 
+        subTitle="Opções e especificações tecnológicas para cartuchos de reposição de alta qualidade" 
+        background={BackgroundImg}
+    />
+    <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
+
+		<section class=" flex flex-col gap-7 items-center">
+			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Serviços</h3>
+			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">containers com filtros para filtração chorume ou aterro sanitário</p>
+		</section>
+
+		<section class=" flex flex-col gap-7 items-center">
+			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Produtos</h3>
+			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">filtros de placas e lenticulares</p>
+		</section>
+
+		<section class=" w-full h-fit xl:h-[222px] bg-accent flex items-center py-5 xl:py-0 justify-center xl:justify-evenly">
+			<div>
+				<h3 class=" hidden font-Jakarta xl:inline md:text-5xl text-primary">Produtos</h3>
+			</div>
+			<div class="flex flex-wrap justify-start text-base md:text-[28px] max-[951px]:w-2/3 min-[952px]:mx-3 gap-9 xl:gap-[103px]">
+				<div class=" flex flex-col gap-9">
+					<h5 class="font-Jakarta text-primary"> > Filter Media</h5>
+					<h5 class="font-Jakarta text-primary"> > Produtos Complementares</h5>
+				</div>
+				<div class=" flex flex-col gap-9">
+					<h5 class="font-Jakarta text-primary"> > Filter Presses and Housings</h5>
+					<h5 class="font-Jakarta text-primary"> > Equipamentos de Filtragem Laboratórial</h5>
+				</div>
+			</div>
+		</section>
+	
+	 </main>
+</Layout>

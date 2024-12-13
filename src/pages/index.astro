@@ -1,13 +1,10 @@
 ---
-import Header from '../components/header.astro';
 import Layout from '../layouts/Layout.astro';
 import Homeproductcard from '../components/homeproductcard.astro';
 import ContactBtn from '../components/contactBtn.astro';
 
-import continerImg1 from '../assets/containerimg1.png'
-import continerImg2 from '../assets/containerimg2.png'
-import continerImg3 from '../assets/containerimg3.png'
 import groupImg from '../assets/group-pic.png'
+import HomeHeader from '../components/homeHeader.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -52,7 +49,7 @@ const productSectionData=[
 ---
 
 <Layout>
-	 <Header/>
+	 <HomeHeader/>
 	 <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 		<div class=" bg-accent rounded flex justify-around items-center p-6 md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
 			<div class=" font-Jakarta sm:w-[467px] flex flex-col items-center gap-8">
