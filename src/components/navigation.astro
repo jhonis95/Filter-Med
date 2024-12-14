@@ -7,7 +7,7 @@ interface Linkdata{
 }
 const navdata=Astro.props;
 ---
-<nav id="navOptionConatiner" class="flex lg:gap-16 xl:gap-28 items-center ">
+<nav id="navOptionConatiner" class=" flex lg:gap-16 xl:gap-28 items-center">
     {
         navdata.navlist.map((linkdata:Linkdata)=>{
             return <a class="font-Inter font-bold lg:text-2xl" href={linkdata.link}>{linkdata.title}</a>
@@ -21,10 +21,11 @@ const navdata=Astro.props;
 
 
 <script>
+    const burgerMenuElement= document.getElementById('burgerMenu')
+    const navOptionConatiner= document.getElementById('navOptionConatiner')
+    const hidden='hidden' 
+
     function toggleNav(){
-        const burgerMenuElement= document.getElementById('burgerMenu')
-        const navOptionConatiner= document.getElementById('navOptionConatiner')
-        const hidden='hidden'
         let reg = new RegExp('(\\s|^)'+hidden+'(\\s|$)')
 
         let screenW=document.documentElement.clientWidth
@@ -42,6 +43,15 @@ const navdata=Astro.props;
         }
     }
 
-    window.addEventListener('load', toggleNav)
+    function loadNav(){
+        let screenW=document.documentElement.clientWidth
+        if(screenW<1024){
+            navOptionConatiner?.classList.add('hidden')
+        }
+        if(screenW>1024){
+            burgerMenuElement?.classList.add('hidden')
+        }
+    }
+    window.addEventListener('load', loadNav)
     window.addEventListener("resize", toggleNav);
 </script>

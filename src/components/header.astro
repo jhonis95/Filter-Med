@@ -6,10 +6,10 @@ const {title, subTitle, background}=Astro.props
     <div class=" relative text-white w-full h-full">
         <div class="absolute z-10 flex items-center justify-around gap-5 h-auto top-[120px] md:top-0 w-full md:w-fit md:left-[170px] 2xl:left-[308px] md:h-full md:justify-start flex-col md:flex-row lg:gap-14 xl:gap-28">
             <div class=" flex flex-col h-full justify-center items-center mx-3 gap-4 md:gap-11 md:items-start font-Jakarta font-bold text-center">
-                <h3 class=" text-2xl lg:text-5xl w-[250px] md:text-left lg:w-[500px] 2xl:w-[662px] 2xl:text-[64px]">{title}</h3>
+                <h3 class=" text-2xl lg:text-5xl sm:w-[550px] md:text-left lg:w-[800px] 2xl:w-[1200px] 2xl:text-[64px]">{title}</h3>
                 <h4 class=" text-base lg:text-2xl max-w-[400px] md:text-justify lg:max-w-[525px] 2xl:max-w-[861px] 2xl:text-3xl">{subTitle}</h4>
             </div>
         </div>
-        <img class=" w-full h-full object-cover" src={background.src} alt="">
+        <img class=" w-full h-full object-cover" src={background.src} alt="bg-img">
     </div>
 </section>

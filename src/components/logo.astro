@@ -1,7 +1,15 @@
 ---
 import logo from '../assets/logo-filter-med.svg'
 ---
-<div class=" flex flex-row items-center gap-2">
+<button id="logo" class=" flex flex-row items-center gap-2">
     <img src={logo.src} class=" size-9 sm:size-[59px]" alt="filter-med-logo">
     <h3 class=" font-Inter font-bold text-xl sm:text-4xl">Filter Med</h3>
-</div>
+</button>
+
+<script>
+    const logo=document.getElementById('logo')
+    function goHome(){
+        window.location.replace('/')
+    }
+    logo?.addEventListener('click',goHome)
+</script>
