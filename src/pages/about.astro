@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header.astro";
+import BackgroundImg from "../assets/about-img-bg.png"
+
+import logo from '../assets/logo-filter-med.svg'
+import ContactBtn from "../components/contactBtn.astro";
+
+const content={
+    company:{
+        paragraph1:'Bem-vindo à Filter Med, uma empresa especializada em soluções inovadoras e sustentáveis para o tratamento de resíduos em aterros sanitários. Com uma forte ênfase em tecnologia e responsabilidade ambiental, oferecemos contentores equipados com sistemas avançados de filtragem para a gestão eficiente de chorume e outros resíduos líquidos gerados em aterros.',
+        paragraph2:'A nossa missão é ajudar os gestores de resíduos a minimizar impactos ambientais, garantindo conformidade com normas ambientais rigorosas e promovendo práticas mais sustentáveis. Trabalhamos lado a lado com clientes para desenvolver soluções personalizadas que atendam às suas necessidades específicas, sempre com foco na eficiência, durabilidade e proteção ambiental.'
+    }
+}
+---
+<Layout>
+    <Header 
+        title="Container com filtros para filtração chorume ou aterro sanitário" 
+        subTitle="Fazemos sobre medida para sua empresa" 
+        background={BackgroundImg}
+    />
+    <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
+
+        <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">Sobre Nossa Empresa</h3>
+
+        <div class=" rounded flex flex-col-reverse gap-4 items-end w-[272px] mt-10 sm:w-[400px] md:w-fit md:gap-10 md:flex-row md:mx-5 md:mt-0 md:items-center lg:gap-20 2xl:gap-48">
+			<div class=" z-10 font-Jakarta md:w-[467px] xl:w-[865px] flex flex-col items-center gap-8 md:mb-0">
+                <h3 class=" text-xs text-black text-justify sm:text-lg font-bold xl:text-3xl 2xl:text-4xl">{content.company.paragraph1}</h3>
+                <h3 class=" text-xs text-black text-justify sm:text-lg font-bold xl:text-3xl 2xl:text-4xl">{content.company.paragraph2}</h3>
+            </div>
+            <div class=" flex flex-col items-center gap-12">
+                <img class=" w-fit h-fit" src={logo.src} alt="group image">
+                <h6 class=" font-bold text-4xl">Filte Med</h6>
+            </div>
+		</div>
+        
+        <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">O que nos diferencia?</h3>
+
+        <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">A nossa visão</h3>
+        <div class=" w-[1319px] flex flex-col gap-4">
+            <p class="text-black font-bold text-xs sm:text-lg xl:text-3xl 2xl:text-4xl">Ser uma referência em soluções sustentáveis para o tratamento de chorume e resíduos líquidos, contribuindo para um futuro mais limpo e saudável para todos.</p>
+            <p class="text-black font-bold text-xs sm:text-lg xl:text-3xl 2xl:text-4xl">Estamos comprometidos em oferecer não apenas produtos, mas também parcerias de valor, ajudando os nossos clientes a alcançar os seus objetivos ambientais com confiança e eficácia.Estamos comprometidos em oferecer não apenas produtos, mas também parcerias de valor, ajudando os nossos clientes a alcançar os seus objetivos ambientais com confiança e eficácia.</p>
+            <p class="text-black font-bold text-xs sm:text-lg xl:text-3xl 2xl:text-4xl">Entre em contacto connosco e descubra como podemos ajudar o seu projeto a crescer com responsabilidade e inovação.</p>
+        </div>
+
+        <ContactBtn btnContent="Entre em contato"/>
+    </main>
+</Layout>
