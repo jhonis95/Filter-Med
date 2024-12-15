@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Homeproductcard from '../components/homeproductcard.astro';
 import ContactBtn from '../components/contactBtn.astro';
 
+import bgContinerImg1 from '../assets/containerimg1.png'
+import bgContinerImg2 from '../assets/containerimg2.png'
+import bgContinerImg3 from '../assets/containerimg3.png'
+
 import groupImg from '../assets/group-pic.png'
 import HomeHeader from '../components/homeHeader.astro';
 
@@ -11,15 +15,15 @@ import HomeHeader from '../components/homeHeader.astro';
 
 const containerImgData=[
 	{
-		img:'bg-continer-img1',
+		img:bgContinerImg1,
 		content:'Container prontos para o serviço'
 	},
 	{
-		img:'bg-continer-img2',
+		img:bgContinerImg2,
 		content:'Produtos de alta quilidade'
 	},
 	{
-		img:'bg-continer-img3',
+		img:bgContinerImg2,
 		content:'Calibrados e ajustados sobre medida'
 	},
 ]
@@ -75,7 +79,8 @@ const productSectionData=[
 			{
 				containerImgData.map((container)=>{
 					return(
-						<div class={`relative flex flex-col items-center ${container.img} rounded-xl xl:rounded-[20px] w-[298px] h-[263px] xl:w-[531px] xl:h-[468px]`}>
+						<div class={`relative flex flex-col items-center w-[298px] h-[263px] xl:w-[531px] xl:h-[468px]`}>
+							<img class=" absolute w-full h-full object-cover rounded-xl xl:rounded-[20px]" src={container.img.src} alt="bg-img"/>
 							<h5 class=" text-center text-white font-Jakarta font-bold z-10 text-lg sm:text-2xl top-[190px] xl:top-[353px] xl:w-[447px] xl:text-[32px] absolute">{container.content}</h5>
 						</div>
 					)
