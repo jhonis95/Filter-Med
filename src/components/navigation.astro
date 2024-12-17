@@ -1,5 +1,6 @@
 ---
 import burgerMenu from '../assets/burger-menu.svg'
+import closeicon from '../assets/close-icon.svg'
 
 interface Linkdata{
     link:string,
@@ -15,8 +16,13 @@ const navdata=Astro.props;
     }
 </nav>
 
-<button id="burgerMenu">
-    <img src={burgerMenu.src} alt="">
+<button id="burgerMenu" x-data="{open: false}" @click="open = ! open">
+    <template x-if="open">
+        <img class=" size-9 object-fill" src={closeicon.src} alt="close-button-">
+    </template>
+    <template x-if="!open">
+        <img class=" size-9 object-fill" src={burgerMenu.src} alt="burger-button-">
+    </template>
 </button>
 
 
