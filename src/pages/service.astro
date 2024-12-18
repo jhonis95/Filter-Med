@@ -6,6 +6,25 @@ import BackgroundImg from "../assets/service-img-bg.png"
 import productContainerImg from '../assets/productpg-card-pic.jpg'
 import productImg from '../assets/containerimg2.png'
 
+const serviceCards=[
+	{
+		title:'Análise Detalhada',
+		content:'Começamos por compreender as particularidades do seu projeto. A nossa equipa técnica realiza uma análise detalhada do aterro sanitário, considerando fatores como volume de resíduos líquidos, composição do chorume e as regulamentações locais.'
+	},
+	{
+		title:'Planeamento de Soluções Sob Medida',
+		content:'Com base nos dados recolhidos, desenvolvemos uma estratégia otimizada para a gestão do chorume e outros resíduos líquidos. O contentor é projetado e montado de acordo com os requisitos específicos, garantindo o desempenho ideal para o seu projeto.'
+	},
+	{
+		title:'Entrega e Instalação',
+		content:'Após o planeamento, fabricamos o contentor personalizado e efetuamos a sua instalação no local, com todo o suporte necessário para que o sistema comece a operar com eficiência.'
+	},
+	{
+		title:'Apoio Técnico e Manutenção',
+		content:'Além de projetar e instalar os contentores, oferecemos suporte contínuo para garantir que o sistema funcione da melhor forma possível. Também disponibilizamos serviços de manutenção para prolongar a durabilidade e eficiência dos equipamentos.'
+	}
+]
+
 ---
 <Layout>
     <Header 
@@ -23,6 +42,19 @@ import productImg from '../assets/containerimg2.png'
 		</div>
         
         <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">O nosso processo é totalmente personalizado</h3>
+		
+		<div class="flex flex-wrap justify-center gap-8 px-5">
+			{
+				serviceCards.map((data)=>{
+					return(
+						<div class="bg-accent w-[285px] h-[342px] font-Jakarta font-bold flex flex-col items-center gap-3 rounded-lg min-[940px]:w-[391px] min-[940px]:h-[503px]">
+							<h1 class="text-xl flex flex-col justify-center text-center items-center text-secondary w-[221px] h-[80px] min-[940px]:text-[32px] min-[940px]:w-[370px] min-[940px]:h-[80px]">{data.title}</h1>
+							<p class="font-bold font-Jakarta text-base text-justify mx-4 min-[940px]:text-2xl">{data.content}</p>
+						</div>
+					)
+				})
+			}
+		</div>
 
         <div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
 			<div class=" z-10 font-Jakarta sm:w-[267px] xl:w-[467px] flex flex-col items-center gap-8 mb-5 md:mb-0">
