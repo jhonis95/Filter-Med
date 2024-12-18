@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/footer.astro"
 import Navbar from "../components/navbar.astro"
+import { ClientRouter } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -14,6 +15,7 @@ import Navbar from "../components/navbar.astro"
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<title>Filter Med</title>
+		<ClientRouter/>
 	</head>
 	<body>
 		<Navbar/>

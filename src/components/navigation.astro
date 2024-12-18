@@ -1,32 +1,86 @@
 ---
+
+import Alpine from 'alpinejs';
 import burgerMenu from '../assets/burger-menu.svg'
 import closeicon from '../assets/close-icon.svg'
 
 interface Linkdata{
     link:string,
-    title:string
+    title:string,
+    id:number
 }
 const navdata=Astro.props;
 ---
-<nav id="navOptionConatiner" class=" flex lg:gap-16 xl:gap-28 items-center">
+<div 
+    x-data="{
+        mobile:false,
+        setMobile(){
+            if(document.documentElement.clientWidth<1024){
+                return this.mobile=true
+            }else{
+                return this.mobile=false
+            }
+        }
+    }"
+    x-init="setMobile()"
+>
+    <template x-if="mobile">
+        <button x-data="{open: false, toggle() { this.open = ! this.open }}" class="flex justify-center items-center w-11" @click="toggle()">
+            <template x-if="open">
+                <img class=" size-10 object-fill" src={closeicon.src} alt="close-button-">
+            </template>
+            <template x-if="!open">
+                <img class=" size-9 object-fill" src={burgerMenu.src} alt="burger-button-">
+            </template>
+        </button>
+    </template>
+    <template 
+        x-if="!mobile"
+        x-data={`{navlist:[${navdata.navlist.map((data:Linkdata)=>{return `{link:'${data.link}',title:'${data.title}',id:${data.id}}`})}]}`}
+    >
+        <nav class=" flex flex-row lg:gap-16 xl:gap-28 items-center">
+            <template x-for="data in navlist" :key="data.id">
+                    <a class="font-Inter font-bold lg:text-2xl" x-text="data.title" x-bind:href="data.link"></a>
+            </template>
+        </nav>
+    </template>
+</div>
+
+<!-- <nav id="navOptionConatiner" class=" flex lg:gap-16 xl:gap-28 items-center">
     {
         navdata.navlist.map((linkdata:Linkdata)=>{
             return <a class="font-Inter font-bold lg:text-2xl" href={linkdata.link}>{linkdata.title}</a>
         })
     }
-</nav>
+</nav> -->
 
-<button id="burgerMenu" x-data="{open: false}" @click="open = ! open">
+<!-- <button id="burgerMenu" x-data="{open: false, toggle() { this.open = ! this.open }}" @click="toggle()">
     <template x-if="open">
-        <img class=" size-9 object-fill" src={closeicon.src} alt="close-button-">
+        <img class=" size-10 object-fill" src={closeicon.src} alt="close-button-">
     </template>
     <template x-if="!open">
         <img class=" size-9 object-fill" src={burgerMenu.src} alt="burger-button-">
     </template>
-</button>
+</button> -->
 
+<!-- <script>
+    function isMobileda():any{
+        return{
+            mobile:false,
+            setMobile(windowSize:any){
+                if(windowSize<1024){
+                    console.log(this.mobile)
+                    return this.mobile=true
+                }else{
+                    console.log(this.mobile)
+                    return this.mobile=false
+                }
+            }
+        }
+    }
+</script> -->
 
-<script>
+<!-- <script>
     const burgerMenuElement= document.getElementById('burgerMenu')
     const navOptionConatiner= document.getElementById('navOptionConatiner')
     const hidden='hidden' 
@@ -60,4 +114,4 @@ const navdata=Astro.props;
     }
     window.addEventListener('load', loadNav)
     window.addEventListener("resize", toggleNav);
-</script>
+</script> -->
