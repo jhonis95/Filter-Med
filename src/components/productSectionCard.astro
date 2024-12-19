@@ -4,7 +4,7 @@ const {title,description, img, pgLink}=Astro.props
 <section  class=" font-Jakarta w-fit h-fit font-bold">
     <h3 class=" text-xl flex flex-col justify-center text-center items-center text-secondary w-[285px] h-[80px] min-[940px]:text-[32px] min-[940px]:w-[420px] min-[940px]:h-[80px]">{title}</h3>
     <div class=" bg-accent w-[285px] h-[342px] flex flex-col gap-3 items-center min-[940px]:w-[420px] min-[940px]:h-[476px]">
-        <img class="w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={img.src} alt="">
+        <img class="w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={img.src} alt=""/>
         <div class=" flex flex-col w-[262px] gap-2 h-[101px] justify-around items-center min-[940px]:w-[356px] min-[940px]:h-[133px]">
             <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-[92px]">{description}</p>
             <a class=" w-full text-right font-bold text-sm min-[940px]:text-base" href={pgLink}>Ver todos os produtos</a>

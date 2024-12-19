@@ -1,0 +1,283 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/header.astro";
+import BackgroundImg from '../../assets/product-detail-img-bg.png'
+import ContactBtn from '../../components/contactBtn.astro';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: {
+        product_section: 'filter_media',
+      },
+      props:{
+        title:'Filter Media',
+        card:{
+          title:'FILTER SHEETS AND FILTER MODULES',
+          description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.'
+        },
+        products:[
+            {
+              name:[
+                {
+                  title:'VERSAFIX',
+                  subtitle:'(filter sheets)'
+                },
+                {
+                  title:'VERSADISC',
+                  subtitle:'(filter modules)'
+                }
+              ],
+              image:'',
+              description:'Standard depth filter sheets for the removal of particles from liquids to suit a wide range of applications. The pore size rating is from coarse to fine filtration, achieving a bright clear liquid.'
+            },
+            {
+              name:[
+                {
+                  title:'FIBRAFIX',
+                  subtitle:'(filter sheets)'
+                },
+                {
+                  title:'FIBRADISC',
+                  subtitle:'(filter modules)'
+                }
+              ],
+              image:'',
+              description:'High quality depth filter sheets manufactured under controlled conditions. Widely used in the food and beverage industry as well as many other applications. '
+            },
+            {
+              name:[
+                {
+                  title:'PURAFIX',
+                  subtitle:'(filter sheets)'
+                },
+                {
+                  title:'PURADISC',
+                  subtitle:'(filter modules)'
+                },
+                {
+                  title:'PURADISC BIO SD',
+                  subtitle:'(single-use modules)'
+                }
+              ],
+              image:'',
+              description:'High quality depth filter sheets manufactured under controlled conditions. Widely used in the food and beverage industry as well as many other applications. '
+            },
+            {
+              name:[
+                {
+                  title:'SUPERSORB',
+                  subtitle:'(filter pads, envelopes)'
+                }
+              ],
+              image:'',
+              description:'This product range is specifically developed for frying oil filtration in the food service. Using SuperSorb filter pads the frying oil is cleaner after filtration and therefore lasts longer.'
+            },
+            {
+              name:[
+                {
+                  title:'LIBRASORB',
+                  subtitle:'(filter sheets)'
+                },
+                {
+                  title:'LIBRADISC',
+                  subtitle:'(filter modules)'
+                }
+              ],
+              image:'',
+              description:'This product range is specifically developed for frying oil filtration in the food service. Using SuperSorb filter pads the frying oil is cleaner after filtration and therefore lasts longer.'
+            },
+            {
+              name:[
+                {
+                  title:'ACTIVASORB',
+                  subtitle:'(filter sheets)'
+                },
+                {
+                  title:'ACTIVADISC',
+                  subtitle:'(filter modules)'
+                }
+              ],
+              image:'',
+              description:'This product range is specifically developed for frying oil filtration in the food service. Using SuperSorb filter pads the frying oil is cleaner after filtration and therefore lasts longer.'
+            },
+        ]
+      }
+    },
+    {
+      params: {
+        product_section: 'produtos_complementares',
+      },
+      props:{
+        title:'Produtos Complementares',
+        card:{
+          title:'',
+          description:''
+        },
+        products:[
+            {
+              name:[
+                {
+                  title:'NOVOX-ST',
+                  subtitle:'(plate & frame filters)'
+                },
+                {
+                  title:'NOVOX-OD',
+                  subtitle:'(plate & frame filters)'
+                },
+                {
+                  title:'NOVOX-CP',
+                  subtitle:'(plate & frame filters)'
+                }
+              ],
+              image:'',
+              description:''
+            },
+            {
+              name:[
+                {
+                  title:'DISCSTAR H',
+                  subtitle:'(filter housing for lenticular mudules)'
+                },
+                {
+                  title:'DISCSTAR G',
+                  subtitle:'(filter housing for lenticular mudules)'
+                },
+                {
+                  title:'DISCSTAR LS',
+                  subtitle:'(filter housing for lenticular mudules)'
+                },
+                {
+                  title:'DISCSTAR BIO SD',
+                  subtitle:'(filter housing for lenticular mudules)'
+                }
+              ],
+              image:'',
+              description:''
+            },
+            {
+              name:[
+                {
+                  title:'SECUROX',
+                  subtitle:'(filter housing for filter cartridges)'
+                }
+              ],
+              image:'',
+              description:'SECUROX filter cartridge housings are made for a broad field of solid-liquid separation applications. The technology is designed for high service life of filter media and equipment. Also as special version for life sciences available.'
+            },
+        ]
+      }
+    },
+    {
+      params: {
+        product_section: 'equipamentos_de_filtragem_laboratórial',
+      },
+      props:{
+        title:'Equipamentos de Filtragem Laboratórial',
+        card:{
+          title:'',
+          description:''
+        },
+        products:[
+            {
+              name:[
+                {
+                  title:'',
+                  subtitle:''
+                },
+                {
+                  title:'',
+                  subtitle:''
+                }
+              ],
+              image:'',
+              description:''
+            },
+        ]
+      }
+    },
+    {
+      params: {
+        product_section: 'filter_presses_and_housings',
+      },
+      props:{
+        title:'Filter Presses and Housings',
+        card:{
+          title:'',
+          description:''
+        },
+        products:[
+            {
+              name:[
+                {
+                  title:'',
+                  subtitle:''
+                },
+                {
+                  title:'',
+                  subtitle:''
+                }
+              ],
+              image:''
+            },
+        ]
+      }
+    }
+  ];
+}
+const { products,title,card } = Astro.props;
+---
+<Layout>
+  <Header 
+    title="Filtros de placas e lenticulares" 
+    subTitle="Descrição breve sobre filtros de placas e lenticulares" 
+    background={BackgroundImg}
+  />
+  <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 mt-10 2xl:mt-16">
+    <div class=" flex justify-center items-center h-fit sm:h-2/6 sm:mt-5">
+      <div class=" flex flex-col items-center p-3 bg-primary w-full mx-3 rounded-lg sm:gap-0 sm:inline sm:relative md:w-4/5 h-fit 2xl:w-[1331px]">
+          <div class="flex flex-col justify-center items-center xl:p-7 gap-2 xl:items-start w-full h-fit">
+              <h5 class="font-Jakarta font-bold text-white w-fit text-base md:text-2xl xl:text-4xl">{card.title}</h5>
+              <p class="font-Jakarta font-bold text-white text-center w-full sm:w-fit sm:text-left text-sm md:text-lg xl:text-xl">{card.description}</p>
+          </div>
+      </div>
+    </div>
+
+    <section class="flex flex-col gap-7 w-full text-primary">
+      <h3 class=" font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl font-bold">{title}</h3>
+    </section>
+
+    <section class="flex flex-wrap justify-center gap-8 px-5 max-w-[1700px]">
+      {
+        products.map((product:any)=>{
+          return(
+            <div class=" bg-accent w-[285px] h-[342px] flex flex-col gap-3 items-center min-[940px]:w-[420px] min-[940px]:h-[476px]">
+                <img class="w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.image} alt="product-image"/>
+                <div class=" flex flex-col w-[262px] gap-2 h-[101px] justify-around items-center min-[940px]:w-[356px] min-[940px]:h-[133px]">
+                    <p class=" text-primary w-full text-right font-bold text-sm min-[940px]:text-base">{
+                        product.name.map((nameData)=>{
+                          return `${nameData.title} ${nameData.subtitle}`
+                        })
+                      }
+                    </p> 
+                    <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-[92px]">{product.description}</p>
+                </div>
+            </div>
+          )                               
+        })  
+      }
+    </section>
+
+    <div class=" flex justify-center items-center h-fit sm:h-2/6 sm:mt-5 w-full">
+      <div class=" flex flex-col items-center p-3 bg-primary w-full mx-3 rounded-lg sm:gap-0 sm:inline sm:relative md:w-4/5 h-[90px] md:h-[100px] xl:h-[118px] 2xl:w-[1208px]">
+          <div class="flex flex-col justify-center items-center xl:items-start xl:pl-12 w-full h-fit">
+              <h5 class="font-Jakarta font-bold text-white w-fit text-base md:text-2xl xl:text-4xl">Gostou dos nossos produtos</h5>
+              <p class="font-Jakarta font-bold text-white text-center w-full sm:w-fit sm:text-left text-sm md:text-lg xl:text-xl">Entre em contato com um de nossos atendentes agora mesmo!!</p>
+          </div>
+          <div class="sm:absolute sm:bottom-[-20px] lg:bottom-[-20px] right-0">
+              <ContactBtn btnContent="Entre em contato"/>
+          </div>
+      </div>
+    </div>
+  </main>
+</Layout>
