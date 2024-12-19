@@ -111,11 +111,141 @@ export function getStaticPaths() {
       props:{
         title:'Produtos Complementares',
         card:{
+          title:'Complementary Products',
+          description:'When it comes to depth filtration, there are several complementary products that can help you to enhance the process and achieve better results. In addition to our filter media and filter apparatus, we also offer support sheets for precoat filtration, filter cartridges and filter aids (diatomaceous earth) in our range.'
+        },
+        products:[
+          {
+            name:[
+              {
+                title:'DUROFIL',
+                subtitle:'(support sheets)'
+              },
+            ],
+            image:'',
+            description:'FILTROX designed the support sheet DUROFIL® specifically to meet the challenges of pre-coat filtration in the food and beverage industry. Due to its unique strength the sheets withstand even highest forces over an extensive period of time.'
+          },
+          {
+            name:[
+              {
+                title:'DUROFIL',
+                subtitle:'(support sheets)'
+              },
+              {
+                title:'CLAROX PL and PL/NR',
+                subtitle:'(filter cartridges)'
+              },
+              {
+                title:'CLAROX MP/W Membrane',
+                subtitle:'(filter cartridges)'
+              }
+            ],
+            image:'',
+            description:'Filter cartridges PL and PL/NR are made in polypropylene (PP). The filter medium is installed in the filter cartridges in large pleated form. '
+          },
+          {
+            name:[
+              {
+                title:'CELPURE',
+                subtitle:'(filter aids)'
+              }
+            ],
+            image:'',
+            description:'CELPURE is made with diatomaceous earth, who is fossilized remains of hard shelled algae. It is the ideal choice when developing new high purity processes with diatomite filter aid.'
+          },
+        ]
+      }
+    },
+    {
+      params: {
+        product_section: 'equipamentos_de_filtragem_laboratórial',
+      },
+      props:{
+        title:'Equipamentos de Filtragem Laboratórial',
+        card:{
           title:'',
           description:''
         },
         products:[
             {
+              name:[
+                {
+                  title:'SCALE-UP',
+                  subtitle:'(test kit)'
+                },
+                {
+                  title:'PURASPIN',
+                  subtitle:'(test kit)'
+                },
+                {
+                  title:'ACTIVASORB',
+                  subtitle:'(test kit)'
+                },
+                {
+                  title:'LIBRASORB TX and MX',
+                  subtitle:'(test kit for wine)'
+                }
+              ],
+              image:'',
+              description:''
+            },
+            {
+              name:[
+                {
+                  title:'PURASPIN',
+                  subtitle:'(centrifuge filter)'
+                }
+              ],
+              image:'',
+              description:'PURASPIN® enables you to quickly and efficiently test different depth filters or quickly purify a small amount of liquid. To do so, insert the filters into the standard 50 mL centrifuge tubes (Labcon® SuperClear® 50 mL tubes). Then, filter the liquid using a centrifuge or vacuum.'
+            },
+            {
+              name:[
+                {
+                  title:'PURACAP 2',
+                  subtitle:'(capsules)'
+                },
+                {
+                  title:'PURACAP BIO SD 2',
+                  subtitle:'(capsules)'
+                },
+                {
+                  title:'PURACAP BIO SD 5',
+                  subtitle:'(capsules)'
+                }
+              ],
+              image:'',
+              description:''
+            },
+            {
+              name:[
+                {
+                  title:'LABTROX 60A',
+                  subtitle:'(lab filters)'
+                },
+                {
+                  title:'LABTROX 60B',
+                  subtitle:'(lab filters)'
+                },
+              ],
+              image:'',
+              description:''
+            },
+        ]
+      }
+    },
+    {
+      params: {
+        product_section: 'filter_presses_and_housings',
+      },
+      props:{
+        title:'Filter Presses and Housings',
+        card:{
+          title:'FILTER PRESSES AND HOUSINGS',
+          description:'This are the Filter presses, Filter housings for lenticular modules, and Filter housings for filter cartridges from our product portfolio – three critical components of many industrial production processes. Filter presses utilize a series of plates and frames to remove solids from liquids. Filter housings for filter modules, can accommodate a stack of lenticular filter modules, allowing for efficient and effective filtration while minimizing the risk of contamination.'
+        },
+        products:[
+        {
               name:[
                 {
                   title:'NOVOX-ST',
@@ -167,61 +297,6 @@ export function getStaticPaths() {
             },
         ]
       }
-    },
-    {
-      params: {
-        product_section: 'equipamentos_de_filtragem_laboratórial',
-      },
-      props:{
-        title:'Equipamentos de Filtragem Laboratórial',
-        card:{
-          title:'',
-          description:''
-        },
-        products:[
-            {
-              name:[
-                {
-                  title:'',
-                  subtitle:''
-                },
-                {
-                  title:'',
-                  subtitle:''
-                }
-              ],
-              image:'',
-              description:''
-            },
-        ]
-      }
-    },
-    {
-      params: {
-        product_section: 'filter_presses_and_housings',
-      },
-      props:{
-        title:'Filter Presses and Housings',
-        card:{
-          title:'',
-          description:''
-        },
-        products:[
-            {
-              name:[
-                {
-                  title:'',
-                  subtitle:''
-                },
-                {
-                  title:'',
-                  subtitle:''
-                }
-              ],
-              image:''
-            },
-        ]
-      }
     }
   ];
 }
@@ -254,13 +329,13 @@ const { products,title,card } = Astro.props;
             <div class=" bg-accent w-[285px] h-[342px] flex flex-col gap-3 items-center min-[940px]:w-[420px] min-[940px]:h-[476px]">
                 <img class="w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.image} alt="product-image"/>
                 <div class=" flex flex-col w-[262px] gap-2 h-[101px] justify-around items-center min-[940px]:w-[356px] min-[940px]:h-[133px]">
-                    <p class=" text-primary w-full text-right font-bold text-sm min-[940px]:text-base">{
+                    <p class=" text-primary w-full font-bold text-sm h-[28px] min-[940px]:text-base min-[940px]:w-[382px] min-[940px]:h-[48px] text-ellipsis overflow-hidden overflow-y-scroll no-scrollbar ">{
                         product.name.map((nameData)=>{
-                          return `${nameData.title} ${nameData.subtitle}`
+                          return product.name.indexOf(nameData)==product.name.length-1?` ${nameData.title} ${nameData.subtitle}`:` ${nameData.title} ${nameData.subtitle} e`
                         })
                       }
                     </p> 
-                    <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-[92px]">{product.description}</p>
+                    <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-[70px] min-[940px]:w-[382px]">{product.description}</p>
                 </div>
             </div>
           )                               
