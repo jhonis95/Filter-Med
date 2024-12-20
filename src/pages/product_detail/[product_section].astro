@@ -330,7 +330,7 @@ const { products,title,card } = Astro.props;
                 <img class="w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.image} alt="product-image"/>
                 <div class=" flex flex-col w-[262px] gap-2 h-[101px] justify-around items-center min-[940px]:w-[356px] min-[940px]:h-[133px]">
                     <p class=" text-primary w-full font-bold text-sm h-[28px] min-[940px]:text-base min-[940px]:w-[382px] min-[940px]:h-[48px] text-ellipsis overflow-hidden overflow-y-scroll no-scrollbar ">{
-                        product.name.map((nameData)=>{
+                        product.name.map((nameData:any)=>{
                           return product.name.indexOf(nameData)==product.name.length-1?` ${nameData.title} ${nameData.subtitle}`:` ${nameData.title} ${nameData.subtitle} e`
                         })
                       }

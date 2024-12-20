@@ -12,6 +12,24 @@ const content={
         paragraph2:'A nossa missão é ajudar os gestores de resíduos a minimizar impactos ambientais, garantindo conformidade com normas ambientais rigorosas e promovendo práticas mais sustentáveis. Trabalhamos lado a lado com clientes para desenvolver soluções personalizadas que atendam às suas necessidades específicas, sempre com foco na eficiência, durabilidade e proteção ambiental.'
     }
 }
+const aboutCards=[
+	{
+		title:'Tecnologia Avançada',
+		content:'Os nossos contentores com filtros são projetados para maximizar a retenção de contaminantes, reduzindo a carga poluente no meio ambiente.'
+	},
+	{
+		title:'Compromisso com a Sustentabilidade',
+		content:'Acreditamos que é possível conciliar progresso e preservação ambiental. Por isso, todas as nossas soluções são pensadas para reduzir o impacto ambiental.'
+	},
+	{
+		title:'Personalização',
+		content:'Entendemos que cada aterro sanitário tem suas particularidades. Assim, oferecemos projetos adaptados a diferentes demandas.'
+	},
+	{
+		title:'Equipe Especializada',
+		content:'Contamos com uma equipa de engenheiros e especialistas com vasta experiência em gestão de resíduos sólidos e líquidos.'
+	}
+]
 ---
 <Layout>
     <Header 
@@ -35,6 +53,19 @@ const content={
 		</div>
         
         <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">O que nos diferencia?</h3>
+
+        <div class="flex flex-wrap justify-center gap-8 px-5">
+			{
+				aboutCards.map((data)=>{
+					return(
+						<div class="bg-accent w-[285px] h-[285px] font-Jakarta font-bold flex flex-col items-center gap-3 rounded-lg min-[940px]:w-[391px] min-[940px]:h-[391px]">
+							<h1 class="text-xl flex flex-col justify-center text-center items-center text-secondary w-[221px] h-[80px] min-[940px]:text-[32px] min-[940px]:w-[370px] min-[940px]:h-[80px]">{data.title}</h1>
+							<p class="font-bold font-Jakarta text-base text-justify mx-4 min-[940px]:text-2xl">{data.content}</p>
+						</div>
+					)
+				})
+			}
+		</div>
 
         <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">A nossa visão</h3>
         <div class=" w-fit 2xl:w-[1319px] flex flex-col gap-4 mx-5">

@@ -14,10 +14,12 @@ import { ClientRouter } from 'astro:transitions';
 		<link rel="stylesheet" href="../global.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<title>Filter Med</title>
 		<ClientRouter/>
 	</head>
 	<body>
+		<script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script> 
 		<Navbar/>
 		<slot />
 		<Footer/>
@@ -32,3 +34,19 @@ import { ClientRouter } from 'astro:transitions';
 		background-color: var(--white);
 	}
 </style>
+<script>
+	declare global{
+		interface Window {
+			netlifyIdentity:any
+		}
+	}
+	if (window.netlifyIdentity) {
+	  window.netlifyIdentity.on("init", (user:any) => {
+		if (!user) {
+		  window.netlifyIdentity.on("login", () => {
+			document.location.href = "/admin/";
+		  });
+		}
+	  });
+	}
+  </script>

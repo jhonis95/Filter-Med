@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+
+publish_mode: editorial_workflow
+
+media_folder: "src/assets" # Location where files will be stored in the repo
+public_folder: "src/assets" # The src attribute for uploaded media
+
+collections:
+  - label: "Home_Page_Data"
+    name: "home"
+    folder: "../../src/_cms/home_page/home_page.md"
+    create: true
+    fields:
+        - {label: "header_title", name: "title", widget: "string"}
+        - {label: "header_subtitle", name: "subtitle", widget: "string"}
