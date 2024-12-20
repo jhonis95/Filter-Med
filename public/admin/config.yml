@@ -12,6 +12,8 @@ collections:
     name: "home_page_data"
     folder: "src/_cms/home_page"
     create: true
+    slug: "{{slug}}"
     fields:
-        - {label: "header_title", name: "title", widget: "string"}
+        - {label: "title", name: "title", widget: "hidden", default: "home_page_data"}
+        - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
