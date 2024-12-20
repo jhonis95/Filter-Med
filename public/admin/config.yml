@@ -9,7 +9,7 @@ public_folder: "src/assets" # The src attribute for uploaded media
 
 collections:
   - label: "Home_Page_Data"
-    name: "home"
+    name: "home_page_data"
     folder: "../../src/_cms/home_page/home_page.md"
     create: true
     fields:
