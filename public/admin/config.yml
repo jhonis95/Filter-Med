@@ -1,3 +1,5 @@
+local_backend: true
+
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
@@ -6,6 +8,11 @@ publish_mode: editorial_workflow
 
 media_folder: "src/assets" # Location where files will be stored in the repo
 public_folder: "src/assets" # The src attribute for uploaded media
+logo_url: https://filter-med.netlify.app/_astro/logo-filter-med.DKycxu6U.svg
+locale: 'pt/br'
+show_preview_links: true
+editor:
+    preview: true
 
 collections:
   - label: "Home_Page_Data"
@@ -13,7 +20,53 @@ collections:
     folder: "src/_cms/home_page"
     create: true
     slug: "{{slug}}"
+    preview_path: preview/{{slug}}
     fields:
         - {label: "title", name: "title", widget: "hidden", default: "home_page_data"}
+        - {label: "header_title", name: "headertitle", widget: "string"}
+        - {label: "header_subtitle", name: "subtitle", widget: "string"}
+
+  - label: "Product_Page_Data"
+    name: "product_page_data"
+    folder: "src/_cms/product_page"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+        - {label: "title", name: "title", widget: "hidden", default: "product_page_data"}
+        - {label: "header_title", name: "headertitle", widget: "string"}
+        - {label: "header_subtitle", name: "subtitle", widget: "string"}
+
+
+  - label: "Service_Page_Data"
+    name: "service_page_data"
+    folder: "src/_cms/service_page"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+        - {label: "title", name: "title", widget: "hidden", default: "service_page_data"}
+        - {label: "header_title", name: "headertitle", widget: "string"}
+        - {label: "header_subtitle", name: "subtitle", widget: "string"}
+
+  - label: "About_Page_Data"
+    name: "about_page_data"
+    folder: "src/_cms/about_page"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+        - {label: "title", name: "title", widget: "hidden", default: "about_page_data"}
+        - {label: "header_title", name: "headertitle", widget: "string"}
+        - {label: "header_subtitle", name: "subtitle", widget: "string"}
+
+  - label: "Product_Detail_Page_Data"
+    name: "product_detail_page_data"
+    folder: "src/_cms/product_detail_page"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+        - {label: "title", name: "title", widget: "hidden", default: "product_detail_page_data"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
