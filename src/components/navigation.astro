@@ -22,6 +22,7 @@ const navdata=Astro.props;
         }
     }"
     x-init="setMobile()"
+    @resize.window.debounce="setMobile()"
 >
     <template x-if="mobile">
         <button 
@@ -42,7 +43,7 @@ const navdata=Astro.props;
                         class="absolute left-0 w-screen top-[101px] h-fit flex flex-col items-center gap-4 bg-primary py-4 rounded-b-lg shadow-xl"
                     >
                         <template x-for="data in navlist" :key="data.id">
-                            <a class="font-Inter font-bold text-base text-white" x-text="data.title" x-bind:href="data.link"></a>
+                            <a class="font-Inter font-bold text-xl text-white" x-text="data.title" x-bind:href="data.link"></a>
                         </template>
                         <div class="w-[240px]">
                             <ContactBtn btnContent="Entre em contato"/>
