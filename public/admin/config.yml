@@ -15,14 +15,14 @@ editor:
     preview: true
 
 collections:
-  - label: "Home Page Data"
-    name: "home_page_data"
-    folder: "src/_cms/home_page"
+  - label: "Home Page"
+    name: "home_page"
+    folder: "src/content/cms/home_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
     fields:
-        - {label: "title", name: "title", widget: "hidden", default: "home_page_data"}
+        - {label: "title", name: "title", widget: "hidden", default: "home_page"}
         - {label: "header title", name: "headertitle", widget: "string"}
         - {label: "header subtitle", name: "subtitle", widget: "string"}
         - label: "home header card"
@@ -77,14 +77,14 @@ collections:
             - {label: "product card content", name: "product_card_content", widget: "text"}
             - {label: "product card image", name: "product_card_image", widget: "image"}
 
-  - label: "Product Page Data"
-    name: "product_page_data"
-    folder: "src/_cms/product_page"
+  - label: "Product Page"
+    name: "product_page"
+    folder: "src/content/cms/product_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
     fields:
-        - {label: "title", name: "title", widget: "hidden", default: "product_page_data"}
+        - {label: "title", name: "title", widget: "hidden", default: "product_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
         - label: "product header card"
@@ -111,14 +111,14 @@ collections:
             - {label: "card button text", name: "card_button_text", widget: "string"}
             - {label: "card image", name: "card_image", widget: "image"}
 
-  - label: "Service Page Data"
-    name: "service_page_data"
-    folder: "src/_cms/service_page"
+  - label: "Service Page"
+    name: "service_page"
+    folder: "src/content/cms/service_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
     fields:
-        - {label: "title", name: "title", widget: "hidden", default: "service_page_data"}
+        - {label: "title", name: "title", widget: "hidden", default: "service_page"}
         - {label: "header title", name: "headertitle", widget: "string"}
         - {label: "header subtitle", name: "subtitle", widget: "string"}
         - {label: "main content", name: "main_content", widget: "text"}
@@ -138,14 +138,14 @@ collections:
             - {label: "card button text", name: "card_button_text", widget: "string"}
             - {label: "card image", name: "card_image", widget: "image"}
 
-  - label: "About Page Data"
-    name: "about_page_data"
-    folder: "src/_cms/about_page"
+  - label: "About Page"
+    name: "about_page"
+    folder: "src/content/cms/about_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
     fields:
-        - {label: "title", name: "title", widget: "hidden", default: "about_page_data"}
+        - {label: "title", name: "title", widget: "hidden", default: "about_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
         - label: "first section"
@@ -177,14 +177,14 @@ collections:
             - {label: "third section content tree", name: "third_section_content_tree", widget: "text"}
         - {label: "card button text", name: "card_button_text", widget: "string"}
 
-  - label: "Product Detail Page Data"
-    name: "product_detail_page_data"
-    folder: "src/_cms/product_detail_page"
+  - label: "Product Detail Page"
+    name: "product_detail_page"
+    folder: "src/content/cms/product_detail"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
     fields:
-        - {label: "title", name: "title", widget: "hidden", default: "product_detail_page_data"}
+        - {label: "title", name: "title", widget: "hidden", default: "product_detail_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
         - label: "product detail header card"
@@ -206,7 +206,7 @@ collections:
               - {label: "product description", name: "product_description", widget: "string"}
               - {label: "product image", name: "product_image", widget: "image"}
         - label: "Complementary Products" 
-          name: "complementaty_Products" 
+          name: "complementaty_products" 
           widget: "object" 
           fields:
             - {label: "section title", name: "section_title", widget: "string"}
@@ -241,4 +241,11 @@ collections:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
               - {label: "product image", name: "product_image", widget: "image"}
+        - label: "product detail card"
+          name: "product_detail_card" 
+          widget: "object"
+          fields:
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
 

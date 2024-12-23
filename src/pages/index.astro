@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Homeproductcard from '../components/homeproductcard.astro';
 import ContactBtn from '../components/contactBtn.astro';
+import { getCollection } from 'astro:content';
 
 import bgContinerImg1 from '../assets/containerimg1.png'
 import bgContinerImg2 from '../assets/containerimg2.png'
@@ -9,6 +10,9 @@ import bgContinerImg3 from '../assets/containerimg3.png'
 
 import groupImg from '../assets/group-pic.png'
 import HomeHeader from '../components/homeHeader.astro';
+
+
+const homePageData = await getCollection("home_page");
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
