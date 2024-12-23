@@ -15,7 +15,7 @@ editor:
     preview: true
 
 collections:
-  - label: "Home_Page_Data"
+  - label: "Home Page Data"
     name: "home_page_data"
     folder: "src/_cms/home_page"
     create: true
@@ -23,10 +23,61 @@ collections:
     preview_path: preview/{{slug}}
     fields:
         - {label: "title", name: "title", widget: "hidden", default: "home_page_data"}
-        - {label: "header_title", name: "headertitle", widget: "string"}
-        - {label: "header_subtitle", name: "subtitle", widget: "string"}
+        - {label: "header title", name: "headertitle", widget: "string"}
+        - {label: "header subtitle", name: "subtitle", widget: "string"}
+        - label: "home header card"
+          name: "home_header_card" 
+          widget: "object"
+          fields:
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+        - label: "home product card"
+          name: "home_product_card" 
+          widget: "object"
+          fields:
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+            - {label: "background image", name: "background_image", widget: "image"}
+        - label: "home process card"
+          name: "home_process_card" 
+          widget: "object"
+          fields:
+            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card content", name: "card_content", widget: "text"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+            - {label: "card image", name: "card_image", widget: "image"}
+        - {label: "first section title", name: "first_section_title", widget: "string"}
+        - {label: "first section subtitle", name: "first_section_subtitle", widget: "string"}
+        - label: "home service cards"
+          name: "home_service_cards" 
+          widget: "list"
+          fields:
+            - {label: "service name", name: "service_name", widget: "string"}
+            - {label: "service image", name: "service_image", widget: "image"}
+        - {label: "second section title", name: "second_section_title", widget: "string"}
+        - {label: "second section subtitle", name: "second_section_subtitle", widget: "string"}
+        - label: "home product division"
+          name: "home_product_division" 
+          widget: "object"
+          fields:
+            - {label: "home product division title", name: "home_product_division_title", widget: "string"}
+            - label: "home product division types"
+              name: "home_product_division_types" 
+              widget: "list"
+              fields:
+              - {label: "home product division types", name: "home_product_division_types", widget: "string"}
+        - label: "home product cards"
+          name: "home_product_cards" 
+          widget: "list"
+          fields:
+            - {label: "product card name", name: "product_card_name", widget: "string"}
+            - {label: "product card content", name: "product_card_content", widget: "text"}
+            - {label: "product card image", name: "product_card_image", widget: "image"}
 
-  - label: "Product_Page_Data"
+  - label: "Product Page Data"
     name: "product_page_data"
     folder: "src/_cms/product_page"
     create: true
@@ -36,9 +87,31 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "product_page_data"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
+        - label: "product header card"
+          name: "product_header_card" 
+          widget: "object"
+          fields:
+            - {label: "card text", name: "card_text", widget: "string"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+        - {label: "section title", name: "section_title", widget: "string"}
+        - {label: "first subtitle", name: "first_subtitle", widget: "string"}
+        - label: "product section card"
+          name: "product_section_card" 
+          widget: "list"
+          fields:
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card content", name: "card_content", widget: "string"}
+            - {label: "card link", name: "card_link", widget: "string"}
+        - {label: "second subtitle", name: "second_subtitle", widget: "string"}
+        - label: "product service card"
+          name: "product_service_card" 
+          widget: "object"
+          fields:
+            - {label: "card content", name: "card_content", widget: "text"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+            - {label: "card image", name: "card_image", widget: "image"}
 
-
-  - label: "Service_Page_Data"
+  - label: "Service Page Data"
     name: "service_page_data"
     folder: "src/_cms/service_page"
     create: true
@@ -46,10 +119,26 @@ collections:
     preview_path: preview/{{slug}}
     fields:
         - {label: "title", name: "title", widget: "hidden", default: "service_page_data"}
-        - {label: "header_title", name: "headertitle", widget: "string"}
-        - {label: "header_subtitle", name: "subtitle", widget: "string"}
+        - {label: "header title", name: "headertitle", widget: "string"}
+        - {label: "header subtitle", name: "subtitle", widget: "string"}
+        - {label: "main content", name: "main_content", widget: "text"}
+        - {label: "main image", name: "main_image", widget: "image"}
+        - {label: "section title", name: "section_title", widget: "string"}
+        - label: "service card"
+          name: "service_card" 
+          widget: "list"
+          fields:
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card content", name: "card_content", widget: "string"}
+        - label: "product service card"
+          name: "product_service_card" 
+          widget: "object"
+          fields:
+            - {label: "card content", name: "card_content", widget: "text"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+            - {label: "card image", name: "card_image", widget: "image"}
 
-  - label: "About_Page_Data"
+  - label: "About Page Data"
     name: "about_page_data"
     folder: "src/_cms/about_page"
     create: true
@@ -59,8 +148,36 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "about_page_data"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
+        - label: "first section"
+          name: "first_section" 
+          widget: "object"
+          fields:
+            - {label: "first section title", name: "first_section_title", widget: "string"}
+            - {label: "first section content one", name: "first_section_content_one", widget: "text"}
+            - {label: "first section content two", name: "first_section_content_two", widget: "text"}
+            - {label: "first section image", name: "first_section_image", widget: "image"}
+        - label: "second section"
+          name: "second_section" 
+          widget: "object"
+          fields:
+            - {label: "second section title", name: "second_section_title", widget: "string"}
+            - label: "about card"
+              name: "about_card" 
+              widget: "list"
+              fields:
+                - {label: "card title", name: "card_title", widget: "string"}
+                - {label: "card content", name: "card_content", widget: "string"}
+        - label: "third section"
+          name: "third_section" 
+          widget: "object"
+          fields:
+            - {label: "third section title", name: "third_section_title", widget: "string"}
+            - {label: "third section content one", name: "third_section_content_one", widget: "text"}
+            - {label: "third section content two", name: "third_section_content_two", widget: "text"}
+            - {label: "third section content tree", name: "third_section_content_tree", widget: "text"}
+        - {label: "card button text", name: "card_button_text", widget: "string"}
 
-  - label: "Product_Detail_Page_Data"
+  - label: "Product Detail Page Data"
     name: "product_detail_page_data"
     folder: "src/_cms/product_detail_page"
     create: true
@@ -70,3 +187,58 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "product_detail_page_data"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
+        - label: "product detail header card"
+          name: "product_detail_header_card" 
+          widget: "object"
+          fields:
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card content", name: "card_content", widget: "text"}
+        - label: "Filter Media Products" 
+          name: "filter_media_products" 
+          widget: "object" 
+          fields:
+            - {label: "section title", name: "section_title", widget: "string"}
+            - label: "products list" 
+              name: "product_list" 
+              widget: "list" 
+              fields:
+              - {label: "product name", name: "product_name", widget: "string"}
+              - {label: "product description", name: "product_description", widget: "string"}
+              - {label: "product image", name: "product_image", widget: "image"}
+        - label: "Complementary Products" 
+          name: "complementaty_Products" 
+          widget: "object" 
+          fields:
+            - {label: "section title", name: "section_title", widget: "string"}
+            - label: "products list" 
+              name: "product_list" 
+              widget: "list" 
+              fields:
+              - {label: "product name", name: "product_name", widget: "string"}
+              - {label: "product description", name: "product_description", widget: "string"}
+              - {label: "product image", name: "product_image", widget: "image"}
+        - label: "Lab Filtration Equipment Products" 
+          name: "lab_filtration_equipment_products" 
+          widget: "object" 
+          fields:
+            - {label: "section title", name: "section_title", widget: "string"}
+            - label: "products list" 
+              name: "product_list" 
+              widget: "list" 
+              fields:
+              - {label: "product name", name: "product_name", widget: "string"}
+              - {label: "product description", name: "product_description", widget: "string"}
+              - {label: "product image", name: "product_image", widget: "image"}
+        - label: "Filer Presses And Housing Products" 
+          name: "filer_presses_and_housing_products" 
+          widget: "object" 
+          fields:
+            - {label: "section title", name: "section_title", widget: "string"}
+            - label: "products list" 
+              name: "product_list" 
+              widget: "list" 
+              fields:
+              - {label: "product name", name: "product_name", widget: "string"}
+              - {label: "product description", name: "product_description", widget: "string"}
+              - {label: "product image", name: "product_image", widget: "image"}
+
