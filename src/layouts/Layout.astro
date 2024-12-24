@@ -31,4 +31,41 @@ import { ClientRouter } from 'astro:transitions';
 		width: 100%;
 		background-color: var(--white);
 	}
+	
+	/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+	* {
+	  scrollbar-width: thin;
+	  scrollbar-color: #D4DAE1 #F3F4F6;
+	}
+
+	/* Chrome, Edge and Safari */
+	*::-webkit-scrollbar {
+	  height: 8px;
+	  width: 8px;
+	}
+	*::-webkit-scrollbar-track {
+	  border-radius: 5px;
+	  background-color: #F3F4F6;
+	}
+
+	*::-webkit-scrollbar-track:hover {
+	  background-color: #EAF0F8;
+	}
+
+	*::-webkit-scrollbar-track:active {
+	  background-color: #EAF0F8;
+	}
+
+	*::-webkit-scrollbar-thumb {
+	  border-radius: 10px;
+	  background-color: #D4DAE1;
+	}
+
+	*::-webkit-scrollbar-thumb:hover {
+	  background-color: #B5BAC0;
+	}
+
+	*::-webkit-scrollbar-thumb:active {
+	  background-color: #B5BAC0;
+	}
 </style>

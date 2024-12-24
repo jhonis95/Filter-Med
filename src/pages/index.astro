@@ -10,6 +10,7 @@ import bgContinerImg3 from '../assets/containerimg3.png'
 
 import groupImg from '../assets/group-pic.png'
 import HomeHeader from '../components/homeHeader.astro';
+import { Image } from 'astro:assets';
 
 
 const homePageData = await getCollection("home_page");
@@ -60,17 +61,16 @@ const productSectionData=[
 	 <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 		<div class=" bg-accent rounded flex justify-around items-center p-6 md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
 			<div class=" font-Jakarta sm:w-[467px] flex flex-col items-center gap-8">
-				<div class="flex flex-col gap-4">
-					<p class=" text-base sm:text-lg lg:text-[22px]">Como Trabalhamos</p>
-					<h3 class=" text-base sm:text-lg font-bold text-secondary lg:text-4xl">Nosso Processo</h3>
+				<div class="flex flex-col items-center xl:items-start gap-4 xl:w-full">
+					<p class=" text-base lg:text-[22px]">{homePageData[0].data.home_process_card.card_subtitle}</p>
+					<h3 class=" text-xl font-bold text-secondary lg:text-4xl">{homePageData[0].data.home_process_card.card_title}</h3>
 				</div>
-				<p class=" text-sm text-justify sm:text-base lg:text-lg sm:max-h-[167px]">Somos especializados no aconselhamento e fornecimento de sistemas de filtro de água, produtos de tratamento de água, filtração de processo, carcaças de filtro de água, cartuchos de filtro de microfiltração, filtração de partículas, sistemas de desinfecção ultravioleta (UV) e sistemas de osmose reversa.</p>
+				<p class=" text-sm text-justify sm:text-base lg:text-lg sm:max-h-[167px]">{homePageData[0].data.home_process_card.card_content}</p>
 				<div class=" m-auto">
-					<ContactBtn btnContent="Entre em contato" />
+					<ContactBtn btnContent={homePageData[0].data.home_process_card.card_button_text} />
 				</div>
 			</div>
-			<img class=" hidden rounded-lg w-[600px] xl:inline 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]" src={groupImg.src} alt="group image">
-			</div>
+			<img class=" hidden rounded-lg w-[600px] xl:inline 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]" src={homePageData[0].data.home_process_card.card_image} alt="group image">
 		</div>
 
 		<section class=" flex flex-col gap-7 items-center">

@@ -8,6 +8,7 @@ const home_page = defineCollection({
         title: z.string(),
         headertitle:z.string(),
         subtitle:z.string(),
+        background_image:z.string(),
         home_header_card:z.object({
             card_title:z.string(),
             card_subtitle:z.string(),
@@ -53,6 +54,7 @@ const product_page = defineCollection({
         title: z.string(),
         headertitle:z.string(),
         subtitle:z.string(),
+        background_image:z.string(),
         product_header_card:z.object({
             card_text:z.string(),
             card_button_text:z.string()
@@ -79,6 +81,7 @@ const service_page = defineCollection({
         title: z.string(),
         headertitle:z.string(),
         subtitle:z.string(),
+        background_image:z.string(),
         main_content:z.string(),
         main_image:z.string(),
         section_title:z.string(),
@@ -99,6 +102,7 @@ const about_page = defineCollection({
         title: z.string(),
         headertitle:z.string(),
         subtitle:z.string(),
+        background_image:z.string(),
         first_section:z.object({
             first_section_title:z.string(),
             first_section_content_one:z.string(),
@@ -128,6 +132,7 @@ const product_detail_page = defineCollection({
         title: z.string(),
         headertitle:z.string(),
         subtitle:z.string(),
+        background_image:z.string(),
         product_detail_header_card:z.object({
             card_title:z.string(),
             card_content:z.string(),
