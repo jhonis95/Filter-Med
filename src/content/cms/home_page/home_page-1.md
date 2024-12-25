@@ -4,6 +4,7 @@ headertitle: Filter Med é especializada em filtos para resíduos
 subtitle: Fornecemos assistência técnica especializada e soluções de filtragem
   para ajudar sua aplicação a ter um desempenho ideal e fornecer a vantagem
   necessária em seu setor.
+background_image: src/assets/bg-img-home-pg.png
 home_header_card:
   card_title: Precisa de ajuda de um profissional?
   card_subtitle: "Encontre flexibilidade para fazer negócios "
@@ -35,21 +36,19 @@ home_service_cards:
 second_section_title: Produtos
 second_section_subtitle: filtros de placas e lenticulares
 home_product_division:
-  home_product_division_title: Produtos
   home_product_division_types:
-    - home_product_division_types: Filter Media
-    - home_product_division_types: Produtos Complementares
-    - home_product_division_types: Filter Presses and Housings
-    - home_product_division_types: Equipamentos de Filtragem Laboratórial
+    type1: "> Filter Media"
+    type2: "> Produtos Complementares"
+    type3: "> Filter Presses and Housings"
+    type4: "> Equipamentos de Filtragem Laboratórial"
+  home_product_division_title: Produtos
 home_product_cards:
   - product_card_name: Filter Media
-    product_card_content: Contrary to popular belief, Lorem Ipsum is not simply
-      random text. It has roots in a piece of classical Latin literature from 45
-      BC, making it over 2000 years old. Richard McClintock, a Latin professor
-      at Hampden-Sydney College in Virginia, looked up one of the more obscure
-      Latin words, consectetur, from a Lorem Ipsum passage, and going through
-      the cites of the word in classical literature, discovered the undoubtable
-      source.
+    product_card_content: Our company offers a wide range of filter media product
+      lines that are designed to meet the needs of various industries and
+      applications. This is the overview of our filter media product lines,
+      comprising filter sheets and filter modules, which are each designed for
+      different requirement levels and areas of applications.
     product_card_image: https://www.filtrox.com/wp-content/uploads/3d-flip-book/auto-thumbnails/52337.png
   - product_card_name: Filter Press and Hoisings
     product_card_content: This are the Filter presses, Filter housings for
@@ -67,7 +66,14 @@ home_product_cards:
       among these three types of filtration technology that can meet your needs.
     product_card_image: https://www.filtrox.com/wp-content/uploads/2023/04/Novox_ST_500x404.jpg
   - product_card_name: Equipamentos de Filtragem Laboratorial
-    product_card_content: Need to add
+    product_card_content: >-
+      oferecemos uma variedade de equipamentos de filtração laboratorial
+      projetados para auxiliar no desenvolvimento de processos e na seleção de
+      soluções de filtração adequadas. Esses produtos incluem kits de teste,
+      filtros centrífugos e cápsulas de filtração, cada um com funcionalidades
+      específicas para atender a diversas necessidades laboratoriais.
+
+      Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
     product_card_image: https://www.filtrox.com/wp-content/uploads/2023/03/DSC02797_freigestellt_web.jpg
   - product_card_name: Produtos Complementares
     product_card_content: When it comes to depth filtration, there are several

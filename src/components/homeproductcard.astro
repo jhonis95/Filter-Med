@@ -7,13 +7,13 @@ const componentData=Astro.props
         <div class=" absolute w-[279px] h-[329px] top-9 left-[-150px]">
             <img
                 class="rounded-2xl w-full h-full" 
-                src={componentData.componentData.img}
+                src={componentData.componentData.product_card_image}
                 alt=""
             >
         </div>
         <div class=" relative left-[170px] top-9 w-[277px] max-h-[350px] overflow-y-scroll no-scrollbar ">
-            <h5 class=" text-white font-bold text-[32px]">{componentData.componentData.title}</h5>
-            <h6 class=" text-white font-bold text-base text-justify">{componentData.componentData.content}</h6>
+            <h5 class=" text-white font-bold text-[32px]">{componentData.componentData.product_card_name}</h5>
+            <h6 class=" text-white font-bold text-base text-justify">{componentData.componentData.product_card_content}</h6>
         </div>
     </div>
 </div>

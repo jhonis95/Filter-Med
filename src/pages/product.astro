@@ -1,73 +1,46 @@
 ---
 import Header from "../components/header.astro";
 import Layout from "../layouts/Layout.astro";
-import BackgroundImg from "../assets/product-img-bg.png"
 import ContactBtn from "../components/contactBtn.astro"
-
-import productContainerImg from '../assets/productpg-card-pic.jpg'
 import ProductSectionCard from "../components/productSectionCard.astro";
 
-const productPgData={
-	productSectionCard:[
-		{
-			title:'Filter Media',
-			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
-			img:'',
-			pgLink:'/product_detail/filter_media'
-		},
-		{
-			title:'Produtos Complementares',
-			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
-			img:'',
-			pgLink:'/product_detail/produtos_complementares'
-		},
-		{
-			title:'Equipamentos de Filtragem Laboratórial',
-			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
-			img:'',
-			pgLink:'/product_detail/equipamentos_de_filtragem_laboratórial'
-		},
-		{
-			title:'Filter Presses and Housings',
-			description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.',
-			img:'',
-			pgLink:'/product_detail/filter_presses_and_housings'
-		},
-	]
-}
+import { getCollection } from 'astro:content';
+
+const productPageData = await getCollection("product_page");
+
 ---
 
 <Layout>
     <Header 
-        title="Nossos Produtos" 
-        subTitle="Opções e especificações tecnológicas para cartuchos de reposição de alta qualidade" 
-        background={BackgroundImg}
+        title={productPageData[0].data.headertitle} 
+        subTitle={productPageData[0].data.subtitle} 
+        background={productPageData[0].data.background_image}
     />
 
 	<div class=" flex justify-center items-center h-[171px] xl:mt-8">
 		<div class=" flex flex-col items-center justify-around bg-primary w-full mx-3 rounded-lg md:w-4/5 h-[71px] md:h-[100px] md:rounded-3xl xl:h-[173px] 2xl:w-[1435px]">
 			<div class=" w-fit">
-				<h5 class="font-Jakarta font-bold text-white w-fit text-center text-base md:text-2xl xl:text-4xl">Veja nossos produtos e entre em contato conosco</h5>
+				<h5 class="font-Jakarta font-bold text-white w-fit text-center text-base md:text-2xl xl:text-4xl">{productPageData[0].data.product_header_card.card_text}</h5>
 			</div>
 			<div class=" sm:bottom-[-20px] lg:bottom-[-20px] left-16">
-				<ContactBtn btnContent="Entre em contato"/>
+				<ContactBtn btnContent={productPageData[0].data.product_header_card.card_button_text}/>
 			</div>
 		</div>
 	</div>
     <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 
 		<section class=" flex flex-col gap-7 w-full text-primary">
-			<h3 class=" font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl font-bold">Produtos em Diferentes Linhas</h3>
-			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[259px]">filtros de placas e lenticulares</p>
+			<h3 class=" font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl font-bold">{productPageData[0].data.section_title}</h3>
+			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[259px]">{productPageData[0].data.first_subtitle}</p>
 			<div class=" flex flex-wrap justify-center gap-8 px-5">
 				{
-					productPgData.productSectionCard.map((cardData)=>{
+					productPageData[0].data.product_section_card.map((cardData)=>{
 						return (
 							<ProductSectionCard
-								title={cardData.title}
-								description={cardData.description}
+								title={cardData.card_title}
+								description={cardData.card_content}
 								img=""
-								pgLink={cardData.pgLink}
+								pgLink={cardData.card_link}
 							/>
 						)
 					})
@@ -76,21 +49,21 @@ const productPgData={
 		</section>
 
 		<section class=" flex flex-col gap-7 w-full text-primary">
-			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[556px]">filtros para filtração chorume ou aterro sanitário</p>
+			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[556px]">{productPageData[0].data.second_subtitle}</p>
 		</section>
 
 		<div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
 			<div class=" z-10 font-Jakarta sm:w-[267px] xl:w-[467px] flex flex-col items-center gap-8 mb-5 md:mb-0">
 				<div class="flex flex-col gap-4">
-					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">Fazemos os contêiner com os químicos perfeitos para cada tipo de caso em que sua empresa necessita</h3>
+					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">{productPageData[0].data.product_service_card.card_content}</h3>
 				</div>
 				<div class=" m-auto">
 					<button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
-						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">entre em contato</a>
+						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">{productPageData[0].data.product_service_card.card_button_text}</a>
 					</button>
 				</div>
 			</div>
-			<img class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productContainerImg.src} alt="group image">
+			<img class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productPageData[0].data.product_service_card.card_image} alt="group image">
 		</div>
 	
 	 </main>

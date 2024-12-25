@@ -37,9 +37,12 @@ const home_page = defineCollection({
         second_section_subtitle:z.string(),
         home_product_division:z.object({
             home_product_division_title:z.string(),
-            home_product_division_types:z.array(z.object({
-                home_product_division_types:z.string()
-            }))
+            home_product_division_types:z.object({
+                type1:z.string(),
+                type2:z.string(),
+                type3:z.string(),
+                type4:z.string()
+            })
         }),
         home_product_cards:z.array(z.object({
             product_card_name:z.string(),
@@ -133,11 +136,11 @@ const product_detail_page = defineCollection({
         headertitle:z.string(),
         subtitle:z.string(),
         background_image:z.string(),
-        product_detail_header_card:z.object({
-            card_title:z.string(),
-            card_content:z.string(),
-        }),
         filter_media_products:z.object({
+            product_detail_header_card:z.object({
+                card_title:z.string(),
+                card_content:z.string(),
+            }),
             section_title:z.string(),
             product_list:z.array(z.object({
                 product_name:z.string(),
@@ -146,6 +149,10 @@ const product_detail_page = defineCollection({
             }))
         }),
         complementaty_products:z.object({
+            product_detail_header_card:z.object({
+                card_title:z.string(),
+                card_content:z.string(),
+            }),
             section_title:z.string(),
             product_list:z.array(z.object({
                 product_name:z.string(),
@@ -154,6 +161,10 @@ const product_detail_page = defineCollection({
             }))
         }),
         lab_filtration_equipment_products:z.object({
+            product_detail_header_card:z.object({
+                card_title:z.string(),
+                card_content:z.string(),
+            }),
             section_title:z.string(),
             product_list:z.array(z.object({
                 product_name:z.string(),
@@ -162,6 +173,10 @@ const product_detail_page = defineCollection({
             }))
         }),
         filer_presses_and_housing_products:z.object({
+            product_detail_header_card:z.object({
+                card_title:z.string(),
+                card_content:z.string(),
+            }),
             section_title:z.string(),
             product_list:z.array(z.object({
                 product_name:z.string(),

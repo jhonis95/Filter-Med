@@ -1,60 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Homeproductcard from '../components/homeproductcard.astro';
-import ContactBtn from '../components/contactBtn.astro';
 import { getCollection } from 'astro:content';
 
-import bgContinerImg1 from '../assets/containerimg1.png'
-import bgContinerImg2 from '../assets/containerimg2.png'
-import bgContinerImg3 from '../assets/containerimg3.png'
-
-import groupImg from '../assets/group-pic.png'
+import ContactBtn from '../components/contactBtn.astro';
+import Layout from '../layouts/Layout.astro';
+import Homeproductcard from '../components/homeproductcard.astro';
 import HomeHeader from '../components/homeHeader.astro';
-import { Image } from 'astro:assets';
 
 
 const homePageData = await getCollection("home_page");
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-
-const containerImgData=[
-	{
-		img:bgContinerImg1,
-		content:'Container prontos para o serviço'
-	},
-	{
-		img:bgContinerImg2,
-		content:'Produtos de alta quilidade'
-	},
-	{
-		img:bgContinerImg3,
-		content:'Calibrados e ajustados sobre medida'
-	},
-]
-
-const productSectionData=[
-	{
-		img:'',
-		title:'Filter Media',
-		content:'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
-	},
-	{
-		img:'',
-		title:'Filter Press and Hoisings',
-		content:'This are the Filter presses, Filter housings for lenticular modules, and Filter housings for filter cartridges from our product portfolio – three critical components of many industrial production processes. Filter presses utilize a series of plates and frames to remove solids from liquids. Filter housings for filter modules, can accommodate a stack of lenticular filter modules, allowing for efficient and effective filtration while minimizing the risk of contamination. And finally, filter housings for filter cartridges are widely used in a variety of applications. These housings provide a convenient and cost-effective way to maintain high levels of filtration performance. Whether you’re looking to perform a alluvial or a depth filtration to remove unwanted solids or impurities from your liquid, there is a solution among these three types of filtration technology that can meet your needs.'
-	},
-	{
-		img:'',
-		title:'Equipamentos de Filtragem Laboratorial',
-		content:''
-	},
-	{
-		img:'',
-		title:'Produtos Complementares',
-		content:'When it comes to depth filtration, there are several complementary products that can help you to enhance the process and achieve better results. In addition to our filter media and filter apparatus, we also offer support sheets for precoat filtration, filter cartridges and filter aids (diatomaceous earth) in our range.'
-	},
-]
 ---
 <Layout>
 	 <HomeHeader/>
@@ -74,17 +28,17 @@ const productSectionData=[
 		</div>
 
 		<section class=" flex flex-col gap-7 items-center">
-			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Serviços</h3>
-			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">containers com filtros para filtração chorume ou aterro sanitário</p>
+			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{homePageData[0].data.first_section_title}</h3>
+			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">{homePageData[0].data.first_section_subtitle}</p>
 		</section>
 		
 		<section class="w-full flex flex-wrap gap-6 justify-center">
 			{
-				containerImgData.map((container)=>{
+				homePageData[0].data.home_service_cards.map((data)=>{
 					return(
 						<div class={`relative flex flex-col items-center w-[298px] h-[263px] xl:w-[531px] xl:h-[468px]`}>
-							<img class=" absolute w-full h-full object-cover rounded-xl xl:rounded-[20px]" src={container.img.src} alt="bg-img"/>
-							<h5 class=" text-center text-white font-Jakarta font-bold z-10 text-lg sm:text-2xl top-[190px] xl:top-[353px] xl:w-[447px] xl:text-[32px] absolute">{container.content}</h5>
+							<img class=" absolute w-full h-full object-cover rounded-xl xl:rounded-[20px]" src={data.service_image} alt="bg-img"/>
+							<h5 class=" text-center text-white font-Jakarta font-bold z-10 text-lg sm:text-2xl top-[190px] xl:top-[353px] xl:w-[447px] xl:text-[32px] absolute">{data.service_name}</h5>
 						</div>
 					)
 				})
@@ -92,29 +46,29 @@ const productSectionData=[
 		</section>
 
 		<section class=" flex flex-col gap-7 items-center">
-			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">Produtos</h3>
-			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">filtros de placas e lenticulares</p>
+			<h3 class=" text-secondary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{homePageData[0].data.second_section_title}</h3>
+			<p class="font-Jakarta text-center sm:text-lg md:text-2xl xl:text-[32px] font-bold min-w-[296px]">{homePageData[0].data.second_section_subtitle}</p>
 		</section>
 
 		<section class=" w-full h-fit xl:h-[222px] bg-accent flex items-center py-5 xl:py-0 justify-center xl:justify-evenly">
 			<div>
-				<h3 class=" hidden font-Jakarta xl:inline md:text-5xl text-primary">Produtos</h3>
+				<h3 class=" hidden font-Jakarta xl:inline md:text-5xl text-primary">{homePageData[0].data.home_product_division.home_product_division_title}</h3>
 			</div>
 			<div class="flex flex-wrap justify-start text-base md:text-[28px] max-[951px]:w-2/3 min-[952px]:mx-3 gap-9 xl:gap-[103px]">
 				<div class=" flex flex-col gap-9">
-					<h5 class="font-Jakarta text-primary"> > Filter Media</h5>
-					<h5 class="font-Jakarta text-primary"> > Produtos Complementares</h5>
+					<h5 class="font-Jakarta text-primary">{homePageData[0].data.home_product_division.home_product_division_types.type1}</h5>
+					<h5 class="font-Jakarta text-primary">{homePageData[0].data.home_product_division.home_product_division_types.type2}</h5>
 				</div>
 				<div class=" flex flex-col gap-9">
-					<h5 class="font-Jakarta text-primary"> > Filter Presses and Housings</h5>
-					<h5 class="font-Jakarta text-primary"> > Equipamentos de Filtragem Laboratórial</h5>
+					<h5 class="font-Jakarta text-primary">{homePageData[0].data.home_product_division.home_product_division_types.type3}</h5>
+					<h5 class="font-Jakarta text-primary">{homePageData[0].data.home_product_division.home_product_division_types.type4}</h5>
 				</div>
 			</div>
 		</section>
 		
 		<section class=" hidden 2xl:flex flex-wrap h-[909px] w-[1305px] justify-end gap-y-28 gap-x-52">
 			{
-				productSectionData.map((data)=>{
+				homePageData[0].data.home_product_cards.map((data)=>{
 					return <Homeproductcard componentData={data}/>
 				})
 			}

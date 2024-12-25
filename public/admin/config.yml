@@ -67,9 +67,12 @@ collections:
             - {label: "home product division title", name: "home_product_division_title", widget: "string"}
             - label: "home product division types"
               name: "home_product_division_types" 
-              widget: "list"
+              widget: "object"
               fields:
-              - {label: "home product division types", name: "home_product_division_types", widget: "string"}
+              - {label: "home product division types", name: "type1", widget: "string"}
+              - {label: "home product division types", name: "type2", widget: "string"}
+              - {label: "home product division types", name: "type3", widget: "string"}
+              - {label: "home product division types", name: "type4", widget: "string"}
         - label: "home product cards"
           name: "home_product_cards" 
           widget: "list"
@@ -192,16 +195,16 @@ collections:
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
         - {label: "background image", name: "background_image", widget: "image"}
-        - label: "product detail header card"
-          name: "product_detail_header_card" 
-          widget: "object"
-          fields:
-            - {label: "card title", name: "card_title", widget: "string"}
-            - {label: "card content", name: "card_content", widget: "text"}
         - label: "Filter Media Products" 
           name: "filter_media_products" 
           widget: "object" 
           fields:
+            - label: "product detail header card"
+              name: "product_detail_header_card" 
+              widget: "object"
+              fields:
+                - {label: "card title", name: "card_title", widget: "string"}
+                - {label: "card content", name: "card_content", widget: "text"}
             - {label: "section title", name: "section_title", widget: "string"}
             - label: "products list" 
               name: "product_list" 
@@ -214,6 +217,12 @@ collections:
           name: "complementaty_products" 
           widget: "object" 
           fields:
+            - label: "product detail header card"
+              name: "product_detail_header_card" 
+              widget: "object"
+              fields:
+                - {label: "card title", name: "card_title", widget: "string"}
+                - {label: "card content", name: "card_content", widget: "text"}
             - {label: "section title", name: "section_title", widget: "string"}
             - label: "products list" 
               name: "product_list" 
@@ -226,6 +235,12 @@ collections:
           name: "lab_filtration_equipment_products" 
           widget: "object" 
           fields:
+            - label: "product detail header card"
+                name: "product_detail_header_card" 
+                widget: "object"
+                fields:
+                  - {label: "card title", name: "card_title", widget: "string"}
+                  - {label: "card content", name: "card_content", widget: "text"}
             - {label: "section title", name: "section_title", widget: "string"}
             - label: "products list" 
               name: "product_list" 
@@ -238,6 +253,12 @@ collections:
           name: "filer_presses_and_housing_products" 
           widget: "object" 
           fields:
+            - label: "product detail header card"
+              name: "product_detail_header_card" 
+              widget: "object"
+              fields:
+                - {label: "card title", name: "card_title", widget: "string"}
+                - {label: "card content", name: "card_content", widget: "text"}
             - {label: "section title", name: "section_title", widget: "string"}
             - label: "products list" 
               name: "product_list" 

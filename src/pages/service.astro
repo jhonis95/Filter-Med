@@ -1,55 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header.astro";
-import BackgroundImg from "../assets/service-img-bg.png"
 
-import productContainerImg from '../assets/productpg-card-pic.jpg'
-import productImg from '../assets/containerimg2.png'
+import { getCollection } from 'astro:content';
 
-const serviceCards=[
-	{
-		title:'Análise Detalhada',
-		content:'Começamos por compreender as particularidades do seu projeto. A nossa equipa técnica realiza uma análise detalhada do aterro sanitário, considerando fatores como volume de resíduos líquidos, composição do chorume e as regulamentações locais.'
-	},
-	{
-		title:'Planeamento de Soluções Sob Medida',
-		content:'Com base nos dados recolhidos, desenvolvemos uma estratégia otimizada para a gestão do chorume e outros resíduos líquidos. O contentor é projetado e montado de acordo com os requisitos específicos, garantindo o desempenho ideal para o seu projeto.'
-	},
-	{
-		title:'Entrega e Instalação',
-		content:'Após o planeamento, fabricamos o contentor personalizado e efetuamos a sua instalação no local, com todo o suporte necessário para que o sistema comece a operar com eficiência.'
-	},
-	{
-		title:'Apoio Técnico e Manutenção',
-		content:'Além de projetar e instalar os contentores, oferecemos suporte contínuo para garantir que o sistema funcione da melhor forma possível. Também disponibilizamos serviços de manutenção para prolongar a durabilidade e eficiência dos equipamentos.'
-	}
-]
-
+const servicePageData = await getCollection("service_page");
 ---
 <Layout>
     <Header 
-        title="Container com filtros para filtração chorume ou aterro sanitário" 
-        subTitle="Fazemos sobre medida para sua empresa" 
-        background={BackgroundImg}
+        title={servicePageData[0].data.headertitle} 
+        subTitle={servicePageData[0].data.subtitle} 
+        background={servicePageData[0].data.background_image}
     />
     <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 
         <div class=" rounded flex flex-col-reverse gap-4 items-end w-[272px] mt-10 sm:w-[400px] md:w-fit md:gap-10 md:flex-row md:mx-5 md:mt-0 md:items-center lg:gap-20">
 			<div class=" z-10 font-Jakarta md:w-[467px] xl:w-[700px] flex flex-col items-center gap-8 md:mb-0">
-                <h3 class=" text-xs text-black text-justify sm:text-lg font-bold xl:text-3xl 2xl:text-4xl">Na Filter Med, oferecemos soluções sob medida para o tratamento de resíduos líquidos em aterros sanitários, com destaque para contentores equipados com sistemas de filtragem avançados. Cada projeto é cuidadosamente planejado para atender às necessidades específicas de cada cliente, garantindo eficiência, segurança e conformidade ambiental.</h3>
+                <h3 class=" text-xs text-black text-justify sm:text-lg font-bold xl:text-3xl 2xl:text-4xl">{servicePageData[0].data.main_content}</h3>
             </div>
-			<img class=" rounded-lg w-full h-full md:w-[304px] md:h-[254px] md:relative xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[617px] 2xl:h-[432px] 2xl:rounded-[20px]" src={productImg.src} alt="group image">
+			<img class=" rounded-lg w-full h-full md:w-[304px] md:h-[254px] md:relative xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[617px] 2xl:h-[432px] 2xl:rounded-[20px]" src={servicePageData[0].data.main_image} alt="group image">
 		</div>
         
-        <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">O nosso processo é totalmente personalizado</h3>
+        <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">{servicePageData[0].data.section_title}</h3>
 		
 		<div class="flex flex-wrap justify-center gap-8 px-5">
 			{
-				serviceCards.map((data)=>{
+				servicePageData[0].data.service_card.map((data)=>{
 					return(
 						<div class="bg-accent w-[285px] h-[342px] font-Jakarta font-bold flex flex-col items-center gap-3 rounded-lg min-[940px]:w-[391px] min-[940px]:h-[503px]">
-							<h1 class="text-xl flex flex-col justify-center text-center items-center text-secondary w-[221px] h-[80px] min-[940px]:text-[32px] min-[940px]:w-[370px] min-[940px]:h-[80px]">{data.title}</h1>
-							<p class="font-bold font-Jakarta text-base text-justify mx-4 min-[940px]:text-2xl">{data.content}</p>
+							<h1 class="text-xl flex flex-col justify-center text-center items-center text-secondary w-[221px] h-[80px] min-[940px]:text-[32px] min-[940px]:w-[370px] min-[940px]:h-[80px]">{data.card_title}</h1>
+							<p class="font-bold font-Jakarta text-base text-justify mx-4 min-[940px]:text-2xl">{data.card_content}</p>
 						</div>
 					)
 				})
@@ -59,15 +39,15 @@ const serviceCards=[
         <div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
 			<div class=" z-10 font-Jakarta sm:w-[267px] xl:w-[467px] flex flex-col items-center gap-8 mb-5 md:mb-0">
 				<div class="flex flex-col gap-4">
-					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">Fazemos os contêiner com os químicos perfeitos para cada tipo de caso em que sua empresa necessita</h3>
+					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">{servicePageData[0].data.product_service_card.card_content}</h3>
 				</div>
 				<div class=" m-auto">
 					<button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
-						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">entre em contato</a>
+						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">{servicePageData[0].data.product_service_card.card_button_text}</a>
 					</button>
 				</div>
 			</div>
-			<img class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productContainerImg.src} alt="group image">
+			<img class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={servicePageData[0].data.product_service_card.card_image} alt="group image">
 		</div>
     </main>
 </div>
