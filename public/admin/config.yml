@@ -194,7 +194,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "product_detail_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image"}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "", public_folder: ""}
         - label: "Filter Media Products" 
           name: "filter_media_products" 
           widget: "object" 
@@ -208,11 +208,11 @@ collections:
             - {label: "section title", name: "section_title", widget: "string"}
             - label: "products list" 
               name: "product_list" 
-              widget: "list" 
+              widget: "list"
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "filter_media", public_folder: "filter_media"}
         - label: "Complementary Products" 
           name: "complementaty_products" 
           widget: "object" 
@@ -230,17 +230,17 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "complementary_products", public_folder: "complementary_products"}
         - label: "Lab Filtration Equipment Products" 
           name: "lab_filtration_equipment_products" 
           widget: "object" 
           fields:
             - label: "product detail header card"
-                name: "product_detail_header_card" 
-                widget: "object"
-                fields:
-                  - {label: "card title", name: "card_title", widget: "string"}
-                  - {label: "card content", name: "card_content", widget: "text"}
+              name: "product_detail_header_card" 
+              widget: "object"
+              fields:
+                - {label: "card title", name: "card_title", widget: "string"}
+                - {label: "card content", name: "card_content", widget: "text"}
             - {label: "section title", name: "section_title", widget: "string"}
             - label: "products list" 
               name: "product_list" 
@@ -248,7 +248,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "lab_filtration_equipment", public_folder: "lab_filtration_equipment"}
         - label: "Filer Presses And Housing Products" 
           name: "filer_presses_and_housing_products" 
           widget: "object" 
@@ -266,7 +266,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "filter_presses_and_housings", public_folder: "filter_presses_and_housings"}
         - label: "product detail card"
           name: "product_detail_card" 
           widget: "object"
@@ -275,3 +275,77 @@ collections:
             - {label: "card subtitle", name: "card_subtitle", widget: "string"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
 
+  - label: "navigation bar"
+    name: "navigation_bar"
+    folder: "src/content/cms/navigation_bar"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+      - {label: "title", name: "title", widget: "hidden", default: "navigation_bar"}
+      - label: "logo container"
+        name: "logo_container"
+        widget: "object"
+        fields:
+          - {label: "text", name: "text", widget: "string"}
+          - {label: "logo", name: "logo", widget: "image"}
+      - label: "navigation"
+        name: "navigation"
+        widget: "list"
+        fields:
+          - label: "navigation text"
+            name: "navigation_text"
+            widget: "object"
+            fields:
+              - {label: "text", name: "text", widget: "string"}
+              - {label: "link", name: "link", widget: "string"}
+
+  - label: "footer bar"
+    name: "footer_bar"
+    folder: "src/content/cms/footer"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+      - {label: "title", name: "title", widget: "hidden", default: "footer_bar"}
+      - label: "footer social media"
+        name: "footer_social_media"
+        widget: "object"
+        fields:
+          - {label: "text", name: "text", widget: "string"}
+          - label: "social media list"
+            name: "social_media_list"
+            widget: "list"
+            fields:
+              - label: "social media"
+                name: "social_media"
+                widget: "object"
+                fields:
+                  - {label: "social media image", name: "social_media_image", widget: "image"}
+                  - {label: "link", name: "link", widget: "string"}
+      - label: "footer navigation"
+        name: "footer_navigation"
+        widget: "object"
+        fields:
+          - {label: "name", name: "name", widget: "string"}
+          - label: "navigation"
+            name: "navigation"
+            widget: "list"
+            fields:
+            - label: "navigation text"
+              name: "navigation_text"
+              widget: "object"
+              fields:
+                - {label: "text", name: "text", widget: "string"}
+                - {label: "link", name: "link", widget: "string"}
+      - label: "footer address"
+        name: "footer_address"
+        widget: "object"
+        fields:
+          - {label: "title", name: "title", widget: "string"}
+          - {label: "address", name: "address", widget: "string"}
+          - {label: "phone", name: "phone", widget: "string"}
+          - {label: "phone number", name: "phone_number", widget: "string"}
+      - label: "copyright"
+        name: "copyright"
+        widget: "string"
