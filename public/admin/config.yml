@@ -213,7 +213,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "filter_media", public_folder: "filter_media"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/filter_media", public_folder: "../../../../src/content/cms/product_detail/filter_media"}
         - label: "Complementary Products" 
           name: "complementaty_products" 
           widget: "object" 
@@ -231,7 +231,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "complementary_products", public_folder: "complementary_products"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/complementary_products", public_folder: "../../../../src/content/cms/product_detail/complementary_products"}
         - label: "Lab Filtration Equipment Products" 
           name: "lab_filtration_equipment_products" 
           widget: "object" 
@@ -249,7 +249,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "lab_filtration_equipment", public_folder: "lab_filtration_equipment"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/lab_filtration_equipment", public_folder: "../../../../src/content/cms/product_detail/lab_filtration_equipment"}
         - label: "Filer Presses And Housing Products" 
           name: "filer_presses_and_housing_products" 
           widget: "object" 
@@ -267,7 +267,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "filter_presses_and_housings", public_folder: "filter_presses_and_housings"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/filter_presses_and_housings", public_folder: "../../../../src/content/cms/product_detail/filter_presses_and_housings"}
         - label: "product detail card"
           name: "product_detail_card" 
           widget: "object"

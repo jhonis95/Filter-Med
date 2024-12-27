@@ -24,92 +24,8 @@ export async function getStaticPaths() {
           description:productDetailPage[0].data.filter_media_products.product_detail_header_card.card_content
         },
         backgroundImg:productDetailPage[0].data.background_image,
-        products:[
-            {
-              name:[
-                {
-                  title:'VERSAFIX',
-                  subtitle:'(filter sheets)'
-                },
-                {
-                  title:'VERSADISC',
-                  subtitle:'(filter modules)'
-                }
-              ],
-              image:'',
-              description:'Standard depth filter sheets for the removal of particles from liquids to suit a wide range of applications. The pore size rating is from coarse to fine filtration, achieving a bright clear liquid.'
-            },
-            {
-              name:[
-                {
-                  title:'FIBRAFIX',
-                  subtitle:'(filter sheets)'
-                },
-                {
-                  title:'FIBRADISC',
-                  subtitle:'(filter modules)'
-                }
-              ],
-              image:'',
-              description:'High quality depth filter sheets manufactured under controlled conditions. Widely used in the food and beverage industry as well as many other applications. '
-            },
-            {
-              name:[
-                {
-                  title:'PURAFIX',
-                  subtitle:'(filter sheets)'
-                },
-                {
-                  title:'PURADISC',
-                  subtitle:'(filter modules)'
-                },
-                {
-                  title:'PURADISC BIO SD',
-                  subtitle:'(single-use modules)'
-                }
-              ],
-              image:'',
-              description:'High quality depth filter sheets manufactured under controlled conditions. Widely used in the food and beverage industry as well as many other applications. '
-            },
-            {
-              name:[
-                {
-                  title:'SUPERSORB',
-                  subtitle:'(filter pads, envelopes)'
-                }
-              ],
-              image:'',
-              description:'This product range is specifically developed for frying oil filtration in the food service. Using SuperSorb filter pads the frying oil is cleaner after filtration and therefore lasts longer.'
-            },
-            {
-              name:[
-                {
-                  title:'LIBRASORB',
-                  subtitle:'(filter sheets)'
-                },
-                {
-                  title:'LIBRADISC',
-                  subtitle:'(filter modules)'
-                }
-              ],
-              image:'',
-              description:'This product range is specifically developed for frying oil filtration in the food service. Using SuperSorb filter pads the frying oil is cleaner after filtration and therefore lasts longer.'
-            },
-            {
-              name:[
-                {
-                  title:'ACTIVASORB',
-                  subtitle:'(filter sheets)'
-                },
-                {
-                  title:'ACTIVADISC',
-                  subtitle:'(filter modules)'
-                }
-              ],
-              image:'',
-              description:'This product range is specifically developed for frying oil filtration in the food service. Using SuperSorb filter pads the frying oil is cleaner after filtration and therefore lasts longer.'
-            },
-        ]
+        products: productDetailPage[0].data.filter_media_products.product_list,
+        pagecard: productDetailPage[0].data.product_detail_card
       }
     },
     {
@@ -122,46 +38,9 @@ export async function getStaticPaths() {
           title:productDetailPage[0].data.complementaty_products.product_detail_header_card.card_title,
           description:productDetailPage[0].data.complementaty_products.product_detail_header_card.card_content
         },
-        products:[
-          {
-            name:[
-              {
-                title:'DUROFIL',
-                subtitle:'(support sheets)'
-              },
-            ],
-            image:'',
-            description:'FILTROX designed the support sheet DUROFIL® specifically to meet the challenges of pre-coat filtration in the food and beverage industry. Due to its unique strength the sheets withstand even highest forces over an extensive period of time.'
-          },
-          {
-            name:[
-              {
-                title:'DUROFIL',
-                subtitle:'(support sheets)'
-              },
-              {
-                title:'CLAROX PL and PL/NR',
-                subtitle:'(filter cartridges)'
-              },
-              {
-                title:'CLAROX MP/W Membrane',
-                subtitle:'(filter cartridges)'
-              }
-            ],
-            image:'',
-            description:'Filter cartridges PL and PL/NR are made in polypropylene (PP). The filter medium is installed in the filter cartridges in large pleated form. '
-          },
-          {
-            name:[
-              {
-                title:'CELPURE',
-                subtitle:'(filter aids)'
-              }
-            ],
-            image:'',
-            description:'CELPURE is made with diatomaceous earth, who is fossilized remains of hard shelled algae. It is the ideal choice when developing new high purity processes with diatomite filter aid.'
-          },
-        ]
+        backgroundImg:productDetailPage[0].data.background_image,
+        products: productDetailPage[0].data.complementaty_products.product_list,
+        pagecard: productDetailPage[0].data.product_detail_card
       }
     },
     {
@@ -169,77 +48,14 @@ export async function getStaticPaths() {
         product_section: 'equipamentos_de_filtragem_laboratórial',
       },
       props:{
-        title:'Equipamentos de Filtragem Laboratórial',
+        title:productDetailPage[0].data.lab_filtration_equipment_products.section_title,
         card:{
-          title:'',
-          description:''
+          title:productDetailPage[0].data.lab_filtration_equipment_products.product_detail_header_card.card_title,
+          description:productDetailPage[0].data.lab_filtration_equipment_products.product_detail_header_card.card_content
         },
-        products:[
-            {
-              name:[
-                {
-                  title:'SCALE-UP',
-                  subtitle:'(test kit)'
-                },
-                {
-                  title:'PURASPIN',
-                  subtitle:'(test kit)'
-                },
-                {
-                  title:'ACTIVASORB',
-                  subtitle:'(test kit)'
-                },
-                {
-                  title:'LIBRASORB TX and MX',
-                  subtitle:'(test kit for wine)'
-                }
-              ],
-              image:'',
-              description:''
-            },
-            {
-              name:[
-                {
-                  title:'PURASPIN',
-                  subtitle:'(centrifuge filter)'
-                }
-              ],
-              image:'',
-              description:'PURASPIN® enables you to quickly and efficiently test different depth filters or quickly purify a small amount of liquid. To do so, insert the filters into the standard 50 mL centrifuge tubes (Labcon® SuperClear® 50 mL tubes). Then, filter the liquid using a centrifuge or vacuum.'
-            },
-            {
-              name:[
-                {
-                  title:'PURACAP 2',
-                  subtitle:'(capsules)'
-                },
-                {
-                  title:'PURACAP BIO SD 2',
-                  subtitle:'(capsules)'
-                },
-                {
-                  title:'PURACAP BIO SD 5',
-                  subtitle:'(capsules)'
-                }
-              ],
-              image:'',
-              description:''
-            },
-            {
-              name:[
-                {
-                  title:'LABTROX 60A',
-                  subtitle:'(lab filters)'
-                },
-                {
-                  title:'LABTROX 60B',
-                  subtitle:'(lab filters)'
-                },
-              ],
-              image:'',
-              description:''
-            },
-        ]
+        backgroundImg:productDetailPage[0].data.background_image,
+        products:productDetailPage[0].data.lab_filtration_equipment_products.product_list,
+        pagecard: productDetailPage[0].data.product_detail_card
       }
     },
     {
@@ -247,68 +63,20 @@ export async function getStaticPaths() {
         product_section: 'filter_presses_and_housings',
       },
       props:{
-        title:'Filter Presses and Housings',
+        title:productDetailPage[0].data.filer_presses_and_housing_products.section_title,
         card:{
-          title:'FILTER PRESSES AND HOUSINGS',
-          description:'This are the Filter presses, Filter housings for lenticular modules, and Filter housings for filter cartridges from our product portfolio – three critical components of many industrial production processes. Filter presses utilize a series of plates and frames to remove solids from liquids. Filter housings for filter modules, can accommodate a stack of lenticular filter modules, allowing for efficient and effective filtration while minimizing the risk of contamination.'
+          title:productDetailPage[0].data.filer_presses_and_housing_products.product_detail_header_card.card_title,
+          description:productDetailPage[0].data.filer_presses_and_housing_products.product_detail_header_card.card_content
         },
-        products:[
-        {
-              name:[
-                {
-                  title:'NOVOX-ST',
-                  subtitle:'(plate & frame filters)'
-                },
-                {
-                  title:'NOVOX-OD',
-                  subtitle:'(plate & frame filters)'
-                },
-                {
-                  title:'NOVOX-CP',
-                  subtitle:'(plate & frame filters)'
-                }
-              ],
-              image:'',
-              description:''
-            },
-            {
-              name:[
-                {
-                  title:'DISCSTAR H',
-                  subtitle:'(filter housing for lenticular mudules)'
-                },
-                {
-                  title:'DISCSTAR G',
-                  subtitle:'(filter housing for lenticular mudules)'
-                },
-                {
-                  title:'DISCSTAR LS',
-                  subtitle:'(filter housing for lenticular mudules)'
-                },
-                {
-                  title:'DISCSTAR BIO SD',
-                  subtitle:'(filter housing for lenticular mudules)'
-                }
-              ],
-              image:'',
-              description:''
-            },
-            {
-              name:[
-                {
-                  title:'SECUROX',
-                  subtitle:'(filter housing for filter cartridges)'
-                }
-              ],
-              image:'',
-              description:'SECUROX filter cartridge housings are made for a broad field of solid-liquid separation applications. The technology is designed for high service life of filter media and equipment. Also as special version for life sciences available.'
-            },
-        ]
+        backgroundImg:productDetailPage[0].data.background_image,
+        products:productDetailPage[0].data.filer_presses_and_housing_products.product_list,
+        pagecard: productDetailPage[0].data.product_detail_card
       }
     }
   ];
 }
-const { products,title,card, backgroundImg} = Astro.props;
+const { products,title,card, backgroundImg,pagecard} = Astro.props;
+const imageAdress='src/content/cms'
 ---
 <Layout>
   <Header 
@@ -335,15 +103,12 @@ const { products,title,card, backgroundImg} = Astro.props;
         products.map((product:any)=>{
           return(
             <div class=" bg-accent w-[285px] h-[342px] flex flex-col gap-3 items-center min-[940px]:w-[420px] min-[940px]:h-[476px]">
-                <img class="w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.image} alt="product-image"/>
+                <img class="bg-[#FFFFFF] w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.product_image} alt="product-image"/>
                 <div class=" flex flex-col w-[262px] gap-2 h-[101px] justify-around items-center min-[940px]:w-[356px] min-[940px]:h-[133px]">
-                    <p class=" text-primary w-full font-bold text-sm h-[28px] min-[940px]:text-base min-[940px]:w-[382px] min-[940px]:h-[48px] text-ellipsis overflow-hidden overflow-y-scroll no-scrollbar ">{
-                        product.name.map((nameData:any)=>{
-                          return product.name.indexOf(nameData)==product.name.length-1?` ${nameData.title} ${nameData.subtitle}`:` ${nameData.title} ${nameData.subtitle} e`
-                        })
-                      }
+                    <p class=" text-primary w-full font-bold text-sm h-[28px] min-[940px]:text-base min-[940px]:w-[382px] min-[940px]:h-[48px] text-ellipsis overflow-hidden overflow-y-scroll no-scrollbar ">
+                      {product.product_name}
                     </p> 
-                    <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-[70px] min-[940px]:w-[382px]">{product.description}</p>
+                    <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-[70px] min-[940px]:w-[382px]">{product.product_description}</p>
                 </div>
             </div>
           )                               
@@ -354,11 +119,11 @@ const { products,title,card, backgroundImg} = Astro.props;
     <div class=" flex justify-center items-center h-fit sm:h-2/6 sm:mt-5 w-full">
       <div class=" flex flex-col items-center p-3 bg-primary w-full mx-3 rounded-lg sm:gap-0 sm:inline sm:relative md:w-4/5 h-[90px] md:h-[100px] xl:h-[118px] 2xl:w-[1208px]">
           <div class="flex flex-col justify-center items-center xl:items-start xl:pl-12 w-full h-fit">
-              <h5 class="font-Jakarta font-bold text-white w-fit text-base md:text-2xl xl:text-4xl">Gostou dos nossos produtos</h5>
-              <p class="font-Jakarta font-bold text-white text-center w-full sm:w-fit sm:text-left text-sm md:text-lg xl:text-xl">Entre em contato com um de nossos atendentes agora mesmo!!</p>
+              <h5 class="font-Jakarta font-bold text-white w-fit text-base md:text-2xl xl:text-4xl">{pagecard.card_title}</h5>
+              <p class="font-Jakarta font-bold text-white text-center w-full sm:w-fit sm:text-left text-sm md:text-lg xl:text-xl">{pagecard.card_subtitle}</p>
           </div>
           <div class="sm:absolute sm:bottom-[-20px] lg:bottom-[-20px] right-0">
-              <ContactBtn btnContent="Entre em contato"/>
+              <ContactBtn btnContent={pagecard.card_button_text}/>
           </div>
       </div>
     </div>
