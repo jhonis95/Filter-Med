@@ -107,6 +107,7 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card content", name: "card_content", widget: "string"}
             - {label: "card link", name: "card_link", widget: "string"}
+            - {label: "card image", name: "card_image", widget: "image"}
         - {label: "second subtitle", name: "second_subtitle", widget: "string"}
         - label: "product service card"
           name: "product_service_card" 

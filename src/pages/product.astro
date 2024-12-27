@@ -39,7 +39,7 @@ const productPageData = await getCollection("product_page");
 							<ProductSectionCard
 								title={cardData.card_title}
 								description={cardData.card_content}
-								img=""
+								img={cardData.card_image}
 								pgLink={cardData.card_link}
 							/>
 						)

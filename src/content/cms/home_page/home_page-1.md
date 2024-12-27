@@ -49,7 +49,7 @@ home_product_cards:
       applications. This is the overview of our filter media product lines,
       comprising filter sheets and filter modules, which are each designed for
       different requirement levels and areas of applications.
-    product_card_image: https://www.filtrox.com/wp-content/uploads/3d-flip-book/auto-thumbnails/52337.png
+    product_card_image: src/assets/versafix.png
   - product_card_name: Filter Press and Hoisings
     product_card_content: This are the Filter presses, Filter housings for
       lenticular modules, and Filter housings for filter cartridges from our
@@ -64,7 +64,7 @@ home_product_cards:
       Whether you’re looking to perform a alluvial or a depth filtration to
       remove unwanted solids or impurities from your liquid, there is a solution
       among these three types of filtration technology that can meet your needs.
-    product_card_image: https://www.filtrox.com/wp-content/uploads/2023/04/Novox_ST_500x404.jpg
+    product_card_image: src/assets/NOVOX-CP.png
   - product_card_name: Equipamentos de Filtragem Laboratorial
     product_card_content: >-
       oferecemos uma variedade de equipamentos de filtração laboratorial
@@ -74,12 +74,12 @@ home_product_cards:
       específicas para atender a diversas necessidades laboratoriais.
 
       Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
-    product_card_image: https://www.filtrox.com/wp-content/uploads/2023/03/DSC02797_freigestellt_web.jpg
+    product_card_image: src/assets/SCALE-UP Test Kit.png
   - product_card_name: Produtos Complementares
     product_card_content: When it comes to depth filtration, there are several
       complementary products that can help you to enhance the process and
       achieve better results. In addition to our filter media and filter
       apparatus, we also offer support sheets for precoat filtration, filter
       cartridges and filter aids (diatomaceous earth) in our range.
-    product_card_image: https://www.filtrox.com/wp-content/uploads/2023/06/Filtrap_Schraege-Ansicht_500x522_web-287x300.jpg
+    product_card_image: src/assets/FILTRAP FP - FPA Filter Cartridges.png
 ---

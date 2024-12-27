@@ -67,7 +67,8 @@ const product_page = defineCollection({
         product_section_card:z.array(z.object({
             card_title:z.string(),
             card_content:z.string(),
-            card_link:z.string()
+            card_link:z.string(),
+            card_image:z.string()
         })),
         second_subtitle:z.string(),
         product_service_card:z.object({

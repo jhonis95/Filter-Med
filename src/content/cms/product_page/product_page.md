@@ -17,6 +17,7 @@ product_section_card:
       sheets and filter modules, which are each designed for different
       requirement levels and areas of applications.
     card_link: /product_detail/filter_media
+    card_image: src/assets/filter_media_section_image.png
   - card_title: Produtos Complementares
     card_content: When it comes to depth filtration, there are several complementary
       products that can help you to enhance the process and achieve better
@@ -24,6 +25,7 @@ product_section_card:
       offer support sheets for precoat filtration, filter cartridges and filter
       aids (diatomaceous earth) in our range.
     card_link: /product_detail/produtos_complementares
+    card_image: src/assets/Produtos Complementares.png
   - card_title: Equipamentos de Filtragem Laboratórial
     card_content: This are the Filter presses, Filter housings for lenticular
       modules, and Filter housings for filter cartridges from our product
@@ -39,6 +41,7 @@ product_section_card:
       impurities from your liquid, there is a solution among these three types
       of filtration technology that can meet your needs.
     card_link: /product_detail/equipamentos_de_filtragem_laboratórial
+    card_image: src/assets/Equipamentos_de_Filtragem_Laboratórial.png
   - card_title: Filter Presses  and Housings
     card_content: This are the Filter presses, Filter housings for lenticular
       modules, and Filter housings for filter cartridges from our product
@@ -54,6 +57,7 @@ product_section_card:
       impurities from your liquid, there is a solution among these three types
       of filtration technology that can meet your needs.
     card_link: /product_detail/filter_presses_and_housings
+    card_image: src/assets/Filter_Presses _and_Housings.png
 second_subtitle: filtros para filtração chorume ou aterro sanitário
 product_service_card:
   card_content: Fazemos os contêiner com os químicos perfeitos para cada tipo de
