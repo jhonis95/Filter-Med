@@ -195,7 +195,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "product_detail_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image", media_folder: "", public_folder: ""}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../../src/assets", public_folder: "../../../../src/assets"}
         - label: "Filter Media Products" 
           name: "filter_media_products" 
           widget: "object" 

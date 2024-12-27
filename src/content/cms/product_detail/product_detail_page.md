@@ -1,8 +1,10 @@
 ---
 title: product_detail_page
 headertitle: filtros de placas lenticulares
-subtitle: descricao
-background_image: product-detail-img-bg.png
+subtitle: Explore a nossa seleção de produtos cuidadosamente escolhidos para
+  oferecer qualidade, inovação e praticidade. Encontre a solução perfeita para
+  as suas necessidades
+background_image: ../../../../src/assets/product-detail-img-bg.png
 filter_media_products:
   product_detail_header_card:
     card_title: FILTER SHEETS AND FILTER MODULES

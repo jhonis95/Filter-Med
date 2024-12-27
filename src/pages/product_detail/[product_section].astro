@@ -1,21 +1,29 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/header.astro";
-import BackgroundImg from '../../assets/product-detail-img-bg.png'
 import ContactBtn from '../../components/contactBtn.astro';
 
-export function getStaticPaths() {
+
+import { getCollection } from 'astro:content';
+const productDetailPage = await getCollection("product_detail");
+
+
+export async function getStaticPaths() {
+
+  const productDetailPage = await getCollection("product_detail");
+
   return [
     {
       params: {
-        product_section: 'filter_media',
+        product_section: "filter_media",
       },
       props:{
-        title:'Filter Media',
+        title:productDetailPage[0].data.filter_media_products.section_title,
         card:{
-          title:'FILTER SHEETS AND FILTER MODULES',
-          description:'Our company offers a wide range of filter media product lines that are designed to meet the needs of various industries and applications. This is the overview of our filter media product lines, comprising filter sheets and filter modules, which are each designed for different requirement levels and areas of applications.'
+          title:productDetailPage[0].data.filter_media_products.product_detail_header_card.card_title,
+          description:productDetailPage[0].data.filter_media_products.product_detail_header_card.card_content
         },
+        backgroundImg:productDetailPage[0].data.background_image,
         products:[
             {
               name:[
@@ -109,10 +117,10 @@ export function getStaticPaths() {
         product_section: 'produtos_complementares',
       },
       props:{
-        title:'Produtos Complementares',
+        title: productDetailPage[0].data.complementaty_products.section_title,
         card:{
-          title:'Complementary Products',
-          description:'When it comes to depth filtration, there are several complementary products that can help you to enhance the process and achieve better results. In addition to our filter media and filter apparatus, we also offer support sheets for precoat filtration, filter cartridges and filter aids (diatomaceous earth) in our range.'
+          title:productDetailPage[0].data.complementaty_products.product_detail_header_card.card_title,
+          description:productDetailPage[0].data.complementaty_products.product_detail_header_card.card_content
         },
         products:[
           {
@@ -300,13 +308,13 @@ export function getStaticPaths() {
     }
   ];
 }
-const { products,title,card } = Astro.props;
+const { products,title,card, backgroundImg} = Astro.props;
 ---
 <Layout>
   <Header 
-    title="Filtros de placas e lenticulares" 
-    subTitle="Descrição breve sobre filtros de placas e lenticulares" 
-    background={BackgroundImg}
+    title={productDetailPage[0].data.headertitle}
+    subTitle={productDetailPage[0].data.subtitle} 
+    background={backgroundImg}
   />
   <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 mt-10 2xl:mt-16">
     <div class=" flex justify-center items-center h-fit sm:h-2/6 sm:mt-5">

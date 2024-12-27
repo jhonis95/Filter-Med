@@ -130,8 +130,8 @@ const about_page = defineCollection({
     })
 })
 
-const product_detail_page = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/content/cms/product_detail_page" }),
+const product_detail = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/content/cms/product_detail" }),
     schema:z.object({
         title: z.string(),
         headertitle:z.string(),
@@ -198,5 +198,5 @@ export const collections={
     "product_page":product_page,
     "service_page":service_page,
     "about_page":about_page,
-    "product_detail_page":product_detail_page,
+    "product_detail":product_detail,
 }
