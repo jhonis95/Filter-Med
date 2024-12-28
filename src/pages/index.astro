@@ -5,10 +5,8 @@ import ContactBtn from '../components/contactBtn.astro';
 import Layout from '../layouts/Layout.astro';
 import Homeproductcard from '../components/homeproductcard.astro';
 import HomeHeader from '../components/homeHeader.astro';
-
-
+import { Image } from "astro:assets";
 const homePageData = await getCollection("home_page");
-
 ---
 <Layout>
 	 <HomeHeader/>
@@ -24,7 +22,7 @@ const homePageData = await getCollection("home_page");
 					<ContactBtn btnContent={homePageData[0].data.home_process_card.card_button_text} />
 				</div>
 			</div>
-			<img class=" hidden rounded-lg w-[600px] xl:inline 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]" src={homePageData[0].data.home_process_card.card_image} alt="group image">
+			<Image class=" hidden rounded-lg w-[600px] xl:inline 2xl:w-[707px] 2xl:h-[442] 2xl:rounded-[20px]" src={homePageData[0].data.home_process_card.card_image} alt={'group image'}/>
 		</div>
 
 		<section class=" flex flex-col gap-7 items-center">
@@ -34,10 +32,10 @@ const homePageData = await getCollection("home_page");
 		
 		<section class="w-full flex flex-wrap gap-6 justify-center">
 			{
-				homePageData[0].data.home_service_cards.map((data)=>{
+				homePageData[0].data.home_service_cards.map((data:any)=>{
 					return(
 						<div class={`relative flex flex-col items-center w-[298px] h-[263px] xl:w-[531px] xl:h-[468px]`}>
-							<img class=" absolute w-full h-full object-cover rounded-xl xl:rounded-[20px]" src={data.service_image} alt="bg-img"/>
+							<Image class=" absolute w-full h-full object-cover rounded-xl xl:rounded-[20px]" src={data.service_image} alt="bg-img"/>
 							<h5 class=" text-center text-white font-Jakarta font-bold z-10 text-lg sm:text-2xl top-[190px] xl:top-[353px] xl:w-[447px] xl:text-[32px] absolute">{data.service_name}</h5>
 						</div>
 					)
@@ -68,7 +66,7 @@ const homePageData = await getCollection("home_page");
 		
 		<section class=" hidden 2xl:flex flex-wrap h-[909px] w-[1305px] justify-end gap-y-28 gap-x-52">
 			{
-				homePageData[0].data.home_product_cards.map((data)=>{
+				homePageData[0].data.home_product_cards.map((data:any)=>{
 					return <Homeproductcard componentData={data}/>
 				})
 			}

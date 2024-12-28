@@ -6,8 +6,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "src/assets" # Location where files will be stored in the repo
-public_folder: "src/assets" # The src attribute for uploaded media
+media_folder: "../../../src/assets" # Location where files will be stored in the repo
+public_folder: "../../../src/assets" # The src attribute for uploaded media
 logo_url: https://filter-med.netlify.app/_astro/logo-filter-med.DKycxu6U.svg
 locale: 'pt/br'
 show_preview_links: true
@@ -17,7 +17,7 @@ editor:
 collections:
   - label: "Home Page"
     name: "home_page"
-    folder: "src/content/cms/home_page"
+    folder: "../../../src/cms//home_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -83,7 +83,7 @@ collections:
 
   - label: "Product Page"
     name: "product_page"
-    folder: "src/content/cms/product_page"
+    folder: "../../../src/cms//product_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -119,7 +119,7 @@ collections:
 
   - label: "Service Page"
     name: "service_page"
-    folder: "src/content/cms/service_page"
+    folder: "../../../src/cms//service_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -147,7 +147,7 @@ collections:
 
   - label: "About Page"
     name: "about_page"
-    folder: "src/content/cms/about_page"
+    folder: "../../../src/cms//about_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -187,7 +187,7 @@ collections:
 
   - label: "Product Detail Page"
     name: "product_detail_page"
-    folder: "src/content/cms/product_detail"
+    folder: "../../../src/cms//product_detail"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -195,7 +195,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "product_detail_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../../src/assets", public_folder: "../../../../src/assets"}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "Filter Media Products" 
           name: "filter_media_products" 
           widget: "object" 
@@ -213,7 +213,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/filter_media", public_folder: "../../../../src/content/cms/product_detail/filter_media"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/filter_media", public_folder: "../../../src/cms//product_detail/filter_media"}
         - label: "Complementary Products" 
           name: "complementaty_products" 
           widget: "object" 
@@ -231,7 +231,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/complementary_products", public_folder: "../../../../src/content/cms/product_detail/complementary_products"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/complementary_products", public_folder: "../../../src/cms//product_detail/complementary_products"}
         - label: "Lab Filtration Equipment Products" 
           name: "lab_filtration_equipment_products" 
           widget: "object" 
@@ -249,7 +249,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/lab_filtration_equipment", public_folder: "../../../../src/content/cms/product_detail/lab_filtration_equipment"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/lab_filtration_equipment", public_folder: "../../../src/cms//product_detail/lab_filtration_equipment"}
         - label: "Filer Presses And Housing Products" 
           name: "filer_presses_and_housing_products" 
           widget: "object" 
@@ -267,7 +267,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "string"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../../src/content/cms/product_detail/filter_presses_and_housings", public_folder: "../../../../src/content/cms/product_detail/filter_presses_and_housings"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/filter_presses_and_housings", public_folder: "../../../src/cms//product_detail/filter_presses_and_housings"}
         - label: "product detail card"
           name: "product_detail_card" 
           widget: "object"
@@ -278,7 +278,7 @@ collections:
 
   - label: "navigation bar"
     name: "navigation_bar"
-    folder: "src/content/cms/navigation_bar"
+    folder: "../../../src/cms//navigation_bar"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -303,7 +303,7 @@ collections:
 
   - label: "footer bar"
     name: "footer_bar"
-    folder: "src/content/cms/footer"
+    folder: "../../../src/cms//footer"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}

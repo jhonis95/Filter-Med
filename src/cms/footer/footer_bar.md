@@ -4,13 +4,13 @@ footer_social_media:
   text: Filter Med
   social_media_list:
     - social_media:
-        social_media_image: src/assets/email-icon.svg
+        social_media_image: ../../../src/assets/email-icon.svg
         link: gmail.com
     - social_media:
-        social_media_image: src/assets/instagram-icon.svg
+        social_media_image: ../../../src/assets/instagram-icon.svg
         link: instagram..com
     - social_media:
-        social_media_image: src/assets/whatsapp-icon.svg
+        social_media_image: ../../../src/assets/whatsapp-icon.svg
         link: web.whatsapp.com
 footer_navigation:
   name: Navegue

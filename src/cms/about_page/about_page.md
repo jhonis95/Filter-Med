@@ -2,7 +2,7 @@
 title: about_page
 headertitle: Conheça mais sobre nós
 subtitle: Trabalhamos para entregar a melhor qualidade com o melhor serviço
-background_image: src/assets/about-img-bg.png
+background_image: ../../../src/assets/about-img-bg.png
 first_section:
   first_section_title: Sobre Nossa Empresa
   first_section_content_one: Bem-vindo à Filter Med, uma empresa especializada em
@@ -16,7 +16,7 @@ first_section:
     com clientes para desenvolver soluções personalizadas que atendam às suas
     necessidades específicas, sempre com foco na eficiência, durabilidade e
     proteção ambiental.
-  first_section_image: src/assets/logo-filter-med.svg
+  first_section_image: ../../../src/assets/logo-filter-med.svg
 second_section:
   second_section_title: O que nos diferencia?
   about_card:

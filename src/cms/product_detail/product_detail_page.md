@@ -4,7 +4,7 @@ headertitle: filtros de placas lenticulares
 subtitle: Explore a nossa seleção de produtos cuidadosamente escolhidos para
   oferecer qualidade, inovação e praticidade. Encontre a solução perfeita para
   as suas necessidades
-background_image: ../../../../src/assets/product-detail-img-bg.png
+background_image: ../../../src/assets/product-detail-img-bg.png
 filter_media_products:
   product_detail_header_card:
     card_title: FILTER SHEETS AND FILTER MODULES
@@ -19,12 +19,12 @@ filter_media_products:
         from liquids to suit a wide range of applications. The pore size rating
         is from coarse to fine filtration, achieving a bright clear liquid.
       product_name: VERSAFIX (filter sheets)
-      product_image: ../../../../src/content/cms/product_detail/filter_media/VERSADISC.png
+      product_image: ../../../src/cms/product_detail/filter_media/VERSADISC.png
     - product_name: VERSADISC (filter modules)
       product_description: Standard depth filter sheets for the removal of particles
         from liquids to suit a wide range of applications. The pore size rating
         is from coarse to fine filtration, achieving a bright clear liquid.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/VERSAFIX.png
+      product_image: ../../../src/cms/product_detail/filter_media/VERSAFIX.png
     - product_name: FIBRAFIX (filter sheets)
       product_description: High quality depth filter sheets manufactured under
         controlled conditions. Widely used in the food and beverage industry as
@@ -37,7 +37,7 @@ filter_media_products:
         low ions contents. SY grades, reinforced with synthetic fibers, deliver
         enhanced mechanical and chemical strength to excel in more demanding
         applications.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/FIBRAFIX.png
+      product_image: ../../../src/cms/product_detail/filter_media/FIBRAFIX.png
     - product_name: FIBRADISC (filter modules)
       product_description: High quality depth filter sheets manufactured under
         controlled conditions. Widely used in the food and beverage industry as
@@ -50,7 +50,7 @@ filter_media_products:
         low ions contents. SY grades, reinforced with synthetic fibers, deliver
         enhanced mechanical and chemical strength to excel in more demanding
         applications.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/FIBRADISC.png
+      product_image: ../../../src/cms/product_detail/filter_media/FIBRADISC.png
     - product_name: FIBRACAP (capsule for lab trials)
       product_description: High quality depth filter sheets manufactured under
         controlled conditions. Widely used in the food and beverage industry as
@@ -63,7 +63,7 @@ filter_media_products:
         low ions contents. SY grades, reinforced with synthetic fibers, deliver
         enhanced mechanical and chemical strength to excel in more demanding
         applications.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/FIBRACAP.png
+      product_image: ../../../src/cms/product_detail/filter_media/FIBRACAP.png
     - product_name: PURAFIX (filter sheets)
       product_description: PURAFIX depth filter sheets are specifically designed to
         meet the demanding needs of biological and pharmaceutical industries.
@@ -74,7 +74,7 @@ filter_media_products:
         beta-glucan value is also very low. The type ZP is characterized by a
         zeta-potential in addition to the purity usual for the entire PURAFIX
         product line
-      product_image: ../../../../src/content/cms/product_detail/filter_media/PURAFIX.png
+      product_image: ../../../src/cms/product_detail/filter_media/PURAFIX.png
     - product_name: PURADISC (filter modules)
       product_description: PURAFIX depth filter sheets are specifically designed to
         meet the demanding needs of biological and pharmaceutical industries.
@@ -85,7 +85,7 @@ filter_media_products:
         beta-glucan value is also very low. The type ZP is characterized by a
         zeta-potential in addition to the purity usual for the entire PURAFIX
         product line
-      product_image: ../../../../src/content/cms/product_detail/filter_media/PURADISC.png
+      product_image: ../../../src/cms/product_detail/filter_media/PURADISC.png
     - product_name: PURADISC BIO SD (single-use modules)
       product_description: PURAFIX depth filter sheets are specifically designed to
         meet the demanding needs of biological and pharmaceutical industries.
@@ -96,19 +96,19 @@ filter_media_products:
         beta-glucan value is also very low. The type ZP is characterized by a
         zeta-potential in addition to the purity usual for the entire PURAFIX
         product line
-      product_image: ../../../../src/content/cms/product_detail/filter_media/PURADISC BIO SD.png
+      product_image: ../../../src/cms/product_detail/filter_media/PURADISC BIO SD.png
     - product_name: SUPERSORB (carbon pads)
       product_description: This product range is specifically developed for frying oil
         filtration in the food service. Using SuperSorb filter pads the frying
         oil is cleaner after filtration and therefore lasts longer.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/SUPERSORB.png
+      product_image: ../../../src/cms/product_detail/filter_media/SUPERSORB.png
     - product_name: SUPERSORB (pleated carbon pads)
-      product_image: ../../../../src/content/cms/product_detail/filter_media/SUPERSORB PLEATED.png
+      product_image: ../../../src/cms/product_detail/filter_media/SUPERSORB PLEATED.png
       product_description: This product range is specifically developed for frying oil
         filtration in the food service. Using SuperSorb filter pads the frying
         oil is cleaner after filtration and therefore lasts longer.
     - product_name: SUPERSORB (carbon envelopes)
-      product_image: ../../../../src/content/cms/product_detail/filter_media/SUPERSORB ENVELOPES.png
+      product_image: ../../../src/cms/product_detail/filter_media/SUPERSORB ENVELOPES.png
       product_description: This product range is specifically developed for frying oil
         filtration in the food service. Using SuperSorb filter pads the frying
         oil is cleaner after filtration and therefore lasts longer.
@@ -119,7 +119,7 @@ filter_media_products:
         active principles are immobilized into the filter sheet structure
         avoiding the operator to deal with any loose powder additions or
         similar.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/LIBRASORB.png
+      product_image: ../../../src/cms/product_detail/filter_media/LIBRASORB.png
     - product_name: LIBRADISC (filter modules)
       product_description: Depth filter sheets specifically developed to reduce off
         flavors and volatiles from wine and other beverages. These filter sheets
@@ -127,7 +127,7 @@ filter_media_products:
         active principles are immobilized into the filter sheet structure
         avoiding the operator to deal with any loose powder additions or
         similar.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/LIBRADISC.png
+      product_image: ../../../src/cms/product_detail/filter_media/LIBRADISC.png
     - product_description: Depth filter sheets specifically developed to reduce off
         flavors and volatiles from wine and other beverages. These filter sheets
         are meant as a treatment process rather than a filtration process. The
@@ -135,7 +135,7 @@ filter_media_products:
         avoiding the operator to deal with any loose powder additions or
         similar.
       product_name: LIBRACAP (capsule for trials)
-      product_image: ../../../../src/content/cms/product_detail/filter_media/LIBRACAP.png
+      product_image: ../../../src/cms/product_detail/filter_media/LIBRACAP.png
     - product_name: ACTIVASORB (filter sheets)
       product_description: ACTIVASORB sheets allow the user to handle powdered
         activated carbon (PAC) in a much cleaner way than with loose carbon
@@ -146,7 +146,7 @@ filter_media_products:
         biotechnological processing and the production of fine chemicals.
         FILTROX offers a whole family of different immobilized carbon grades to
         treat organic impurities of all types.
-      product_image: ../../../../src/content/cms/product_detail/filter_media/ACTIVASORB.png
+      product_image: ../../../src/cms/product_detail/filter_media/ACTIVASORB.png
     - product_description: ACTIVASORB sheets allow the user to handle powdered
         activated carbon (PAC) in a much cleaner way than with loose carbon
         powders. Decolorization, deodorization, or the removal of other trace
@@ -157,7 +157,7 @@ filter_media_products:
         FILTROX offers a whole family of different immobilized carbon grades to
         treat organic impurities of all types.
       product_name: ACTIVADISC (filter modules)
-      product_image: ../../../../src/content/cms/product_detail/filter_media/ACTIVADISC.png
+      product_image: ../../../src/cms/product_detail/filter_media/ACTIVADISC.png
     - product_description: ACTIVASORB sheets allow the user to handle powdered
         activated carbon (PAC) in a much cleaner way than with loose carbon
         powders. Decolorization, deodorization, or the removal of other trace
@@ -168,7 +168,7 @@ filter_media_products:
         FILTROX offers a whole family of different immobilized carbon grades to
         treat organic impurities of all types.
       product_name: ACTIVACAP (capsule for lab trials)
-      product_image: ../../../../src/content/cms/product_detail/filter_media/ACTIVACAP.png
+      product_image: ../../../src/cms/product_detail/filter_media/ACTIVACAP.png
 complementaty_products:
   product_detail_header_card:
     card_title: Complementary Products
@@ -179,7 +179,7 @@ complementaty_products:
       aids (diatomaceous earth) in our range.
   section_title: Produtos complementares
   product_list:
-    - product_image: ../../../../src/content/cms/product_detail/complementary_products/DUROFIL.jpg
+    - product_image: ../../../src/cms/product_detail/complementary_products/DUROFIL.jpg
       product_name: DUROFIL (support sheets)
       product_description: The support sheet DUROFIL specifically to meet the
         challenges of pre-coat filtration in the food and beverage industry. Due
@@ -193,7 +193,7 @@ complementaty_products:
         chemicals allowing extended life and output thanks to
         re-generation/sterilization cycles. Please find further technical
         details in the technical data sheets available in the download area.
-      product_image: ../../../../src/content/cms/product_detail/complementary_products/CLAROX PL and PL-NR Filter Cartridges.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/CLAROX PL and PL-NR Filter Cartridges.jpg
     - product_name: CLAROX MP/W Membrane (filter cartridges)
       product_description: MP/W membrane filter cartridges are made of hydrophilic
         polyetersulfone (PES) media . The pleated multilayer filter medium in
@@ -205,18 +205,18 @@ complementaty_products:
         guarantees sterile filtration immediately prior to bottling and are
         integrity testeable. Please find further technical details in the
         technical data sheets available in the download area.
-      product_image: ../../../../src/content/cms/product_detail/complementary_products/CLAROX MP-W Membrane Filter Cartridges.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/CLAROX MP-W Membrane Filter Cartridges.jpg
     - product_name: FILTRAP FP / FPA  (filter cartridges)
       product_description: Wound depth filter cartridge developed for the FILTRAP
         security filter. Used for beer filtration and a wide range of
         applications in the beverage industry. Please find further technical
         details in the technical data sheets available in the download area.
-      product_image: ../../../../src/content/cms/product_detail/complementary_products/FILTRAP FP - FPA Filter Cartridges.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/FILTRAP FP - FPA Filter Cartridges.jpg
     - product_name: CELPURE (filter aids)
       product_description: CELPURE is made with diatomaceous earth, who is fossilized
         remains of hard shelled algae. It is the ideal choice when developing
         new high purity processes with diatomite filter aid.
-      product_image: ../../../../src/content/cms/product_detail/complementary_products/CELPURE.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/CELPURE.jpg
 lab_filtration_equipment_products:
   section_title: Equipamentos de Filtragem Laboratorial
   product_detail_header_card:
@@ -230,7 +230,7 @@ lab_filtration_equipment_products:
 
       Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
   product_list:
-    - product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/SCALE-UP  Test Kit.jpg
+    - product_image: ../../../src/cms/product_detail/lab_filtration_equipment/SCALE-UP  Test Kit.jpg
       product_name: SCALE-UP  (test kit)
       product_description: Find your ideal depth filter at an early stage of your
         product development. The Test-Kit contains 10 different PURASPIN for 20
@@ -243,14 +243,14 @@ lab_filtration_equipment_products:
         filtration and sterile filtration. A practical and easy-to-use tool to
         define the right filtration solution at an early stage in the
         development process.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/PURASPIN Test Kit.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURASPIN Test Kit.jpg
     - product_name: ACTIVASORB (test kit)
       product_description: Contains 6 different activated carbon ACTIVASORB sheet
         types for different requirements and applications. Also included is a
         filter capsule into which the filter sheets and filter paper are
         inserted and the capsule holder, which holds all components for the
         filtration tests together.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/ACTIVASORB.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/ACTIVASORB.jpg
     - product_name: LIBRASORB TX and MX (test kit for wine)
       product_description: LIBRASORB TX and MX filter sheets offer a clear solution in
         removing undesireable aromas, improving the organoleptic aspects and
@@ -261,14 +261,14 @@ lab_filtration_equipment_products:
         to test and verify the effectiveness on your beverage. The Test Kit
         includes a 2″ TX or MX filter capsule with connection hose and a
         syringe.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/LIBRASORB TX and MX Test Kit for Wine.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/LIBRASORB TX and MX Test Kit for Wine.jpg
     - product_name: PURASPIN (centrifuge filter)
       product_description: PURASPIN enables you to quickly and efficiently test
         different depth filters or quickly purify a small amount of liquid. To
         do so, insert the filters into the standard 50 mL centrifuge tubes
         (Labcon SuperClear 50 mL tubes). Then, filter the liquid using a
         centrifuge or vacuum.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/PURASPIN Centrifuge filter.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURASPIN Centrifuge filter.jpg
     - product_name: PURACAP 2″ Capsule
       product_description: Lab filter for filtration method development. The purpose
         of the mini capsule lab filter is to have a tool to find the best
@@ -277,7 +277,7 @@ lab_filtration_equipment_products:
         sheet to clarify liquids containing undesired particles. The mini
         capsule holds a maximum pressure of 2.5 bar (36 psi) or 2.0 bar (29 psi)
         for alcoholic solutions at 25°C (77°F).
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/PURACAP 2″ Capsule.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP 2″ Capsule.jpg
     - product_name: PURACAP BIO SD 2″ Capsule
       product_description: Lab filter for microfiltration testing for
         biopharmaceutical liquids at laboratory scale. This procedure is
@@ -286,7 +286,7 @@ lab_filtration_equipment_products:
         the concentration of solids in the feedstock. Solids and filter aid firm
         a filter cake which has a height limitation due to the design (geometry)
         of the filter capsule.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/PURACAP BIO SD 2″ Capsule.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP BIO SD 2″ Capsule.jpg
     - product_name: PURACAP BIO SD 5″ Capsule
       product_description: Lab filter for microfiltration testing of biopharmaceutical
         liquids at laboratory scale or for filtration of small batches. The 5″
@@ -295,7 +295,7 @@ lab_filtration_equipment_products:
         depends on the concentration of solids in the feedstock. Solids and
         filter aid firm a filter cake which has a height limitation due to the
         design (geometry) of the filter capsule.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/PURACAP BIO SD 5″ Capsule.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP BIO SD 5″ Capsule.jpg
     - product_name: LABTROX 60A
       product_description: Stainless steel lab filter for sheet filtration. For
         filtration experiments and the development of new filtration
@@ -303,7 +303,7 @@ lab_filtration_equipment_products:
         sheet with a diameter of 60 mm can be installed in the filter holder.
         The holder, made of stainless steel 316L, is also suitable for critical
         liquids.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/LABTROX 60A.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/LABTROX 60A.jpg
     - product_name: LABTROX 60B
       product_description: Stainless steel lab filter for alluvial filtration. For
         filtration experiments and the development of new filtration
@@ -311,7 +311,7 @@ lab_filtration_equipment_products:
         sheet with a diameter of 60 mm can be installed in the filter holder.
         The holder, made of stainless steel 316L, is also suitable for critical
         liquids.
-      product_image: ../../../../src/content/cms/product_detail/lab_filtration_equipment/LABTROX 60B.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/LABTROX 60B.jpg
 filer_presses_and_housing_products:
   section_title: FILTER PRESSES AND HOUSINGS
   product_detail_header_card:
@@ -338,7 +338,7 @@ filer_presses_and_housing_products:
         the hydraulic closing mechanism, combined with high-performance FILTROX
         filter sheets, minimizes drip-loss. It is used for alluvial filtration
         or sheet filtration only.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/NOVOX-ST.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/NOVOX-ST.jpg
     - product_name: NOVOX-OD
       product_description: The NOVOX-OD is a high precision stainless steel plate &
         frame filter, designed and built for hygienically critical, high-value
@@ -350,7 +350,7 @@ filer_presses_and_housing_products:
         the plate & frame assembly and the hydraulic closing mechanism, combined
         with high-performance FILTROX filter sheets, make this system almost
         free of any drip-loss.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/NOVOX-OD.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/NOVOX-OD.jpg
     - product_name: NOVOX-CP
       product_description: The NOVOX-CP is a high precision plate & frame filter,
         designed and built for pharmaceutical and other critical applications.
@@ -359,21 +359,21 @@ filer_presses_and_housing_products:
         system completely sealed for CIP without filter sheets. It eliminates
         any drip loss and prevents the liquid from having contact with the
         outside environment.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/NOVOX-CP.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/NOVOX-CP.jpg
     - product_name: DISCSTAR H
       product_description: DISCSTAR H is the newest generation of module housing. The
         precise horizontal stainless steel housing for 16″ filter modules, is
         developed and manufactured for everyday use. It is much safer to operate
         and easier to handle. This, due to an economic chest working height and
         easy loading and disposing of the modules.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/DISCSTAR H.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR H.jpg
     - product_name: DISCSTAR G
       product_description: This filter module housing is designed with screw clamp
         closure system and standard piping. Ideal for Food & Beverage
         applications. Designed for heavy duty use and high-capacity depth
         filtration. Available for 12″ or 16″ filter modules. Full range from 1
         to 4 modules.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/DISCSTAR G.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR G.jpg
     - product_name: DISCSTAR LS
       product_description: DISCSTAR LS has a tri-clamp connection. It has
         pharma-approved valves and pressure gauges. Therefore it is ideally
@@ -381,20 +381,20 @@ filer_presses_and_housing_products:
         pharmaceutical applications. It’s the system of choice for frequently
         changing filtration applications in the pharmaceutical industry.
         Available for 12″ and 16″ filter modules.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/DISCSTAR LS.png
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR LS.png
     - product_name: DISCSTAR BIO SD
       product_description: DISCSTAR BIO SD stainless steel housing. This system is
         designed to insert the PURADISC® BIO SD single or double single-use
         filter modules. With a tiltable housing for loading and unloading the
         filter modules. The largest DISCSTAR BIO SD model for 16″ double modules
         offers a filter capacity of up to 1000L.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/DISCSTAR BIO SD.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR BIO SD.jpg
     - product_name: SECUROX
       product_description: SECUROX filter cartridge housings are made for a broad
         field of solid-liquid separation applications. The technology is
         designed for high service life of filter media and equipment. Also as
         special version for life sciences available.
-      product_image: ../../../../src/content/cms/product_detail/filter_presses_and_housings/SECUROX.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/SECUROX.jpg
 product_detail_card:
   card_title: "Gostoun dos nossos produtos "
   card_subtitle: Entre em contato com um de nossos atendentes agora mesmo!!

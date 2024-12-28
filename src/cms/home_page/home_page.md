@@ -4,7 +4,7 @@ headertitle: Filter Med é especializada em filtos para resíduos
 subtitle: Fornecemos assistência técnica especializada e soluções de filtragem
   para ajudar sua aplicação a ter um desempenho ideal e fornecer a vantagem
   necessária em seu setor.
-background_image: src/assets/bg-img-home-pg.png
+background_image: ../../../src/assets/bg-img-home-pg.png
 home_header_card:
   card_title: Precisa de ajuda de um profissional?
   card_subtitle: "Encontre flexibilidade para fazer negócios "
@@ -23,16 +23,16 @@ home_process_card:
     de partículas, sistemas de desinfecção ultravioleta (UV) e sistemas de
     osmose reversa.
   card_button_text: Entre em contato
-  card_image: src/assets/group-pic.png
+  card_image: ../../../src/assets/group-pic.png
 first_section_title: Serviços
 first_section_subtitle: containers com filtros para filtração chorume ou aterro sanitário
 home_service_cards:
   - service_name: Container prontos para o serviço
-    service_image: src/assets/containerimg3.png
+    service_image: ../../../src/assets/containerimg3.png
   - service_name: Produtos de alta quilidade
-    service_image: src/assets/containerimg2.png
+    service_image: ../../../src/assets/containerimg2.png
   - service_name: Calibrados e ajustados sobre medida
-    service_image: src/assets/containerimg1.png
+    service_image: ../../../src/assets/containerimg1.png
 second_section_title: Produtos
 second_section_subtitle: filtros de placas e lenticulares
 home_product_division:
@@ -49,7 +49,7 @@ home_product_cards:
       applications. This is the overview of our filter media product lines,
       comprising filter sheets and filter modules, which are each designed for
       different requirement levels and areas of applications.
-    product_card_image: src/assets/versafix.png
+    product_card_image: ../../../src/assets/versafix.png
   - product_card_name: Filter Press and Hoisings
     product_card_content: This are the Filter presses, Filter housings for
       lenticular modules, and Filter housings for filter cartridges from our
@@ -64,7 +64,7 @@ home_product_cards:
       Whether you’re looking to perform a alluvial or a depth filtration to
       remove unwanted solids or impurities from your liquid, there is a solution
       among these three types of filtration technology that can meet your needs.
-    product_card_image: src/assets/NOVOX-CP.png
+    product_card_image: ../../../src/assets/NOVOX-CP.png
   - product_card_name: Equipamentos de Filtragem Laboratorial
     product_card_content: >-
       oferecemos uma variedade de equipamentos de filtração laboratorial
@@ -74,12 +74,12 @@ home_product_cards:
       específicas para atender a diversas necessidades laboratoriais.
 
       Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
-    product_card_image: src/assets/SCALE-UP Test Kit.png
+    product_card_image: ../../../src/assets/SCALE-UP Test Kit.png
   - product_card_name: Produtos Complementares
     product_card_content: When it comes to depth filtration, there are several
       complementary products that can help you to enhance the process and
       achieve better results. In addition to our filter media and filter
       apparatus, we also offer support sheets for precoat filtration, filter
       cartridges and filter aids (diatomaceous earth) in our range.
-    product_card_image: src/assets/FILTRAP FP - FPA Filter Cartridges.png
+    product_card_image: ../../../src/assets/FILTRAP FP - FPA Filter Cartridges.png
 ---
