@@ -5,7 +5,7 @@ import ContactBtn from "../components/contactBtn.astro"
 import ProductSectionCard from "../components/productSectionCard.astro";
 
 import { getCollection } from 'astro:content';
-
+import { Image } from "astro:assets";
 const productPageData = await getCollection("product_page");
 
 ---
@@ -63,7 +63,7 @@ const productPageData = await getCollection("product_page");
 					</button>
 				</div>
 			</div>
-			<img class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productPageData[0].data.product_service_card.card_image} alt="group image">
+			<Image class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productPageData[0].data.product_service_card.card_image} alt="group image">
 		</div>
 	
 	 </main>

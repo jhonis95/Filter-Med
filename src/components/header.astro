@@ -1,6 +1,7 @@
 ---
 
 const {title, subTitle, background}=Astro.props
+import { Image } from "astro:assets";
 ---
 <section class=" w-full h-[270px] md:h-fit 2xl:h-[690px]">
     <div class=" relative text-white w-full h-full">
@@ -10,6 +11,6 @@ const {title, subTitle, background}=Astro.props
                 <h4 class=" text-base lg:text-2xl max-w-[400px] md:text-justify lg:max-w-[525px] 2xl:max-w-[861px] 2xl:text-3xl">{subTitle}</h4>
             </div>
         </div>
-        <img class=" w-full h-full object-cover" src={background} alt="bg-img">
+        <Image class=" w-full h-full object-cover" src={background} alt="bg-img">
     </div>
 </section>

@@ -5,6 +5,7 @@ import ContactBtn from '../../components/contactBtn.astro';
 
 
 import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
 const productDetailPage = await getCollection("product_detail");
 
 
@@ -102,7 +103,7 @@ const { products,title,card, backgroundImg,pagecard} = Astro.props;
         products.map((product:any)=>{
           return(
             <div class=" bg-accent w-[285px] h-[342px] flex flex-col gap-3 items-center min-[940px]:w-[420px] min-[940px]:h-[476px]">
-                <img class="bg-[#FFFFFF] w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.product_image} alt="product-image"/>
+                <Image class="bg-[#FFFFFF] w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.product_image} alt="product-image"/>
                 <div class=" flex flex-col w-[262px] gap-2 h-[101px] justify-around items-center min-[940px]:w-[356px] min-[940px]:h-[133px]">
                     <p class=" text-primary w-full font-bold text-sm h-[28px] min-[940px]:text-base min-[940px]:w-[382px] min-[940px]:h-[48px] text-ellipsis overflow-hidden overflow-y-scroll no-scrollbar ">
                       {product.product_name}
