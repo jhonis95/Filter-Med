@@ -6,8 +6,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "../../../src/assets" # Location where files will be stored in the repo
-public_folder: "../../../src/assets" # The src attribute for uploaded media
+media_folder: "src/assets" # Location where files will be stored in the repo
+public_folder: "src/assets" # The src attribute for uploaded media
 logo_url: https://filter-med.netlify.app/_astro/logo-filter-med.DKycxu6U.svg
 locale: 'pt/br'
 show_preview_links: true
@@ -17,7 +17,7 @@ editor:
 collections:
   - label: "Home Page"
     name: "home_page"
-    folder: "../../../src/cms//home_page"
+    folder: "src/cms/home_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -25,7 +25,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "home_page"}
         - {label: "header title", name: "headertitle", widget: "string"}
         - {label: "header subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image"}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "home header card"
           name: "home_header_card" 
           widget: "object"
@@ -40,7 +40,7 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card subtitle", name: "card_subtitle", widget: "string"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "background image", name: "background_image", widget: "image"}
+            - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "home process card"
           name: "home_process_card" 
           widget: "object"
@@ -49,7 +49,7 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card content", name: "card_content", widget: "text"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image"}
+            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - {label: "first section title", name: "first_section_title", widget: "string"}
         - {label: "first section subtitle", name: "first_section_subtitle", widget: "string"}
         - label: "home service cards"
@@ -57,7 +57,7 @@ collections:
           widget: "list"
           fields:
             - {label: "service name", name: "service_name", widget: "string"}
-            - {label: "service image", name: "service_image", widget: "image"}
+            - {label: "service image", name: "service_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - {label: "second section title", name: "second_section_title", widget: "string"}
         - {label: "second section subtitle", name: "second_section_subtitle", widget: "string"}
         - label: "home product division"
@@ -79,11 +79,11 @@ collections:
           fields:
             - {label: "product card name", name: "product_card_name", widget: "string"}
             - {label: "product card content", name: "product_card_content", widget: "text"}
-            - {label: "product card image", name: "product_card_image", widget: "image"}
+            - {label: "product card image", name: "product_card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
 
   - label: "Product Page"
     name: "product_page"
-    folder: "../../../src/cms//product_page"
+    folder: "src/cms/product_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -91,7 +91,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "product_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image"}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "product header card"
           name: "product_header_card" 
           widget: "object"
@@ -107,7 +107,7 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card content", name: "card_content", widget: "string"}
             - {label: "card link", name: "card_link", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image"}
+            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - {label: "second subtitle", name: "second_subtitle", widget: "string"}
         - label: "product service card"
           name: "product_service_card" 
@@ -115,11 +115,11 @@ collections:
           fields:
             - {label: "card content", name: "card_content", widget: "text"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image"}
+            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
 
   - label: "Service Page"
     name: "service_page"
-    folder: "../../../src/cms//service_page"
+    folder: "src/cms/service_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -127,7 +127,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "service_page"}
         - {label: "header title", name: "headertitle", widget: "string"}
         - {label: "header subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image"}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - {label: "main content", name: "main_content", widget: "text"}
         - {label: "main image", name: "main_image", widget: "image"}
         - {label: "section title", name: "section_title", widget: "string"}
@@ -143,11 +143,11 @@ collections:
           fields:
             - {label: "card content", name: "card_content", widget: "text"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image"}
+            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
 
   - label: "About Page"
     name: "about_page"
-    folder: "../../../src/cms//about_page"
+    folder: "src/cms/about_page"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -155,7 +155,7 @@ collections:
         - {label: "title", name: "title", widget: "hidden", default: "about_page"}
         - {label: "header_title", name: "headertitle", widget: "string"}
         - {label: "header_subtitle", name: "subtitle", widget: "string"}
-        - {label: "background image", name: "background_image", widget: "image"}
+        - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "first section"
           name: "first_section" 
           widget: "object"
@@ -163,7 +163,7 @@ collections:
             - {label: "first section title", name: "first_section_title", widget: "string"}
             - {label: "first section content one", name: "first_section_content_one", widget: "text"}
             - {label: "first section content two", name: "first_section_content_two", widget: "text"}
-            - {label: "first section image", name: "first_section_image", widget: "image"}
+            - {label: "first section image", name: "first_section_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "second section"
           name: "second_section" 
           widget: "object"
@@ -187,7 +187,7 @@ collections:
 
   - label: "Product Detail Page"
     name: "product_detail_page"
-    folder: "../../../src/cms//product_detail"
+    folder: "src/cms/product_detail"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -278,7 +278,7 @@ collections:
 
   - label: "navigation bar"
     name: "navigation_bar"
-    folder: "../../../src/cms//navigation_bar"
+    folder: "src/cms/navigation_bar"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -289,7 +289,7 @@ collections:
         widget: "object"
         fields:
           - {label: "text", name: "text", widget: "string"}
-          - {label: "logo", name: "logo", widget: "image"}
+          - {label: "logo", name: "logo", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
       - label: "navigation"
         name: "navigation"
         widget: "list"
@@ -298,7 +298,7 @@ collections:
 
   - label: "footer bar"
     name: "footer_bar"
-    folder: "../../../src/cms//footer"
+    folder: "src/cms/footer"
     create: true
     slug: "{{slug}}"
     preview_path: preview/{{slug}}
@@ -313,7 +313,7 @@ collections:
             name: "social_media_list"
             widget: "list"
             fields:
-              - {label: "social media image", name: "social_media_image", widget: "image"}
+              - {label: "social media image", name: "social_media_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
               - {label: "link", name: "link", widget: "string"}
       - label: "footer navigation"
         name: "footer_navigation"
