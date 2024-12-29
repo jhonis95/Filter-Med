@@ -2,13 +2,13 @@
 import burgerMenu from '../assets/burger-menu.svg'
 import closeicon from '../assets/close-icon.svg'
 import ContactBtn from './contactBtn.astro';
-
+import { Image } from "astro:assets";
+const navdata=Astro.props;
 interface Linkdata{
     link:string,
     title:string,
     id:number
 }
-const navdata=Astro.props;
 ---
 <div 
     x-data="{
@@ -37,7 +37,7 @@ const navdata=Astro.props;
         >
             <template x-if="open">
                 <div>
-                    <img class=" size-10 object-fill" src={closeicon.src} alt="close-button-">
+                    <Image class=" size-10 object-fill" src={closeicon} alt="close-button-"/>
                     <div
                         x-data={`{navlist:[${navdata.navlist.map((data:Linkdata)=>{return `{link:'${data.link}',title:'${data.title}',id:${data.id}}`})}]}`}
                         class="absolute left-0 w-screen top-[101px] h-fit flex flex-col items-center gap-4 bg-primary py-4 rounded-b-lg shadow-xl"
@@ -52,7 +52,7 @@ const navdata=Astro.props;
                 </div>
             </template>
             <template x-if="!open">
-                <img class=" size-9 object-fill" src={burgerMenu.src} alt="burger-button-">
+                <Image class=" size-9 object-fill" src={burgerMenu} alt="burger-button-"/>
             </template>
         </button>
     </template>

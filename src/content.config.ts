@@ -191,6 +191,44 @@ const product_detail = defineCollection({
         }),
     })
 })
+const navigation_bar = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/cms/navigation_bar" }),
+    schema:({image})=>z.object({
+        logo_container:z.object({
+            text:z.string(),
+            logo:image()
+        }),
+        navigation:z.array(z.object({
+            text:z.string()
+        }))
+    })
+})
+
+const footer_bar = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/cms/footer" }),
+    schema:({image})=>z.object({
+        footer_social_media:z.object({
+            text:z.string(),
+            social_media_list:z.array(z.object({
+                social_media_image:image(),
+                link:z.string()
+            }))
+        }),
+        footer_navigation:z.object({
+            name:z.string(),
+            navigation:z.array(z.object({
+                text:z.string(),
+            }))
+        }),
+        footer_address:z.object({
+            adress_title:z.string(),
+            adress_text:z.string(),
+            phone_title:z.string(),
+            phone_number:z.string(),
+        }),
+        copyright:z.string()
+    })
+})
 
 export const collections={
     home_page,
@@ -198,4 +236,6 @@ export const collections={
     service_page,
     about_page,
     product_detail,
+    navigation_bar,
+    footer_bar
 }

@@ -294,12 +294,7 @@ collections:
         name: "navigation"
         widget: "list"
         fields:
-          - label: "navigation text"
-            name: "navigation_text"
-            widget: "object"
-            fields:
-              - {label: "text", name: "text", widget: "string"}
-              - {label: "link", name: "link", widget: "string"}
+          - {label: "text", name: "text", widget: "string"}
 
   - label: "footer bar"
     name: "footer_bar"
@@ -318,12 +313,8 @@ collections:
             name: "social_media_list"
             widget: "list"
             fields:
-              - label: "social media"
-                name: "social_media"
-                widget: "object"
-                fields:
-                  - {label: "social media image", name: "social_media_image", widget: "image"}
-                  - {label: "link", name: "link", widget: "string"}
+              - {label: "social media image", name: "social_media_image", widget: "image"}
+              - {label: "link", name: "link", widget: "string"}
       - label: "footer navigation"
         name: "footer_navigation"
         widget: "object"
@@ -333,19 +324,14 @@ collections:
             name: "navigation"
             widget: "list"
             fields:
-            - label: "navigation text"
-              name: "navigation_text"
-              widget: "object"
-              fields:
-                - {label: "text", name: "text", widget: "string"}
-                - {label: "link", name: "link", widget: "string"}
+              - {label: "text", name: "text", widget: "string"}
       - label: "footer address"
         name: "footer_address"
         widget: "object"
         fields:
-          - {label: "title", name: "title", widget: "string"}
-          - {label: "address", name: "address", widget: "string"}
-          - {label: "phone", name: "phone", widget: "string"}
+          - {label: "adress title", name: "adress_title", widget: "string"}
+          - {label: "adress text", name: "adress_text", widget: "string"}
+          - {label: "phone title", name: "phone_title", widget: "string"}
           - {label: "phone number", name: "phone_number", widget: "string"}
       - label: "copyright"
         name: "copyright"

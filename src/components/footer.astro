@@ -1,24 +1,18 @@
 ---
-import emailIcon from '../assets/email-icon.svg'
-import instagramIcon from '../assets/instagram-icon.svg'
-import whatsappIcon from '../assets/whatsapp-icon.svg'
-
-const icons=[
-    emailIcon,
-    instagramIcon,
-    whatsappIcon,
-]
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+const footerDataCms = await getCollection("footer_bar");
 
 const navdata=[
     {
         link:'/product',
-        title:'Produto'
+        title:footerDataCms[0].data.footer_navigation.navigation[0].text
     },{
         link:'/service',
-        title:'Serviço'
+        title:footerDataCms[0].data.footer_navigation.navigation[1].text
     },{
         link:'/about',
-        title:'Sobre'
+        title:footerDataCms[0].data.footer_navigation.navigation[2].text
     }
 ]
 ---
@@ -28,28 +22,30 @@ const navdata=[
             <h3 class=" font-Inter  font-bold text-[32px] text-white xl:text-4xl">Filter Med</h3>
             <div class=" flex flex-row gap-4">
                 {
-                    icons.map((icon)=>{
-                        return <img class=" size-7 xl:size-11" src={icon.src} alt={icon.name}>
+                    footerDataCms[0].data.footer_social_media.social_media_list.map((icon)=>{
+                        return <a href={icon.link}>
+                            <Image class=" size-7 xl:size-11" src={icon.social_media_image} alt={'socialmedia icon'}/>
+                        </a>
                     })
                 }
             </div>
         </div>
-        <div class="flex flex-col items-center gap-[73px] md:flex-row lg:gap-14">
+        <div class="flex flex-col justify-center md:items-start gap-[73px] md:flex-row lg:gap-14">
             <div class="flex flex-col text-white gap-6">
-                <h3 class=" text-2xl font-bold font-Jakarta">Navegue</h3>
+                <h3 class="text-center md:text-start text-2xl font-bold font-Jakarta">{footerDataCms[0].data.footer_navigation.name}</h3>
                 {
                     navdata.map((linkdata)=>{
                         return <a class="font-Jakarta text-xl text-center" href={linkdata.link}>{linkdata.title}</a>
                     })
                 }
             </div>
-            <div class="text-base text-white font-Jakarta font-bold text-center flex flex-col gap-4 xl:text-2xl">
-                <h4>Endereço</h4>
-                <h4>Av. Tiradentes, 573-401 - Zona 01, Maringá, PR</h4>
-                <h4>Telefone</h4>
-                <h4>(00) 00000-0000</h4>
+            <div class="text-base text-white font-Jakarta font-bold text-center flex flex-col gap-4 md:items-start xl:text-2xl">
+                <h4 class="text-2xl font-bold font-Jakarta">{footerDataCms[0].data.footer_address.adress_title}</h4>
+                <h4>{footerDataCms[0].data.footer_address.adress_text}</h4>
+                <h4>{footerDataCms[0].data.footer_address.phone_title}</h4>
+                <h4>{footerDataCms[0].data.footer_address.phone_number}</h4>
             </div>
         </div>
     </div>
-    <h3 class=" font-Jakarta text-xl text-white text-center mt-9">copyright © 2024 all rights reserved</h3>
+    <h3 class=" font-Jakarta text-xl text-white text-center mt-9">{footerDataCms[0].data.copyright}</h3>
 </footer>
