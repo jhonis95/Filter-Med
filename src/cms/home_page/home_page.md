@@ -17,11 +17,11 @@ home_product_card:
 home_process_card:
   card_subtitle: Como Trabalhamos
   card_title: Nosso Processo
-  card_content: Somos especializados no aconselhamento e fornecimento de sistemas
-    de filtro de água, produtos de tratamento de água, filtração de processo,
-    carcaças de filtro de água, cartuchos de filtro de microfiltração, filtração
-    de partículas, sistemas de desinfecção ultravioleta (UV) e sistemas de
-    osmose reversa.
+  card_content: Compreendemos as especificidades do projeto para desenvolvemos uma
+    estratégia otimizada para atender aos requisitos do projeto, só assim vamos
+    para a escolha e instalação garantindo que o sistema opere de forma
+    eficiente. Oferecemos suporte contínuo e serviços de manutenção para
+    assegurar a durabilidade e eficiência do sistema.
   card_button_text: Entre em contato
   card_image: ../../../src/assets/group-pic.png
 first_section_title: Serviços
@@ -44,26 +44,26 @@ home_product_division:
   home_product_division_title: Produtos
 home_product_cards:
   - product_card_name: Filter Media
-    product_card_content: Our company offers a wide range of filter media product
-      lines that are designed to meet the needs of various industries and
-      applications. This is the overview of our filter media product lines,
-      comprising filter sheets and filter modules, which are each designed for
-      different requirement levels and areas of applications.
+    product_card_content: Nossa empresa oferece uma ampla gama de linhas de produtos
+      de meios filtrantes projetados para atender às necessidades de vários
+      setores e aplicações. Esta é a visão geral de nossas linhas de produtos de
+      meios filtrantes, compreendendo folhas de filtro e módulos de filtro, cada
+      um projetado para diferentes níveis de requisitos e áreas de aplicação.
     product_card_image: ../../../src/assets/versafix.png
   - product_card_name: Filter Press and Hoisings
-    product_card_content: This are the Filter presses, Filter housings for
-      lenticular modules, and Filter housings for filter cartridges from our
-      product portfolio – three critical components of many industrial
-      production processes. Filter presses utilize a series of plates and frames
-      to remove solids from liquids. Filter housings for filter modules, can
-      accommodate a stack of lenticular filter modules, allowing for efficient
-      and effective filtration while minimizing the risk of contamination. And
-      finally, filter housings for filter cartridges are widely used in a
-      variety of applications. These housings provide a convenient and
-      cost-effective way to maintain high levels of filtration performance.
-      Whether you’re looking to perform a alluvial or a depth filtration to
-      remove unwanted solids or impurities from your liquid, there is a solution
-      among these three types of filtration technology that can meet your needs.
+    product_card_content: Em nossa prortifolio temos Filtros Prensa, Filtros Carcaça
+      para módulos lenticulares e Filtros Carcaça para cartuchos filtrantes.
+      Filtros Prensa utilizam uma série de placas e armações para remover
+      sólidos de líquidos. Filtros Carcaça para modulos filtrantes podem
+      acomodar uma pilha de módulos de filtro lenticulares, permitindo uma
+      filtragem eficiente e eficaz, minimizando o risco de contaminação. Filtros
+      Carcaças para cartuchos filtrantes são amplamente utilizadas em uma
+      variedade de aplicações, Esses Filtros Carcaça fornecem uma maneira
+      conveniente e econômica de manter altos níveis de desempenho de filtragem.
+      Quer você esteja procurando realizar uma filtragem aluvial ou de
+      profundidade para remover sólidos indesejados ou impurezas do seu líquido,
+      há uma solução entre esses três tipos de tecnologia de filtragem que pode
+      atender às suas necessidades.
     product_card_image: ../../../src/assets/NOVOX-CP.png
   - product_card_name: Equipamentos de Filtragem Laboratorial
     product_card_content: >-
@@ -76,10 +76,11 @@ home_product_cards:
       Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
     product_card_image: ../../../src/assets/SCALE-UP Test Kit.png
   - product_card_name: Produtos Complementares
-    product_card_content: When it comes to depth filtration, there are several
-      complementary products that can help you to enhance the process and
-      achieve better results. In addition to our filter media and filter
-      apparatus, we also offer support sheets for precoat filtration, filter
-      cartridges and filter aids (diatomaceous earth) in our range.
+    product_card_content: Quando se trata de filtração em profundidade, existem
+      vários produtos complementares que podem ajudá-lo a aprimorar o processo e
+      obter melhores resultados. Além de nossos Meios Filtrantes e aparelhos
+      Filtrantes, também oferecemos folhas de suporte para filtração de
+      pré-revestimento, cartuchos filtrantes e auxiliares de filtração (terra de
+      diatomáceas) em nossa linha.
     product_card_image: ../../../src/assets/FILTRAP FP - FPA Filter Cartridges.png
 ---

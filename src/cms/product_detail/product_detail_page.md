@@ -7,13 +7,13 @@ subtitle: Explore a nossa seleção de produtos cuidadosamente escolhidos para
 background_image: ../../../src/assets/product-detail-img-bg.png
 filter_media_products:
   product_detail_header_card:
-    card_title: FILTER SHEETS AND FILTER MODULES
-    card_content: Our company offers a wide range of filter media product lines that
-      are designed to meet the needs of various industries and applications.
-      This is the overview of our filter media product lines, comprising filter
-      sheets and filter modules, which are each designed for different
-      requirement levels and areas of applications.
-  section_title: Filter Med
+    card_title: Filtro Folha e Módulos Filtrantes
+    card_content: Nossa empresa oferece uma ampla gama de linhas de produtos de
+      meios filtrantes projetados para atender às necessidades de vários setores
+      e aplicações. Esta é a visão geral de nossas linhas de produtos de meios
+      filtrantes, compreendendo folhas de filtro e módulos de filtro, cada um
+      projetado para diferentes níveis de requisitos e áreas de aplicação.
+  section_title: Filter Media
   product_list:
     - product_description: Standard depth filter sheets for the removal of particles
         from liquids to suit a wide range of applications. The pore size rating
@@ -171,12 +171,13 @@ filter_media_products:
       product_image: ../../../src/cms/product_detail/filter_media/ACTIVACAP.png
 complementaty_products:
   product_detail_header_card:
-    card_title: Complementary Products
-    card_content: When it comes to depth filtration, there are several complementary
-      products that can help you to enhance the process and achieve better
-      results. In addition to our filter media and filter apparatus, we also
-      offer support sheets for precoat filtration, filter cartridges and filter
-      aids (diatomaceous earth) in our range.
+    card_title: Produtos Complementares
+    card_content: Quando se trata de filtração em profundidade, existem vários
+      produtos complementares que podem ajudá-lo a aprimorar o processo e obter
+      melhores resultados. Além de nossos Meios Filtrantes e aparelhos
+      Filtrantes, também oferecemos folhas de suporte para filtração de
+      pré-revestimento, cartuchos filtrantes e auxiliares de filtração (terra de
+      diatomáceas) em nossa linha.
   section_title: Produtos complementares
   product_list:
     - product_image: ../../../src/cms/product_detail/complementary_products/DUROFIL.jpg
@@ -193,7 +194,8 @@ complementaty_products:
         chemicals allowing extended life and output thanks to
         re-generation/sterilization cycles. Please find further technical
         details in the technical data sheets available in the download area.
-      product_image: ../../../src/cms/product_detail/complementary_products/CLAROX PL and PL-NR Filter Cartridges.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/CLAROX PL
+        and PL-NR Filter Cartridges.jpg
     - product_name: CLAROX MP/W Membrane (filter cartridges)
       product_description: MP/W membrane filter cartridges are made of hydrophilic
         polyetersulfone (PES) media . The pleated multilayer filter medium in
@@ -205,13 +207,15 @@ complementaty_products:
         guarantees sterile filtration immediately prior to bottling and are
         integrity testeable. Please find further technical details in the
         technical data sheets available in the download area.
-      product_image: ../../../src/cms/product_detail/complementary_products/CLAROX MP-W Membrane Filter Cartridges.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/CLAROX
+        MP-W Membrane Filter Cartridges.jpg
     - product_name: FILTRAP FP / FPA  (filter cartridges)
       product_description: Wound depth filter cartridge developed for the FILTRAP
         security filter. Used for beer filtration and a wide range of
         applications in the beverage industry. Please find further technical
         details in the technical data sheets available in the download area.
-      product_image: ../../../src/cms/product_detail/complementary_products/FILTRAP FP - FPA Filter Cartridges.jpg
+      product_image: ../../../src/cms/product_detail/complementary_products/FILTRAP FP
+        - FPA Filter Cartridges.jpg
     - product_name: CELPURE (filter aids)
       product_description: CELPURE is made with diatomaceous earth, who is fossilized
         remains of hard shelled algae. It is the ideal choice when developing
@@ -230,7 +234,8 @@ lab_filtration_equipment_products:
 
       Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
   product_list:
-    - product_image: ../../../src/cms/product_detail/lab_filtration_equipment/SCALE-UP  Test Kit.jpg
+    - product_image: ../../../src/cms/product_detail/lab_filtration_equipment/SCALE-UP  Test
+        Kit.jpg
       product_name: SCALE-UP  (test kit)
       product_description: Find your ideal depth filter at an early stage of your
         product development. The Test-Kit contains 10 different PURASPIN for 20
@@ -243,7 +248,8 @@ lab_filtration_equipment_products:
         filtration and sterile filtration. A practical and easy-to-use tool to
         define the right filtration solution at an early stage in the
         development process.
-      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURASPIN Test Kit.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURASPIN
+        Test Kit.jpg
     - product_name: ACTIVASORB (test kit)
       product_description: Contains 6 different activated carbon ACTIVASORB sheet
         types for different requirements and applications. Also included is a
@@ -261,14 +267,16 @@ lab_filtration_equipment_products:
         to test and verify the effectiveness on your beverage. The Test Kit
         includes a 2″ TX or MX filter capsule with connection hose and a
         syringe.
-      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/LIBRASORB TX and MX Test Kit for Wine.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/LIBRASORB
+        TX and MX Test Kit for Wine.jpg
     - product_name: PURASPIN (centrifuge filter)
       product_description: PURASPIN enables you to quickly and efficiently test
         different depth filters or quickly purify a small amount of liquid. To
         do so, insert the filters into the standard 50 mL centrifuge tubes
         (Labcon SuperClear 50 mL tubes). Then, filter the liquid using a
         centrifuge or vacuum.
-      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURASPIN Centrifuge filter.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURASPIN
+        Centrifuge filter.jpg
     - product_name: PURACAP 2″ Capsule
       product_description: Lab filter for filtration method development. The purpose
         of the mini capsule lab filter is to have a tool to find the best
@@ -277,7 +285,8 @@ lab_filtration_equipment_products:
         sheet to clarify liquids containing undesired particles. The mini
         capsule holds a maximum pressure of 2.5 bar (36 psi) or 2.0 bar (29 psi)
         for alcoholic solutions at 25°C (77°F).
-      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP 2″ Capsule.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP
+        2″ Capsule.jpg
     - product_name: PURACAP BIO SD 2″ Capsule
       product_description: Lab filter for microfiltration testing for
         biopharmaceutical liquids at laboratory scale. This procedure is
@@ -286,7 +295,8 @@ lab_filtration_equipment_products:
         the concentration of solids in the feedstock. Solids and filter aid firm
         a filter cake which has a height limitation due to the design (geometry)
         of the filter capsule.
-      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP BIO SD 2″ Capsule.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP
+        BIO SD 2″ Capsule.jpg
     - product_name: PURACAP BIO SD 5″ Capsule
       product_description: Lab filter for microfiltration testing of biopharmaceutical
         liquids at laboratory scale or for filtration of small batches. The 5″
@@ -295,7 +305,8 @@ lab_filtration_equipment_products:
         depends on the concentration of solids in the feedstock. Solids and
         filter aid firm a filter cake which has a height limitation due to the
         design (geometry) of the filter capsule.
-      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP BIO SD 5″ Capsule.jpg
+      product_image: ../../../src/cms/product_detail/lab_filtration_equipment/PURACAP
+        BIO SD 5″ Capsule.jpg
     - product_name: LABTROX 60A
       product_description: Stainless steel lab filter for sheet filtration. For
         filtration experiments and the development of new filtration
@@ -315,20 +326,20 @@ lab_filtration_equipment_products:
 filer_presses_and_housing_products:
   section_title: FILTER PRESSES AND HOUSINGS
   product_detail_header_card:
-    card_title: FILTER PRESSES AND HOUSINGS
-    card_content: This are the Filter presses, Filter housings for lenticular
-      modules, and Filter housings for filter cartridges from our product
-      portfolio – three critical components of many industrial production
-      processes. Filter presses utilize a series of plates and frames to remove
-      solids from liquids. Filter housings for filter modules, can accommodate a
-      stack of lenticular filter modules, allowing for efficient and effective
-      filtration while minimizing the risk of contamination. And finally, filter
-      housings for filter cartridges are widely used in a variety of
-      applications. These housings provide a convenient and cost-effective way
-      to maintain high levels of filtration performance. Whether you’re looking
-      to perform a alluvial or a depth filtration to remove unwanted solids or
-      impurities from your liquid, there is a solution among these three types
-      of filtration technology that can meet your needs.
+    card_title: Filtros de Prensa e Housings
+    card_content: Em nossa prortifolio temos Filtros Prensa, Filtros Carcaça para
+      módulos lenticulares e Filtros Carcaça para cartuchos filtrantes. Filtros
+      Prensa utilizam uma série de placas e armações para remover sólidos de
+      líquidos. Filtros Carcaça para modulos filtrantes podem acomodar uma pilha
+      de módulos de filtro lenticulares, permitindo uma filtragem eficiente e
+      eficaz, minimizando o risco de contaminação. Filtros Carcaças para
+      cartuchos filtrantes são amplamente utilizadas em uma variedade de
+      aplicações, Esses Filtros Carcaça fornecem uma maneira conveniente e
+      econômica de manter altos níveis de desempenho de filtragem. Quer você
+      esteja procurando realizar uma filtragem aluvial ou de profundidade para
+      remover sólidos indesejados ou impurezas do seu líquido, há uma solução
+      entre esses três tipos de tecnologia de filtragem que pode atender às suas
+      necessidades.
   product_list:
     - product_name: NOVOX-ST (plate & frame filters)
       product_description: The NOVOX-ST is a high precision stainless steel plate &
@@ -366,14 +377,16 @@ filer_presses_and_housing_products:
         developed and manufactured for everyday use. It is much safer to operate
         and easier to handle. This, due to an economic chest working height and
         easy loading and disposing of the modules.
-      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR H.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
+        H.jpg
     - product_name: DISCSTAR G
       product_description: This filter module housing is designed with screw clamp
         closure system and standard piping. Ideal for Food & Beverage
         applications. Designed for heavy duty use and high-capacity depth
         filtration. Available for 12″ or 16″ filter modules. Full range from 1
         to 4 modules.
-      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR G.jpg
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
+        G.jpg
     - product_name: DISCSTAR LS
       product_description: DISCSTAR LS has a tri-clamp connection. It has
         pharma-approved valves and pressure gauges. Therefore it is ideally
@@ -381,22 +394,25 @@ filer_presses_and_housing_products:
         pharmaceutical applications. It’s the system of choice for frequently
         changing filtration applications in the pharmaceutical industry.
         Available for 12″ and 16″ filter modules.
-      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR LS.png
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
+        LS.png
     - product_name: DISCSTAR BIO SD
-      product_description: DISCSTAR BIO SD stainless steel housing. This system is
-        designed to insert the PURADISC® BIO SD single or double single-use
-        filter modules. With a tiltable housing for loading and unloading the
-        filter modules. The largest DISCSTAR BIO SD model for 16″ double modules
-        offers a filter capacity of up to 1000L.
-      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR BIO SD.jpg
+      product_description: Filtro Carcaças de aço inoxidável DISCSTAR BIO SD foi
+        projetado para inserir os módulos filtrantes PURADISC BIO SD simples ou
+        duplos de uso único. Com o corpo inclinável para carga e descarga dos
+        módulos filtrantes. O maior modelo oferece capacidade de filtro de até
+        1000L.
+      product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
+        BIO SD.jpg
     - product_name: SECUROX
-      product_description: SECUROX filter cartridge housings are made for a broad
-        field of solid-liquid separation applications. The technology is
-        designed for high service life of filter media and equipment. Also as
-        special version for life sciences available.
+      product_description: SECUROX Filtro Carcaças para cartuchos filtrantes são
+        feitos para um amplo campo de aplicações de separação sólido-líquido. A
+        tecnologia foi projetada para alta vida útil de meios filtrantes e
+        equipamentos. Também disponível como versão especial para ciências
+        biológicas.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/SECUROX.jpg
 product_detail_card:
-  card_title: "Gostoun dos nossos produtos "
+  card_title: "Gostou dos nossos produtos "
   card_subtitle: Entre em contato com um de nossos atendentes agora mesmo!!
   card_button_text: Entre em contato
 ---

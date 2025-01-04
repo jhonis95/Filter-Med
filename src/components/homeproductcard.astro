@@ -12,9 +12,9 @@ import { Image } from "astro:assets";
                 alt={'product-section-image'}
             >
         </div>
-        <div class=" relative left-[170px] top-9 w-[277px] max-h-[350px] overflow-y-scroll no-scrollbar ">
+        <div class=" relative left-[170px] top-9 w-[277px] max-h-[338px] overflow-y-scroll no-scrollbar ">
             <h5 class=" text-white font-bold text-[32px]">{componentData.componentData.product_card_name}</h5>
-            <h6 class=" text-white font-bold text-base text-justify">{componentData.componentData.product_card_content}</h6>
+            <div class=" text-white font-bold text-base text-justify" id="cardContent">{componentData.componentData.product_card_content}</div>
         </div>
     </div>
 </div>

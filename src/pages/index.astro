@@ -12,12 +12,12 @@ const homePageData = await getCollection("home_page");
 	 <HomeHeader/>
 	 <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 		<div class=" bg-accent rounded flex justify-around items-center p-6 md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
-			<div class=" font-Jakarta sm:w-[467px] flex flex-col items-center gap-8">
+			<div class=" font-Jakarta sm:w-[467px] h-fit flex flex-col items-center gap-8">
 				<div class="flex flex-col items-center xl:items-start gap-4 xl:w-full">
 					<p class=" text-base lg:text-[22px]">{homePageData[0].data.home_process_card.card_subtitle}</p>
 					<h3 class=" text-xl font-bold text-secondary lg:text-4xl">{homePageData[0].data.home_process_card.card_title}</h3>
 				</div>
-				<p class=" text-sm text-justify sm:text-base lg:text-lg sm:max-h-[167px]">{homePageData[0].data.home_process_card.card_content}</p>
+				<p class=" text-sm text-justify sm:text-base lg:text-lg">{homePageData[0].data.home_process_card.card_content}</p>
 				<div class=" m-auto">
 					<ContactBtn btnContent={homePageData[0].data.home_process_card.card_button_text} />
 				</div>
