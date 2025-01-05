@@ -2,7 +2,7 @@
 title: about_page
 headertitle: Conheça mais sobre nós
 subtitle: Trabalhamos para entregar a melhor qualidade com o melhor serviço
-background_image: ../../../src/assets/about-img-bg.png
+background_image: ../../../src/assets/about-img-bg.webp
 first_section:
   first_section_title: Sobre Nossa Empresa
   first_section_content_one: Bem-vindo à Filter Med, uma empresa especializada em

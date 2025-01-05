@@ -2,7 +2,7 @@
 title: service_page
 headertitle: Container com filtros para filtração chorume ou aterro sanitário
 subtitle: Fazemos sobre medida para sua empresa
-background_image: ../../../src/assets/service-img-bg.png
+background_image: ../../../src/assets/service-img-bg.webp
 main_content: Na Filter Med, oferecemos soluções sob medida para o tratamento de
   resíduos líquidos em aterros sanitários, com destaque para contentores
   equipados com sistemas de filtragem avançados. Cada projeto é cuidadosamente

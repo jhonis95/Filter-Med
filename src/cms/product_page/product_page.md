@@ -3,7 +3,7 @@ title: product_page
 headertitle: Nossos Produtos
 subtitle: Opções e especificações tecnológicas para cartuchos de reposição de
   alta qualidade
-background_image: ../../../src/assets/product-img-bg.png
+background_image: ../../../src/assets/product-img-bg.webp
 product_header_card:
   card_text: Veja nossos produtos e entre em contato conosco
   card_button_text: Entre em contato

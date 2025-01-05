@@ -102,13 +102,13 @@ const { products,title,card, backgroundImg,pagecard} = Astro.props;
       {
         products.map((product:any)=>{
           return(
-            <div class=" bg-accent w-[285px] h-[342px] flex flex-col gap-4 items-center min-[940px]:w-[420px] min-[940px]:h-[496px]">
+            <div class=" bg-accent w-[285px] h-[352px] flex flex-col gap-4 items-center min-[940px]:w-[420px] min-[940px]:h-[496px]">
                 <Image class="bg-[#FFFFFF] w-[285px] h-[216px] min-[940px]:w-[420px] min-[940px]:h-[309px]" src={product.product_image} alt="product-image"/>
                 <div class=" flex flex-col w-[262px] gap-2 min-[940px]:gap-4 h-[101px] items-center min-[940px]:w-[356px] min-[940px]:h-[148px]">
                     <p class=" text-primary w-full font-bold text-sm h-[20px] min-[940px]:text-base min-[940px]:w-[382px] min-[940px]:h-[24px] text-ellipsis overflow-hidden overflow-y-scroll no-scrollbar ">
                       {product.product_name}
                     </p> 
-                    <p class=" h-[83px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-full min-[940px]:w-[382px]">{product.product_description}</p>
+                    <p class=" h-[94px] font-bold text-black text-xs text-justify overflow-hidden overflow-y-scroll no-scrollbar min-[940px]:text-base min-[940px]:h-full min-[940px]:w-[382px]">{product.product_description}</p>
                 </div>
             </div>
           )                               
