@@ -15,14 +15,6 @@ export default {
 			'Jakarta':['"Plus Jakarta Sans"', 'sans-serif'],
 			'Inter':['"Inter"', 'sans-serif']
 		},
-		extend: {
-			backgroundImage: {
-				'hero-bg-img': "url('./src/assets/bg-img-home-pg.png')",
-				"continer-img1":"url('./src/assets/containerimg1.png')",
-				"continer-img2":"url('./src/assets/containerimg2.png')",
-				"continer-img3":"url('./src/assets/containerimg3.png')"
-			  }
-		},
 	},
 	plugins: [],
 }

@@ -40,7 +40,7 @@ interface Linkdata{
                     <Image class=" size-10 object-fill" src={closeicon} alt="close-button-"/>
                     <div
                         x-data={`{navlist:[${navdata.navlist.map((data:Linkdata)=>{return `{link:'${data.link}',title:'${data.title}',id:${data.id}}`})}]}`}
-                        class="absolute left-0 w-screen top-[101px] h-fit flex flex-col items-center gap-4 bg-primary py-4 rounded-b-lg shadow-xl"
+                        class="absolute left-0 w-screen top-[60px] sm:top-[101px] h-fit flex flex-col items-center gap-4 bg-primary py-4 rounded-b-lg shadow-xl"
                     >
                         <template x-for="data in navlist" :key="data.id">
                             <a class="font-Inter font-bold text-xl text-white" x-text="data.title" x-bind:href="data.link"></a>

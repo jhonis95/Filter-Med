@@ -2,8 +2,7 @@
 title: product_detail_page
 headertitle: filtros de placas lenticulares
 subtitle: Explore a nossa seleção de produtos cuidadosamente escolhidos para
-  oferecer qualidade, inovação e praticidade. Encontre a solução perfeita para
-  as suas necessidades
+  oferecer qualidade, inovação e praticidade.
 background_image: ../../../src/assets/product-detail-img-bg.webp
 filter_media_products:
   product_detail_header_card:
