@@ -323,7 +323,7 @@ lab_filtration_equipment_products:
         liquids.
       product_image: ../../../src/cms/product_detail/lab_filtration_equipment/LABTROX 60B.jpg
 filer_presses_and_housing_products:
-  section_title: FILTER PRESSES AND HOUSINGS
+  section_title: Filtros de Prensa e Housings
   product_detail_header_card:
     card_title: Filtros de Prensa e Housings
     card_content: Em nossa prortifolio temos Filtros Prensa, Filtros Carcaça para
@@ -341,58 +341,58 @@ filer_presses_and_housing_products:
       necessidades.
   product_list:
     - product_name: NOVOX-ST (plate & frame filters)
-      product_description: The NOVOX-ST is a high precision stainless steel plate &
-        frame filter for depth filtration, designed and manufactured for heavy
-        duty use – 24/7. The unique design of the NOVOX-ST allows for efficient
-        handling. High precision construction of the plate & frame assembly and
-        the hydraulic closing mechanism, combined with high-performance FILTROX
-        filter sheets, minimizes drip-loss. It is used for alluvial filtration
-        or sheet filtration only.
+      product_description: O NOVOX-ST é um filtro de placa e estrutura de aço
+        inoxidável de alta precisão para filtragem de profundidade, projetado e
+        fabricado para uso pesado. O design exclusivo do NOVOX-ST permite um
+        manuseio eficiente. A construção de alta precisão do conjunto de placa e
+        estrutura e o mecanismo de fechamento hidráulico, combinados com folhas
+        de filtro FILTROX de alto desempenho, minimizam a perda por gotejamento.
+        É usado apenas para filtragem aluvial ou filtragem de folhas.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/NOVOX-ST.jpg
     - product_name: NOVOX-OD
-      product_description: The NOVOX-OD is a high precision stainless steel plate &
-        frame filter, designed and built for hygienically critical, high-value
-        applications. The unique design of the NOVOX-OD allows efficient
-        handling without the need for gaskets in the filter stack – inlet/outlet
-        tubes are formed within the stack itself, sealed by the filter sheets.
-        This feature makes the cleaning procedure much easier and eliminates the
-        need for gasket removal or replacement. High precision construction of
-        the plate & frame assembly and the hydraulic closing mechanism, combined
-        with high-performance FILTROX filter sheets, make this system almost
-        free of any drip-loss.
+      product_description: o novox-od é um filtro de placa e estrutura de alta
+        precisão com aço inoxodável, projetado e construído para aplicações
+        higienicamente críticas e de alto valor. o design exclusivo do novox-od
+        permite um manuseio eficiente sem a necessidade de juntas na pilha do
+        filtro – os tubos de entrada/saída são formados dentro da própria pilha,
+        selados pelas folhas do filtro. esse recurso torna o procedimento de
+        limpeza muito mais fácil e elimina a necessidade de remoção ou
+        substituição da junta. a construção de alta precisão do conjunto de
+        placa e estrutura e o mecanismo de fechamento hidráulico, combinados com
+        folhas de filtro filtrox de alto desempenho, tornam este sistema quase
+        livre de qualquer perda por gotejamento.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/NOVOX-OD.jpg
     - product_name: NOVOX-CP
-      product_description: The NOVOX-CP is a high precision plate & frame filter,
-        designed and built for pharmaceutical and other critical applications.
-        The filter plates are available in stainless steel or polypropylene
-        (other materials on request). The NOVOX-CP is an enclosed filtration
-        system completely sealed for CIP without filter sheets. It eliminates
-        any drip loss and prevents the liquid from having contact with the
-        outside environment.
+      product_description: O NOVOX-CP é um filtro de placa e estrutura de alta
+        precisão, projetado e construído para aplicações farmacêuticas e outras
+        aplicações críticas. As placas de filtro estão disponíveis em aço
+        inoxidável ou polipropileno (outros materiais mediante solicitação). O
+        NOVOX-CP é um sistema de filtragem fechado completamente selado para CIP
+        sem folhas de filtro. Ele elimina qualquer perda por gotejamento e evita
+        que o líquido tenha contato com o ambiente externo.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/NOVOX-CP.jpg
     - product_name: DISCSTAR H
-      product_description: DISCSTAR H is the newest generation of module housing. The
-        precise horizontal stainless steel housing for 16″ filter modules, is
-        developed and manufactured for everyday use. It is much safer to operate
-        and easier to handle. This, due to an economic chest working height and
-        easy loading and disposing of the modules.
+      product_description: DISCSTAR H é a mais nova geração de filtro carcaça para
+        módulos filtrantes. O alojamento horizontal preciso de aço inoxidável
+        para módulos filtrantes e é desenvolvido e fabricado para uso diário. É
+        muito mais seguro de operar e mais fácil de manusear. Isso, devido a uma
+        altura de trabalho econômica no peito e fácil carregamento e descarte
+        dos módulos.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
         H.jpg
     - product_name: DISCSTAR G
-      product_description: This filter module housing is designed with screw clamp
-        closure system and standard piping. Ideal for Food & Beverage
-        applications. Designed for heavy duty use and high-capacity depth
-        filtration. Available for 12″ or 16″ filter modules. Full range from 1
-        to 4 modules.
+      product_description: Este filtro carcaça para módulos filtrantes é projetado com
+        sistema de fechamento de grampo de parafuso e tubulação padrão. Ideal
+        para aplicações de alimentos e bebidas. Projetado para uso pesado e
+        filtragem de profundidade de alta capacidade.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
         G.jpg
     - product_name: DISCSTAR LS
-      product_description: DISCSTAR LS has a tri-clamp connection. It has
-        pharma-approved valves and pressure gauges. Therefore it is ideally
-        suited for highly sensitive applications in healthcare and for
-        pharmaceutical applications. It’s the system of choice for frequently
-        changing filtration applications in the pharmaceutical industry.
-        Available for 12″ and 16″ filter modules.
+      product_description: O DISCSTAR LS tem uma conexão tri-clamp. Ele tem válvulas e
+        medidores de pressão aprovados pela indústria farmacêutica. Portanto, é
+        ideal para aplicações altamente sensíveis em assistência médica e para
+        aplicações farmacêuticas. É o sistema de escolha para aplicações de
+        filtragem de mudança frequente na indústria farmacêutica.
       product_image: ../../../src/cms/product_detail/filter_presses_and_housings/DISCSTAR
         LS.png
     - product_name: DISCSTAR BIO SD
