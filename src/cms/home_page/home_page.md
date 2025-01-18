@@ -9,11 +9,27 @@ home_header_card:
   card_title: Precisa de ajuda de um profissional?
   card_subtitle: "Encontre flexibilidade para fazer negócios "
   card_button_text: fale com um especialista
-home_product_card:
-  card_title: Nome – produto de venda principal
-  card_subtitle: pequena descrição do produto
-  card_button_text: Saiba Mais
-  background_image: https://cdn.pixabay.com/photo/2020/06/01/08/46/water-5245722_1280.jpg
+home_service:
+  - card_title: Osmose Reversa
+    card_subtitle: Tecnologia eficiente e automatizada no tratamento de chorume,
+      atendendo aos parâmetros da CONAMA 430 sem necessidade de polimento final.
+    card_button_text: saiba mais
+    card_link: /osmosereversa
+    background_image: ../../../src/assets/Osmose Reversa.webp
+  - card_title: Ultrafiltração
+    card_subtitle: Ultra filtração avançada para purificação de águas residuais que
+      remove 99,99999% de bactérias e vírus, sem químicos, com alta eficiência e
+      sustentabilidade.
+    card_button_text: saiba mais
+    card_link: /ultraffiltracao
+    background_image: ../../../src/assets/Ultrafiltração.png
+  - card_title: Nanofiltração
+    card_link: /nanofiltracao
+    card_button_text: saiba mais
+    card_subtitle: Tecnologia de membranas que remove íons divalentes, metais
+      pesados e micropoluentes, com fácil integração em sistemas de tratamento
+      de efluentes.
+    background_image: ../../../src/assets/nanofiltração.png
 home_process_card:
   card_subtitle: Como Trabalhamos
   card_title: Nosso Processo
@@ -29,7 +45,7 @@ first_section_subtitle: containers com filtros para filtração chorume ou aterr
 home_service_cards:
   - service_name: Container prontos para o serviço
     service_image: ../../../src/assets/containerimg3.png
-  - service_name: Produtos de alta quilidade
+  - service_name: Produtos de alta qualidade
     service_image: ../../../src/assets/containerimg2.png
   - service_name: Calibrados e ajustados sobre medida
     service_image: ../../../src/assets/containerimg1.png

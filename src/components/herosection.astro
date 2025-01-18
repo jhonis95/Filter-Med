@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 const homePageData = await getCollection("home_page");
 ---
 <section class=" w-full min-h-64 pb-[174px] md:pb-0 2xl:h-4/6">
-    <div class=" relative text-white w-full xl:h-[600px] 2xl:h-full">
+    <div class=" relative text-white w-full xl:h-[600px] 2xl:h-[690px]">
         <Image class=" absolute w-full h-full object-cover" loading="lazy" src={homePageData[0].data.background_image} alt={'test'}/>
         <div class=" flex items-center justify-around gap-5 h-auto py-12 md:h-full md:justify-evenly flex-col md:flex-row lg:justify-center lg:gap-14 xl:gap-28">
             <div class=" z-10 flex flex-col h-full justify-center items-center mx-3 gap-4 md:gap-11 md:items-start font-Jakarta font-bold text-center">

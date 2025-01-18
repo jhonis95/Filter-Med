@@ -33,13 +33,14 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card subtitle", name: "card_subtitle", widget: "string"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
-        - label: "home product card"
-          name: "home_product_card" 
-          widget: "object"
+        - label: "home service"
+          name: "home_service" 
+          widget: "list"
           fields:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card subtitle", name: "card_subtitle", widget: "string"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
+            - {label: "card link", name: "card_link", widget: "string"}
             - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - label: "home process card"
           name: "home_process_card" 

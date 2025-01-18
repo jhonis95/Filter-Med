@@ -1,18 +1,30 @@
 ---
 import Herosection from '../components/herosection.astro';
-import ContactBtn from './contactBtn.astro';
+import { Image } from "astro:assets";
+import { getCollection } from 'astro:content';
+const homePageData = await getCollection("home_page");
 ---
-<section class=" h-fit 2xl:h-screen">
+<section class="w-full h-fit">
     <Herosection/>
-    <div class=" flex justify-center items-center h-[171px] sm:h-2/6 sm:mt-5">
-        <div class=" flex flex-col items-center gap-4 bg-primary w-full mx-3 rounded-lg sm:gap-0 sm:inline sm:relative md:w-4/5 h-[71px] md:h-[100px] md:rounded-3xl xl:h-[173px] 2xl:w-[1435px]">
-            <div class=" sm:relative sm:left-16 sm:top-3 xl:top-[27px] w-fit">
-                <h5 class="font-Jakarta font-bold text-white w-fit text-base md:text-2xl xl:text-4xl">Nome – produto de venda principal</h5>
-                <p class="font-Jakarta font-bold text-white text-center w-full sm:w-fit sm:text-left text-sm md:text-lg xl:text-xl">pequena descrição do produto</p>
-            </div>
-            <div class="sm:absolute sm:bottom-[-20px] lg:bottom-[-20px] left-16">
-                <ContactBtn btnContent="Saiba Mais"/>
-            </div>
+    <div class="flex flex-col gap-11 my-5">
+        <h3 class="font-bold text-primary text-4xl text-center">Conheça os nossos sistemas</h3>
+        <div class="flex flex-wrap justify-center h-fit w-full gap-14">
+            {
+                homePageData[0].data.home_service.map((cardData)=>{
+                    return(
+                        <a href={cardData.card_link}>
+                            <div class=" w-[317px] h-[380px] bg-primary flex flex-col gap-3 items-center rounded-lg">
+                                <Image class="w-full h-[202px] rounded-t-lg object-cover" src={cardData.background_image} alt='card image'/>
+                                <div class="flex flex-col gap-3 text-center w-[277px]">
+                                    <h4 class=" text-white font-Jakarta font-bold text-lg">{cardData.card_title}</h4>
+                                    <p class=" min-h-[64px] text-justify font-medium text-white font-Jakarta text-xs">{cardData.card_subtitle}</p>
+                                    <button class=" bg-secondary w-full h-[42px] rounded mb-2 font-bold text-white">{cardData.card_button_text}</button>
+                                </div>
+                            </div>
+                        </a>
+                    )
+                })
+            }
         </div>
     </div>
 </section>
