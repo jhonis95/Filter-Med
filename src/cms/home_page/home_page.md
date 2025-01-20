@@ -13,19 +13,19 @@ home_service:
   - card_title: Osmose Reversa
     card_subtitle: Tecnologia eficiente e automatizada no tratamento de chorume,
       atendendo aos parâmetros da CONAMA 430 sem necessidade de polimento final.
-    card_button_text: saiba mais
-    card_link: /osmosereversa
+    card_button_text: Saiba mais
+    card_link: service_detail/osmosereversa
     background_image: ../../../src/assets/Osmose Reversa.webp
   - card_title: Ultrafiltração
     card_subtitle: Ultra filtração avançada para purificação de águas residuais que
       remove 99,99999% de bactérias e vírus, sem químicos, com alta eficiência e
       sustentabilidade.
-    card_button_text: saiba mais
-    card_link: /ultraffiltracao
+    card_button_text: Saiba mais
+    card_link: service_detail/ultraffiltracao
     background_image: ../../../src/assets/Ultrafiltração.png
   - card_title: Nanofiltração
-    card_link: /nanofiltracao
-    card_button_text: saiba mais
+    card_link: service_detail/nanofiltracao
+    card_button_text: Saiba mais
     card_subtitle: Tecnologia de membranas que remove íons divalentes, metais
       pesados e micropoluentes, com fácil integração em sistemas de tratamento
       de efluentes.

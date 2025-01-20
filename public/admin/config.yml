@@ -214,7 +214,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "text"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/filter_media", public_folder: "../../../src/cms//product_detail/filter_media"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms/product_detail/filter_media", public_folder: "../../../src/cms/product_detail/filter_media"}
         - label: "Complementary Products" 
           name: "complementaty_products" 
           widget: "object" 
@@ -232,7 +232,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "text"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/complementary_products", public_folder: "../../../src/cms//product_detail/complementary_products"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms/product_detail/complementary_products", public_folder: "../../../src/cms/product_detail/complementary_products"}
         - label: "Lab Filtration Equipment Products" 
           name: "lab_filtration_equipment_products" 
           widget: "object" 
@@ -250,7 +250,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "text"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/lab_filtration_equipment", public_folder: "../../../src/cms//product_detail/lab_filtration_equipment"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms/product_detail/lab_filtration_equipment", public_folder: "../../../src/cms/product_detail/lab_filtration_equipment"}
         - label: "Filer Presses And Housing Products" 
           name: "filer_presses_and_housing_products" 
           widget: "object" 
@@ -268,7 +268,7 @@ collections:
               fields:
               - {label: "product name", name: "product_name", widget: "string"}
               - {label: "product description", name: "product_description", widget: "text"}
-              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms//product_detail/filter_presses_and_housings", public_folder: "../../../src/cms//product_detail/filter_presses_and_housings"}
+              - {label: "product image", name: "product_image", widget: "image", media_folder: "../../../src/cms/product_detail/filter_presses_and_housings", public_folder: "../../../src/cms/product_detail/filter_presses_and_housings"}
         - label: "product detail card"
           name: "product_detail_card" 
           widget: "object"
@@ -337,3 +337,65 @@ collections:
       - label: "copyright"
         name: "copyright"
         widget: "string"
+
+  - label: "service detail page"
+    name: "service_detail_page"
+    folder: "src/cms/service_detail_page"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+      - {label: "title", name: "title", widget: "hidden", default: "service_detail_page"}
+      - {label: "header title", name: "header_title", widget: "string"}
+      - label: "page data"
+        name: "page_data"
+        widget: "object"
+        fields:
+          - label: page topics
+            name: page_topics
+            widget: list
+            fields:
+              - {label: "topic", name: "topic", widget: "string"}
+              - {label: "subtitle", name: "subtitle", widget: "string"}
+              - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+              - label: "about system section" 
+                name: "about_system_section"
+                widget: "object"
+                fields:
+                  - {label: "title", name: "title", widget: "string"}
+                  - label: "paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    fields:
+                      - {label: "paragraph", name: "paragraph", widget: "string"}
+                  - {label: "image", name: "image", widget: "image", media_folder: "../../../src/cms/service_detail_page/images", public_folder: "../../../src/cms/service_detail_page/images"}
+              - label: "advantage section" 
+                name: "advantage_section"
+                widget: "object"
+                fields:
+                  - {label: "title", name: "title", widget: "string"}
+                  - {label: "subtitle", name: "subtitle", widget: "text"}
+                  - label: "advantages"
+                    name: "advantages"
+                    widget: "list"
+                    fields:
+                      - {label: "advantage", name: "advantage", widget: "text"}
+                  - {label: "button text", name: "button_text", widget: "string"}
+                  - label: "images"
+                    name: "images"
+                    widget: "list"
+                    fields:
+                      - {label: "image", name: "image", widget: "image", media_folder: "../../../src/cms/service_detail_page/images", public_folder: "../../../src/cms/service_detail_page/images"}
+              - label: "tecnical section" 
+                name: "tecnical_section"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "title", name: "title", widget: "string", required: false}
+                  - {label: "subtitle", name: "subtitle", widget: "text", required: false}
+                  - label: "paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    fields:
+                      - {label: "paragraph", name: "paragraph", widget: "string",required: false}
+                  - {label: "image", name: "image", widget: "image", media_folder: "../../../src/cms/service_detail_page/images", public_folder: "../../../src/cms/service_detail_page/images",required: false}

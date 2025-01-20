@@ -20,8 +20,8 @@ const aboutPageData = await getCollection("about_page");
 
         <div class=" relative rounded flex flex-col-reverse gap-4 items-end w-[272px] sm:w-[400px] md:w-fit md:gap-10 md:flex-row md:mx-5 md:mt-0 md:items-center lg:gap-20 2xl:gap-48">
 			<div class=" z-10 font-Jakarta md:w-[467px] xl:w-[865px] flex flex-col items-center gap-8 md:mb-0">
-                <h3 class=" text-base text-black text-justify sm:text-lg font-bold xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.first_section.first_section_content_one}</h3>
-                <h3 class=" text-base text-black text-justify sm:text-lg font-bold xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.first_section.first_section_content_two}</h3>
+                <h3 class=" text-base text-black text-justify sm:text-lg font-medium xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.first_section.first_section_content_one}</h3>
+                <h3 class=" text-base text-black text-justify sm:text-lg font-medium xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.first_section.first_section_content_two}</h3>
             </div>
             <div class=" absolute h-full w-full md:w-fit md:h-fit opacity-50 md:opacity-100 md:relative flex flex-col items-center justify-center gap-12">
                 <Image class=" h-[400px] sm:w-fit sm:h-fit" src={aboutPageData[0].data.first_section.first_section_image} alt="group image"/>
@@ -37,7 +37,7 @@ const aboutPageData = await getCollection("about_page");
 					return(
 						<div class="bg-accent w-[285px] h-[285px] font-Jakarta font-bold flex flex-col items-center gap-3 rounded-lg min-[940px]:w-[391px] min-[940px]:h-[391px]">
 							<h1 class="text-xl flex flex-col justify-center text-center items-center text-secondary w-[221px] h-[80px] min-[940px]:text-[32px] min-[940px]:w-[370px] min-[940px]:h-[80px]">{data.card_title}</h1>
-							<p class="font-bold font-Jakarta text-base text-justify mx-4 min-[940px]:text-2xl">{data.card_content}</p>
+							<p class="font-medium font-Jakarta text-base text-justify mx-4 min-[940px]:text-2xl">{data.card_content}</p>
 						</div>
 					)
 				})
@@ -46,9 +46,9 @@ const aboutPageData = await getCollection("about_page");
 
         <h3 class=" text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">{aboutPageData[0].data.third_section.third_section_title}</h3>
         <div class=" w-[272px] sm:w-fit 2xl:w-[1319px] flex flex-col gap-4 mx-5">
-            <p class="text-black text-justify font-bold text-base sm:text-lg xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.third_section.third_section_content_one}</p>
-            <p class="text-black text-justify font-bold text-base sm:text-lg xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.third_section.third_section_content_two}</p>
-            <p class="text-black text-justify font-bold text-base sm:text-lg xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.third_section.third_section_content_tree}</p>
+            <p class="text-black text-justify font-normal text-base sm:text-lg xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.third_section.third_section_content_one}</p>
+            <p class="text-black text-justify font-normal text-base sm:text-lg xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.third_section.third_section_content_two}</p>
+            <p class="text-black text-justify font-normal text-base sm:text-lg xl:text-3xl 2xl:text-4xl">{aboutPageData[0].data.third_section.third_section_content_tree}</p>
         </div>
 
         <ContactBtn btnContent="Entre em contato"/>

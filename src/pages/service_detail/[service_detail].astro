@@ -1,0 +1,125 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from "astro:assets";
+import Layout from '../../layouts/Layout.astro';
+
+
+export async function getStaticPaths(){
+    const service_detail = await getCollection("service_detail");
+    return[
+        {
+            params: {
+              service_detail: "osmosereversa",
+            },
+            props:{
+                header_title:service_detail[0].data.header_title,
+                page_data:service_detail[0].data.page_data.page_topics[0]
+            }
+        },
+        {
+            params: {
+              service_detail: "ultraffiltracao",
+            },
+            props:{
+                header_title:service_detail[0].data.header_title,
+                page_data:service_detail[0].data.page_data.page_topics[1]
+            }
+        },
+        {
+            params: {
+              service_detail: "nanofiltracao",
+            },
+            props:{
+                header_title:service_detail[0].data.header_title,
+                page_data:service_detail[0].data.page_data.page_topics[2]
+            }
+        },
+    ]
+}
+const {header_title,page_data} =Astro.props
+---
+
+<Layout>
+    <section class=" w-full h-[270px] md:h-fit 2xl:h-[690px]">
+        <div class=" relative text-white w-full h-full">
+            <div class="absolute z-10 flex items-center justify-around gap-5 h-auto top-[80px] md:top-0 w-full md:w-fit md:left-[170px] 2xl:left-[308px] md:h-full md:justify-start flex-col md:flex-row lg:gap-14 xl:gap-28">
+                <div class=" flex flex-col h-full justify-center items-center mx-3 gap-4 md:gap-11 md:items-start font-Jakarta font-bold text-center">
+                    <h3 class=" text-2xl lg:text-5xl sm:w-[550px] md:text-left lg:w-[800px] 2xl:w-[1200px] 2xl:text-[64px]">{header_title} {page_data.topic}</h3>
+                    <h4 class=" text-base lg:text-2xl max-w-[400px] md:text-justify lg:max-w-[525px] 2xl:max-w-[861px] 2xl:text-3xl">{page_data.subtitle}</h4>
+                </div>
+            </div>
+            <Image loading="lazy" class=" w-full h-full object-cover" src={page_data.background_image} alt="bg-img"/>
+        </div>
+    </section>
+    <main class="flex flex-col mt-24 gap-28">
+        <section class="flex flex-col items-center gap-20">
+            <h3 class=" text-primary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.about_system_section.title}</h3>
+            <div class=" flex justify-around items-center max-w-[1424px] gap-28">
+                <div class="flex flex-col gap-12 max-w-[706px]">
+                    {
+                        page_data.about_system_section.paragraphs.map((paragraph)=>{return(
+                            <p class="text-lg font-Jakarta text-justify">
+                                {paragraph.paragraph}
+                            </p>
+                        )})
+                    }
+                </div>
+                <Image class="rounded-xl w-[600px] h-[475px]" src={page_data.about_system_section.image} alt="about  the system image"/>
+            </div>
+        </section>
+        <section class="w-full bg-accent">
+            <div class="flex gap-10 items-center justify-center my-8">
+                <div class="flex flex-col gap-10 font-Jakarta">
+                    <h3 class=" text-primary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.advantage_section.title}</h3>
+                    <h5 class=" text-2xl font-medium max-w-[657px] text-justify">{page_data.advantage_section.subtitle}</h5>
+                    <div class="flex flex-col gap-6">
+                        {
+                            page_data.advantage_section.advantages.map((advantage)=>{
+                                return(
+                                    <div class="flex items-center gap-8">
+                                        <div class="rounded-full bg-secondary w-[14px] h-[14px]"></div>
+                                        <p class=" max-w-[609px] text-base">{advantage.advantage}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                    <button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
+                        <a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 lg:text-4xl" href="">{page_data.advantage_section.button_text}</a>
+                    </button>
+                </div>
+                <div class=" flex flex-wrap justify-center max-w-[726px] gap-14">
+                    {
+                        page_data.advantage_section.images.map((img)=>{
+                            return(
+                                <Image class="rounded-xl" src={img.image} alt="exemples"/>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </section>
+        {
+            page_data.tecnical_section?.title===''?'':<section class="flex flex-col items-center gap-16 mb-6">
+                <h3 class=" text-primary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.tecnical_section?.title}</h3>
+                <div class="flex justify-center items-center gap-40">
+                    <div class="flex flex-col gap-8 max-w-[706px]">
+                        <h5 class="text-primary text-2xl font-medium max-w-[657px]">{page_data.tecnical_section?.subtitle}</h5>
+                        {
+                            page_data.tecnical_section?.paragraphs?page_data.tecnical_section?.paragraphs.map((text)=>{
+                                return(
+                                    <p class="text-lg font-Jakarta text-justify max-w-[642px]">
+                                        {text.paragraph}
+                                    </p>
+                                )
+                            }):''
+                        }
+                    </div>
+                    {
+                        page_data.tecnical_section?.image?<Image class="w-[626px] h-[364px] rounded-xl" src={page_data.tecnical_section.image} alt="tecnical section image"/>:''
+                    }
+                </div>
+            </section>
+        }
+    </main>
+</Layout>

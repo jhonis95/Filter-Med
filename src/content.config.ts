@@ -231,6 +231,46 @@ const footer_bar = defineCollection({
     })
 })
 
+const service_detail = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/cms/service_detail_page" }),
+    schema:({image})=>z.object({
+        header_title:z.string(),
+        page_data:z.object({
+            page_topics:z.array(z.object({
+                topic:z.string(),
+                subtitle:z.string(),
+                background_image:image(),
+                about_system_section:z.object({
+                    title:z.string(),
+                    paragraphs:z.array(z.object({
+                        paragraph:z.string()
+                    })),
+                    image:image()
+                }),
+                advantage_section:z.object({
+                    title:z.string(),
+                    subtitle:z.string(),
+                    advantages:z.array(z.object({
+                        advantage:z.string()
+                    })),
+                    button_text:z.string(),
+                    images:z.array(z.object({
+                        image:image()
+                    }))
+                }),
+                tecnical_section:z.object({
+                    title:z.string().optional(),
+                    subtitle:z.string().optional(),
+                    paragraphs:z.array(z.object({
+                        paragraph:z.string().optional()
+                    })).optional(),
+                    image:image().optional()
+                }).optional()
+            }))
+        }),
+    })
+})
+
 export const collections={
     home_page,
     product_page,
@@ -238,5 +278,6 @@ export const collections={
     about_page,
     product_detail,
     navigation_bar,
-    footer_bar
+    footer_bar,
+    service_detail
 }
