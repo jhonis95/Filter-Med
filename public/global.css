@@ -49,5 +49,26 @@
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
+  }
 }
+.esconder{
+  opacity: 0;
+  transition: all 1s;
+}
+.mostrar{
+  opacity: 1;
+}
+.stack-img:nth-child(1){
+  transition-delay: 200ms;
+}
+.stack-img:nth-child(2){
+  transition-delay: 400ms;
+}
+.stack-img:nth-child(3){
+  transition-delay: 600ms;
+}
+@media(prefers-reduced-motion){
+  .esconder{
+    transition: none;
+  }
 }

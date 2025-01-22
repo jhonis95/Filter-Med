@@ -52,10 +52,10 @@ const {header_title,page_data} =Astro.props
         </div>
     </section>
     <main class="flex flex-col mt-24 gap-28">
-        <section class="flex flex-col items-center gap-20">
-            <h3 class=" text-primary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.about_system_section.title}</h3>
-            <div class=" flex justify-around items-center max-w-[1424px] gap-28">
-                <div class="flex flex-col gap-12 max-w-[706px]">
+        <section class="flex flex-col items-center gap-10 md:gap-20">
+            <h3 class=" text-primary font-Jakarta text-center w-[230px] md:w-full text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.about_system_section.title}</h3>
+            <div class=" flex flex-col-reverse 2xl:flex-row justify-around items-center max-w-[1424px] gap-6 2xl:gap-28">
+                <div class="flex flex-col gap-6 2xl:gap-12 max-w-[706px] mx-3">
                     {
                         page_data.about_system_section.paragraphs.map((paragraph)=>{return(
                             <p class="text-lg font-Jakarta text-justify">
@@ -64,13 +64,13 @@ const {header_title,page_data} =Astro.props
                         )})
                     }
                 </div>
-                <Image class="rounded-xl w-[600px] h-[475px]" src={page_data.about_system_section.image} alt="about  the system image"/>
+                <Image class="rounded-xl w-[372px] h-[w95px] md:w-[600px] md:h-[475px]" src={page_data.about_system_section.image} alt="about  the system image"/>
             </div>
         </section>
         <section class="w-full bg-accent">
             <div class="flex gap-10 items-center justify-center my-8">
-                <div class="flex flex-col gap-10 font-Jakarta">
-                    <h3 class=" text-primary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.advantage_section.title}</h3>
+                <div class="flex flex-col items-center 2xl:items-start gap-10 font-Jakarta">
+                    <h3 class=" text-primary font-Jakarta text-center w-[300px] md:w-full text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.advantage_section.title}</h3>
                     <h5 class=" text-2xl font-medium max-w-[657px] text-justify">{page_data.advantage_section.subtitle}</h5>
                     <div class="flex flex-col gap-6">
                         {
@@ -84,11 +84,13 @@ const {header_title,page_data} =Astro.props
                             })
                         }
                     </div>
-                    <button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
-                        <a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 lg:text-4xl" href="">{page_data.advantage_section.button_text}</a>
-                    </button>
+                    <div class=" w-full flex justify-center">
+                        <button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
+                            <a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 lg:text-4xl" href="">{page_data.advantage_section.button_text}</a>
+                        </button>
+                    </div>
                 </div>
-                <div class=" flex flex-wrap justify-center max-w-[726px] gap-14">
+                <div class=" hidden 2xl:flex flex-wrap justify-center max-w-[726px] gap-14">
                     {
                         page_data.advantage_section.images.map((img)=>{
                             return(
