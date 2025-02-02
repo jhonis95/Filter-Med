@@ -71,14 +71,14 @@ const {header_title,page_data} =Astro.props
             <div class="flex gap-10 items-center justify-center my-8">
                 <div class="flex flex-col items-center 2xl:items-start gap-10 font-Jakarta">
                     <h3 class=" text-primary font-Jakarta text-center w-[300px] md:w-full text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.advantage_section.title}</h3>
-                    <h5 class=" text-2xl font-medium max-w-[657px] text-justify">{page_data.advantage_section.subtitle}</h5>
-                    <div class="flex flex-col gap-6">
+                    <h5 class=" text-base text-center md:text-2xl font-medium min-w-[280px] md:max-w-[657px] md:text-justify">{page_data.advantage_section.subtitle}</h5>
+                    <div class="flex flex-col gap-6 mx-3">
                         {
                             page_data.advantage_section.advantages.map((advantage)=>{
                                 return(
-                                    <div class="flex items-center gap-8">
-                                        <div class="rounded-full bg-secondary w-[14px] h-[14px]"></div>
-                                        <p class=" max-w-[609px] text-base">{advantage.advantage}</p>
+                                    <div class="flex items-center gap-4 md:gap-8">
+                                        <div class="rounded-full bg-secondary min-w-[14px] min-h-[14px]"></div>
+                                        <p class=" max-w-[609px] text-xs md:text-base">{advantage.advantage}</p>
                                     </div>
                                 )
                             })
@@ -102,25 +102,27 @@ const {header_title,page_data} =Astro.props
             </div>
         </section>
         {
-            page_data.tecnical_section?.title===''?'':<section class="flex flex-col items-center gap-16 mb-6">
+            page_data.tecnical_section?.title===''?'':<section class="flex flex-col items-center gap-10 sm:gap-16 mb-6">
                 <h3 class=" text-primary font-Jakarta sm:text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.tecnical_section?.title}</h3>
-                <div class="flex justify-center items-center gap-40">
-                    <div class="flex flex-col gap-8 max-w-[706px]">
-                        <h5 class="text-primary text-2xl font-medium max-w-[657px]">{page_data.tecnical_section?.subtitle}</h5>
-                        {
-                            page_data.tecnical_section?.paragraphs?page_data.tecnical_section?.paragraphs.map((text)=>{
-                                return(
-                                    <p class="text-lg font-Jakarta text-justify max-w-[642px]">
-                                        {text.paragraph}
-                                    </p>
-                                )
-                            }):''
-                        }
+                <div class="flex flex-col gap-8">
+                        <h5 class="text-primary text-base mx-8 sm:mx-0 text-center md:text-2xl font-medium sm:max-w-[657px] 2xl:text-left">{page_data.tecnical_section?.subtitle}</h5>
+                        <div class="flex flex-col-reverse 2xl:flex-row justify-around items-center max-w-[1424px] gap-6 2xl:gap-28">
+                            <div class="flex flex-col gap-8 mx-3 sm:mx-0">
+                                {
+                                    page_data.tecnical_section?.paragraphs?page_data.tecnical_section?.paragraphs.map((text)=>{
+                                        return(
+                                            <p class="text-lg font-Jakarta text-justify max-w-[642px]">
+                                                {text.paragraph}
+                                            </p>
+                                        )
+                                    }):''
+                                }
+                            </div>
+                            {
+                                page_data.tecnical_section?.image?<Image class=" rounded-xl mx-4 sm:mx-0 md:w-[600px] md:h-[475px] w-[426px] h-[264px]" src={page_data.tecnical_section.image} alt="tecnical section image"/>:''
+                            }
+                        </div>
                     </div>
-                    {
-                        page_data.tecnical_section?.image?<Image class="w-[626px] h-[364px] rounded-xl" src={page_data.tecnical_section.image} alt="tecnical section image"/>:''
-                    }
-                </div>
             </section>
         }
     </main>

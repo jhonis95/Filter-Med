@@ -53,7 +53,7 @@
 }
 .esconder{
   opacity: 0;
-  transition: all 1s;
+  transition: all 1.5s;
 }
 .mostrar{
   opacity: 1;
@@ -70,5 +70,25 @@
 @media(prefers-reduced-motion){
   .esconder{
     transition: none;
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }

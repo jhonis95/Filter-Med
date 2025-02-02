@@ -13,13 +13,6 @@ const home_page = defineCollection({
             card_subtitle:z.string(),
             card_button_text:z.string()
         }),
-        home_service:z.array(z.object({
-            card_title:z.string(),
-            card_subtitle:z.string(),
-            card_button_text:z.string(),
-            card_link:z.string(),
-            background_image:image()
-        })),
         home_process_card:z.object({
             card_subtitle:z.string(),
             card_title:z.string(),
