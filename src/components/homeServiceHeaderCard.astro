@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from 'astro:content';
+const homePageData = await getCollection("home_page");
+
+const cards: { title: string; content: string; image: { src: string; width: number; height: number; format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif"; }; id: string; }[]=[]
+
+homePageData[0].data.home_service_header_card.map((data)=>{
+    cards.push({
+        title:data.card_title,
+        content:data.card_content,
+        image:data.background_image,
+        id:`card${homePageData[0].data.home_service_header_card.indexOf(data)}`
+    })
+})
+---
+<section id="cardContainer" class=" w-full flex justify-center my-16">
+    
+    <div class=" bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in ">
+        <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
+            <h4 class=" font-bold text-3xl">{homePageData[0].data.home_service_header_card[0].card_title}</h4>
+            <p class=" text-justify text-base xl:max-w-[769px]">{homePageData[0].data.home_service_header_card[0].card_content}</p>
+        </div>
+        <Image class="xl:w-[544px] h-[174px] rounded-r-xl" src={homePageData[0].data.home_service_header_card[0].background_image} alt="section-img"/>
+    </div>
+    <!-- {
+        cards.map((data)=>{
+            return(
+                data.id=='card0'?<div id={data.id} class=" bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in ">
+                    <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
+                        <h4 class=" font-bold text-3xl">{data.title}</h4>
+                        <p class=" text-justify text-base xl:max-w-[769px]">{data.content}</p>
+                    </div>
+                    <Image class="xl:w-[544px] h-[174px] rounded-r-xl" src={data.image} alt="section-img"/>
+                </div>:<div id={data.id} class=" hidden bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] gap-6 fade-in ">
+                    <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
+                        <h4 class=" font-bold text-3xl">{data.title}</h4>
+                        <p class=" text-justify text-base xl:max-w-[769px]">{data.content}</p>
+                    </div>
+                    <Image class="xl:w-[544px] h-[174px] rounded-r-xl" src={data.image} alt="section-img"/>
+                </div>
+            )
+        })
+    } -->
+</section>
+<!-- <script>
+
+    const cardsContainer=document.getElementById("cardContainer")
+    const cardlist: { selected: boolean; domElement: any; }[]=[]
+    const numberofcard:any=cardsContainer?.children.length
+    for(let i = 0; i <= numberofcard-1; i++){
+        cardlist.push(
+            i==0?{
+                    selected:true, 
+                    domElement:document.getElementById(`card${i}`)
+                }:{
+                    selected:false,
+                    domElement:document.getElementById(`card${i}`)
+                }
+        )
+    }
+
+    setInterval(() => {
+        for(let i=0;i<=cardlist.length-1;i++){
+            if(cardlist[i].selected==true){
+                cardlist[i].selected=false
+                cardlist[i].domElement.className='hidden bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] gap-6 fade-in '
+                if(i+1==cardlist.length){
+                    cardlist[0].selected=true
+                    cardlist[0].domElement.className='bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in '
+                    break;
+                }else{
+                    cardlist[i+1].selected=true
+                    cardlist[i+1].domElement.className='bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in '
+                    break;
+                }
+            }
+        }
+    }, 15000);
+</script> -->

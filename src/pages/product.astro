@@ -5,7 +5,6 @@ import ContactBtn from "../components/contactBtn.astro"
 import ProductSectionCard from "../components/productSectionCard.astro";
 
 import { getCollection } from 'astro:content';
-import { Image } from "astro:assets";
 const productPageData = await getCollection("product_page");
 
 ---
@@ -47,24 +46,6 @@ const productPageData = await getCollection("product_page");
 				}
 			</div>
 		</section>
-
-		<section class=" flex flex-col gap-7 w-full text-primary">
-			<p class="font-Jakarta text-center font-bold xl:text-left xl:ml-[199px] text-xl md:text-2xl xl:text-[32px] xl:max-w-[556px]">{productPageData[0].data.second_subtitle}</p>
-		</section>
-
-		<div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
-			<div class=" z-10 font-Jakarta sm:w-[267px] xl:w-[467px] flex flex-col items-center gap-8 mb-5 md:mb-0">
-				<div class="flex flex-col gap-4">
-					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">{productPageData[0].data.product_service_card.card_content}</h3>
-				</div>
-				<div class=" m-auto">
-					<button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
-						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">{productPageData[0].data.product_service_card.card_button_text}</a>
-					</button>
-				</div>
-			</div>
-			<Image class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={productPageData[0].data.product_service_card.card_image} alt="group image">
-		</div>
 	
 	 </main>
 </Layout>

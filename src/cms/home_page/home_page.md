@@ -9,27 +9,22 @@ home_header_card:
   card_title: Precisa de ajuda de um profissional?
   card_subtitle: "Encontre flexibilidade para fazer negócios "
   card_button_text: fale com um especialista
-home_service:
-  - card_title: Osmose Reversa
-    card_subtitle: Tecnologia eficiente e automatizada no tratamento de chorume,
-      atendendo aos parâmetros da CONAMA 430 sem necessidade de polimento final.
-    card_button_text: Saiba mais
-    card_link: service_detail/osmosereversa
-    background_image: ../../../src/assets/Osmose Reversa.webp
-  - card_title: Ultrafiltração
-    card_subtitle: Ultra filtração avançada para purificação de águas residuais que
-      remove 99,99999% de bactérias e vírus, sem químicos, com alta eficiência e
-      sustentabilidade.
-    card_button_text: Saiba mais
-    card_link: service_detail/ultraffiltracao
-    background_image: ../../../src/assets/Ultrafiltração.png
-  - card_title: Nanofiltração
-    card_link: service_detail/nanofiltracao
-    card_button_text: Saiba mais
-    card_subtitle: Tecnologia de membranas que remove íons divalentes, metais
-      pesados e micropoluentes, com fácil integração em sistemas de tratamento
-      de efluentes.
-    background_image: ../../../src/assets/nanofiltração.png
+home_service_header_card:
+  - background_image: ../../../src/assets/oleo_image.png
+    card_title: Filtro de óleo para restaurantes
+    card_content: No universo da gastronomia, a qualidade do óleo não só impacta o
+      sabor dos seus pratos, mas também a rentabilidade do seu negócio. Nós
+      entendemos essa necessidade, por isso oferecemos filtros de óleo
+      projetados para maximizar o desempenho da sua fritadeira, prolongar a vida
+      útil do óleo e garantir um sabor impecável em cada preparo.
+  - card_title: Filtros para filtração de chorume ou aterro sanitário
+    card_content: A gestão de resíduos em aterros sanitários é um desafio crucial
+      para garantir a preservação ambiental e a segurança do solo e das águas
+      subterrâneas. Oferecemos contêineres com filtros especializados para
+      chorume, desenvolvidos com tecnologia avançada para atender às exigências
+      do setor de resíduos sólidos e contribuir para uma operação mais
+      sustentável e eficiente.
+    background_image: ../../../src/assets/container_baner_image.png
 home_process_card:
   card_subtitle: Como Trabalhamos
   card_title: Nosso Processo
@@ -41,7 +36,7 @@ home_process_card:
   card_button_text: Entre em contato
   card_image: ../../../src/assets/group-pic.png
 first_section_title: Serviços
-first_section_subtitle: containers com filtros para filtração chorume ou aterro sanitário
+first_section_subtitle: Containers com filtros para filtração chorume ou aterro sanitário
 home_service_cards:
   - service_name: Container prontos para o serviço
     service_image: ../../../src/assets/containerimg3.png
@@ -50,7 +45,7 @@ home_service_cards:
   - service_name: Calibrados e ajustados sobre medida
     service_image: ../../../src/assets/containerimg1.png
 second_section_title: Produtos
-second_section_subtitle: filtros de placas e lenticulares
+second_section_subtitle: Filtros de placas e lenticulares
 home_product_division:
   home_product_division_types:
     type1: "> Filter Media"

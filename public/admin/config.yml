@@ -33,15 +33,15 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card subtitle", name: "card_subtitle", widget: "string"}
             - {label: "card button text", name: "card_button_text", widget: "string"}
-        - label: "home service"
-          name: "home_service" 
+
+        - label: "home service header card"
+          name: "home_service_header_card" 
           widget: "list"
           fields:
             - {label: "card title", name: "card_title", widget: "string"}
-            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
-            - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "card link", name: "card_link", widget: "string"}
+            - {label: "card content", name: "card_content", widget: "text"}
             - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+        
         - label: "home process card"
           name: "home_process_card" 
           widget: "object"
@@ -108,14 +108,6 @@ collections:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card content", name: "card_content", widget: "text"}
             - {label: "card link", name: "card_link", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
-        - {label: "second subtitle", name: "second_subtitle", widget: "string"}
-        - label: "product service card"
-          name: "product_service_card" 
-          widget: "object"
-          fields:
-            - {label: "card content", name: "card_content", widget: "text"}
-            - {label: "card button text", name: "card_button_text", widget: "string"}
             - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
 
   - label: "Service Page"

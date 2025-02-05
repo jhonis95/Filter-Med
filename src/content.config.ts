@@ -13,6 +13,11 @@ const home_page = defineCollection({
             card_subtitle:z.string(),
             card_button_text:z.string()
         }),
+        home_service_header_card:z.array(z.object({
+            card_title:z.string(),
+            card_content:z.string(),
+            background_image:image()
+        })),
         home_process_card:z.object({
             card_subtitle:z.string(),
             card_title:z.string(),
@@ -63,12 +68,6 @@ const product_page = defineCollection({
             card_link:z.string(),
             card_image:image()
         })),
-        second_subtitle:z.string(),
-        product_service_card:z.object({
-            card_content:z.string(),
-            card_button_text:z.string(),
-            card_image:image()
-        })
     })
 })
 
@@ -85,12 +84,7 @@ const service_page = defineCollection({
         service_card:z.array(z.object({
             card_title:z.string(),
             card_content:z.string(),
-        })),
-        product_service_card:z.object({
-            card_content:z.string(),
-            card_button_text:z.string(),
-            card_image:image()
-        })
+        }))
     })
 })
 const about_page = defineCollection({

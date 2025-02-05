@@ -46,10 +46,4 @@ product_section_card:
       impurezas de líquidos."
     card_link: /product_detail/filter_presses_and_housings
     card_image: ../../../src/assets/Filter_Presses _and_Housings.png
-second_subtitle: filtros para filtração chorume ou aterro sanitário
-product_service_card:
-  card_content: Fazemos os contêiner com os químicos perfeitos para cada tipo de
-    caso em que sua empresa necessita
-  card_button_text: Entre em contato
-  card_image: ../../../src/assets/productpg-card-pic.jpg
 ---

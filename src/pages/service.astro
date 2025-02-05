@@ -7,8 +7,6 @@ import { Image } from "astro:assets";
 
 const servicePageData = await getCollection("service_page");
 
-const homePageData = await getCollection("home_page");
-
 ---
 <Layout>
     <Header 
@@ -19,24 +17,6 @@ const homePageData = await getCollection("home_page");
     <main class="flex flex-col items-center gap-7 md:gap-14 2xl:gap-28 mb-8 md:mb-28 sm:mt-14 2xl:mt-16">
 		<div class="flex flex-col gap-11 my-5">
 			<h3 class="text-primary font-Jakarta text-center text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">Conheça os nossos sistemas</h3>
-			<div class="flex flex-wrap justify-center h-fit w-full gap-14">
-				{
-					homePageData[0].data.home_service.map((cardData)=>{
-						return(
-							<div class=" w-[317px] h-[380px] bg-primary flex flex-col gap-3 items-center rounded-lg">
-									<Image class="w-full h-[202px] rounded-t-lg object-cover" src={cardData.background_image} alt='card image'/>
-									<div class="flex flex-col gap-3 text-center w-[277px]">
-										<h4 class=" text-white font-Jakarta font-bold text-lg">{cardData.card_title}</h4>
-										<p class=" min-h-[64px] text-justify font-medium text-white font-Jakarta text-xs">{cardData.card_subtitle}</p>
-										<a href={cardData.card_link}>
-											<button class=" bg-secondary w-full h-[42px] rounded mb-2 font-bold text-white">{cardData.card_button_text}</button>
-										</a>
-									</div>
-								</div>
-						)
-					})
-				}
-			</div>
 		</div>
 
         <div class=" rounded flex flex-col-reverse gap-4 items-end w-[272px] mt-10 sm:w-[400px] md:w-fit md:gap-10 md:flex-row md:mx-5 md:mt-0 md:items-center lg:gap-20">
@@ -60,20 +40,6 @@ const homePageData = await getCollection("home_page");
 					)
 				})
 			}
-		</div>
-
-        <div class=" relative bg-accent rounded flex justify-center items-end mx-5 p-6 w-[304px] mt-10 md:mt-0 sm:justify-evenly md:items-center md:w-[700px] md:rounded-[20px] xl:w-[1200px] 2xl:w-[1433px] 2xl:h-[532px]">
-			<div class=" z-10 font-Jakarta sm:w-[267px] xl:w-[467px] flex flex-col items-center gap-8 mb-5 md:mb-0">
-				<div class="flex flex-col gap-4">
-					<h3 class=" text-white text-base sm:text-lg md:text-black font-bold text-center xl:text-4xl">{servicePageData[0].data.product_service_card.card_content}</h3>
-				</div>
-				<div class=" m-auto">
-					<button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
-						<a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl lg:px-12 xl:text-4xl" href="">{servicePageData[0].data.product_service_card.card_button_text}</a>
-					</button>
-				</div>
-			</div>
-			<Image class=" absolute w-full h-full brightness-75 md:brightness-100 md:w-[304px] md:h-[254px] md:relative rounded-lg xl:inline xl:w-[540px] xl:h-[350px] 2xl:w-[707px] 2xl:h-[442px] 2xl:rounded-[20px]" src={servicePageData[0].data.product_service_card.card_image} alt="group image">
 		</div>
     </main>
 </div>

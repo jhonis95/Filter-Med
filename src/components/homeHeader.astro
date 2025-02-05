@@ -1,19 +1,8 @@
 ---
 import Herosection from '../components/herosection.astro';
-import { Image } from "astro:assets";
-import { getCollection } from 'astro:content';
-const homePageData = await getCollection("home_page");
-// import testimg  from '../assets/oleo_image.png'
+import HomeServiceHeaderCard from './homeServiceHeaderCard.astro';
 ---
 <section class="w-full h-fit">
     <Herosection/>
-    <section class=" w-full flex justify-center my-16">
-        <div class=" bg-primary rounded-xl xl:w-[1330px] xl:h-fit flex gap-6">
-            <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
-                <h4 class=" font-bold text-3xl">Filtro de óleo para restaurantes</h4>
-                <p class=" text-justify text-base xl:max-w-[769px]">No universo da gastronomia, a qualidade do óleo não só impacta o sabor dos seus pratos, mas também a rentabilidade do seu negócio. Nós entendemos essa necessidade, por isso oferecemos filtros de óleo projetados para maximizar o desempenho da sua fritadeira, prolongar a vida útil do óleo e garantir um sabor impecável em cada preparo.</p>
-            </div>
-            <img class="xl:w-[544px] h-[174px] rounded-r-xl" src='images/oleo_image.png' alt="section-img"/>
-        </div>
-    </section>
+    <HomeServiceHeaderCard/>
 </section>

@@ -30,9 +30,4 @@ service_card:
       contínuo para garantir que o sistema funcione da melhor forma possível.
       Também disponibilizamos serviços de manutenção para prolongar a
       durabilidade e eficiência dos equipamentos.
-product_service_card:
-  card_content: Fazemos os contêiner com os químicos perfeitos para cada tipo de
-    caso em que sua empresa necessita
-  card_button_text: Entre em contato
-  card_image: ../../../src/assets/productpg-card-pic.jpg
 ---
