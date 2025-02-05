@@ -15,35 +15,27 @@ homePageData[0].data.home_service_header_card.map((data)=>{
 })
 ---
 <section id="cardContainer" class=" w-full flex justify-center my-16">
-    
-    <div class=" bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in ">
-        <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
-            <h4 class=" font-bold text-3xl">{homePageData[0].data.home_service_header_card[0].card_title}</h4>
-            <p class=" text-justify text-base xl:max-w-[769px]">{homePageData[0].data.home_service_header_card[0].card_content}</p>
-        </div>
-        <Image class="xl:w-[544px] h-[174px] rounded-r-xl" src={homePageData[0].data.home_service_header_card[0].background_image} alt="section-img"/>
-    </div>
-    <!-- {
+    {
         cards.map((data)=>{
             return(
-                data.id=='card0'?<div id={data.id} class=" bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in ">
+                data.id==='card0'?<div id={data.id} class="xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in">
+                    <div class="text-white font-Jakarta absolute xl:relative flex flex-col gap-3 xl:items-start justify-center items-center w-full xl:ml-5 2xl:ml-[56px] z-20 xl:z-0 h-[244px] md:h-[170px]">
+                        <h4 class=" font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                        <p class="text-justify text-xs sm:text-base md:w-[769px] xl:w-full mx-3 xl:mx-0">{data.content}</p>
+                    </div>
+                    <Image class="z-50 xl:z-0 w-full xl:w-[544px] h-[244px] md:h-[170px] xl:h-auto xl:max-h-full xl:rounded-r-xl brightness-50 xl:brightness-100" src={data.image} alt="section-img"/>
+                </div>:<div id={data.id} class=" hidden xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] gap-6 fade-in">
                     <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
                         <h4 class=" font-bold text-3xl">{data.title}</h4>
-                        <p class=" text-justify text-base xl:max-w-[769px]">{data.content}</p>
+                        <p class="text-justify text-xs sm:text-base md:w-[769px] xl:w-full mx-3 xl:mx-0">{data.content}</p>
                     </div>
-                    <Image class="xl:w-[544px] h-[174px] rounded-r-xl" src={data.image} alt="section-img"/>
-                </div>:<div id={data.id} class=" hidden bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] gap-6 fade-in ">
-                    <div class="text-white font-Jakarta flex flex-col gap-3 ml-[56px] my-3">
-                        <h4 class=" font-bold text-3xl">{data.title}</h4>
-                        <p class=" text-justify text-base xl:max-w-[769px]">{data.content}</p>
-                    </div>
-                    <Image class="xl:w-[544px] h-[174px] rounded-r-xl" src={data.image} alt="section-img"/>
+                    <Image class="z-50 xl:z-0 w-full xl:w-[544px] h-[244px] md:h-[170px] xl:h-auto xl:max-h-full xl:rounded-r-xl brightness-50 xl:brightness-100" src={data.image} alt="section-img"/>
                 </div>
             )
         })
-    } -->
+    }
 </section>
-<!-- <script>
+<script>
 
     const cardsContainer=document.getElementById("cardContainer")
     const cardlist: { selected: boolean; domElement: any; }[]=[]
@@ -64,17 +56,17 @@ homePageData[0].data.home_service_header_card.map((data)=>{
         for(let i=0;i<=cardlist.length-1;i++){
             if(cardlist[i].selected==true){
                 cardlist[i].selected=false
-                cardlist[i].domElement.className='hidden bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] gap-6 fade-in '
+                cardlist[i].domElement.className='hidden'
                 if(i+1==cardlist.length){
                     cardlist[0].selected=true
-                    cardlist[0].domElement.className='bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in '
+                    cardlist[0].domElement.className='xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in '
                     break;
                 }else{
                     cardlist[i+1].selected=true
-                    cardlist[i+1].domElement.className='bg-primary rounded-xl xl:w-[1386px] xl:max-h-[174px] flex gap-6 fade-in '
+                    cardlist[i+1].domElement.className='xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in '
                     break;
                 }
             }
         }
     }, 15000);
-</script> -->
+</script>
