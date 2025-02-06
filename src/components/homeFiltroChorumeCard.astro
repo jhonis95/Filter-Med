@@ -1,0 +1,25 @@
+---
+import ContactBtn from './contactBtn.astro';
+import { Image } from "astro:assets";
+const navdata=Astro.props;
+const text="A osmose reversa é uma tecnologia eficiente no tratamento de chorume, destacando-se pela simplicidade e alta capacidade de purificação. O processo consiste na aplicação de alta pressão para forçar a passagem de água através de uma membrana semipermeável, separando a solução mais concentrada da menos concentrada. Essa membrana retém contaminantes, como metais, bactérias e compostos químicos, permitindo que apenas a água purificada passe."
+---
+<section class="bg-accent rounded-xl w-[1647px] h-[583px] flex flex-col gap-[70px] justify-center">
+    <div class=" flex gap-[137px] w-full justify-center text-secondary font-Jakarta font-bold">
+        <button class="text-3xl">Osmose Reversa</button>
+        <button class="text-3xl">Ultrafiltração</button>
+        <button class="text-3xl">Nanofiltração</button>
+    </div>
+    <div class=" flex gap-[80px] justify-center font-Jakarta">
+        <img class=" rounded-md w-[592px] h-[363px]" src="https://ast-ambiente.com.br/wp-content/uploads/2024/10/nano1-1536x828.png" alt="testalt"/>
+        <div class="flex flex-col gap-[50px] max-w-[820px]">
+            <div class="flex flex-col gap-[30px]">
+                <h4 class="font-bold w-[526px] text-3xl">Container para filtração chorume ou aterro sanitário: Osmose Reversa</h4>
+                <p class=" text-justify text-lg">{text}</p>
+            </div>
+            <div class="flex justify-center">
+                <ContactBtn btnContent="Saiba mais"/>
+            </div>
+        </div>
+    </div>
+</section>

@@ -61,19 +61,6 @@ collections:
             - {label: "service image", name: "service_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
         - {label: "second section title", name: "second_section_title", widget: "string"}
         - {label: "second section subtitle", name: "second_section_subtitle", widget: "string"}
-        - label: "home product division"
-          name: "home_product_division" 
-          widget: "object"
-          fields:
-            - {label: "home product division title", name: "home_product_division_title", widget: "string"}
-            - label: "home product division types"
-              name: "home_product_division_types" 
-              widget: "object"
-              fields:
-              - {label: "home product division types", name: "type1", widget: "string"}
-              - {label: "home product division types", name: "type2", widget: "string"}
-              - {label: "home product division types", name: "type3", widget: "string"}
-              - {label: "home product division types", name: "type4", widget: "string"}
         - label: "home product cards"
           name: "home_product_cards" 
           widget: "list"

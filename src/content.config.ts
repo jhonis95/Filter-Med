@@ -33,15 +33,6 @@ const home_page = defineCollection({
         })),
         second_section_title:z.string(),
         second_section_subtitle:z.string(),
-        home_product_division:z.object({
-            home_product_division_title:z.string(),
-            home_product_division_types:z.object({
-                type1:z.string(),
-                type2:z.string(),
-                type3:z.string(),
-                type4:z.string()
-            })
-        }),
         home_product_cards:z.array(z.object({
             product_card_name:z.string(),
             product_card_content:z.string(),

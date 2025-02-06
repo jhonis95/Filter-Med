@@ -46,13 +46,6 @@ home_service_cards:
     service_image: ../../../src/assets/containerimg1.png
 second_section_title: Produtos
 second_section_subtitle: Filtros de placas e lenticulares
-home_product_division:
-  home_product_division_types:
-    type1: "> Filter Media"
-    type2: "> Produtos Complementares"
-    type3: "> Filter Presses and Housings"
-    type4: "> Equipamentos de Filtragem Laboratórial"
-  home_product_division_title: Produtos
 home_product_cards:
   - product_card_name: Filter Media
     product_card_content: Nossa empresa oferece uma ampla gama de linhas de produtos

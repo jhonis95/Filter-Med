@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import ContactBtn from './contactBtn.astro';
+const text1="Auxiliamos sua empresa na escolha e implementação da operação de filtragem mais adequada à sua necessidade. A qualidade dos alimentos fritos e a economia do óleo/gordura de fritura estão diretamente ligadas ao filtro (meio filtrante) utilizado."
+const text2="Melhore a eficiência da sua cozinha, encante seus clientes e cuide do meio ambiente com nossos produtos. Somos o parceiro ideal para o sucesso do seu restaurante!"
+---
+<section class=" max-w-[1556px] gap-10 2xl:gap-24 flex flex-col xl:flex-row items-center">
+    <img class=" rounded-lg  w-[295px] h-[281px] md:w-[476px] md:h-[452px] 2xl:w-[638px] 2xl:h-[607px]" src="/images/filter_oleo.png" alt="">
+    <div class="flex flex-col gap-[30px] md:gap-[64px]">
+        <div class="font-Jakarta max-w-[817px] flex flex-col gap-[30px]">
+            <h4 class=" text-[20px] md:text-2xl lg:text-3xl xl:text-4xl text-primary text-center xl:text-left">Conheça nossas soluções</h4>
+            <div class=" flex flex-col gap-5 mx-3 xl:mx-0">
+                <p class="text-base md:text-lg text-justify">{text1}</p>
+                <p class="text-base md:text-lg text-justify">{text2}</p>
+            </div>
+            <div class=" flex flex-col gap-5 w-full items-center">
+                <div class=" flex flex-col gap-5 mx-10 lg:mx-0">
+                    <div class=" flex justify-start items-center gap-5">
+                        <div class=" bg-secondary rounded-full min-w-[8px] min-h-[8px] lg:min-w-[14px] lg:min-h-[14px]"></div>
+                        <p class="font-bold text-xs md:text-lg">Economia garantida: Reduza custos prolongando o uso do óleo.</p>
+                    </div>
+                    <div class=" flex justify-start items-center gap-5">
+                        <div class=" bg-secondary rounded-full min-w-[8px] min-h-[8px] lg:min-w-[14px] lg:min-h-[14px]"></div>
+                        <p class="font-bold text-xs md:text-lg">Qualidade superior: Mantenha seus alimentos frescos e livres de resíduos.</p>
+                    </div>
+                    <div class=" flex justify-start items-center gap-5">
+                        <div class=" bg-secondary rounded-full min-w-[8px] min-h-[8px] lg:min-w-[14px] lg:min-h-[14px]"></div>
+                        <p class="font-bold text-xs md:text-lg">Sustentabilidade: Menos desperdício, mais eficiência.</p>
+                    </div>
+                    <div class=" flex justify-start items-center gap-5">
+                        <div class=" bg-secondary rounded-full min-w-[8px] min-h-[8px] lg:min-w-[14px] lg:min-h-[14px]"></div>
+                        <p class="font-bold text-xs md:text-lg">Fácil utilização: Filtros práticos que se adaptam a qualquer equipamento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" flex justify-center">
+            <ContactBtn btnContent="Saiba mais"/>
+        </div>
+    </div>
+</section>

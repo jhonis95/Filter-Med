@@ -4,17 +4,17 @@ import { Image } from "astro:assets";
 ---
 
 <div>
-    <div class=" bg-primary w-[468px] h-[405px] rounded-xl relative">
-        <div class=" absolute w-[279px] h-[329px] top-9 left-[-150px]">
+    <div class=" bg-primary w-[468px] h-[415px] rounded-xl relative">
+        <div class=" absolute w-[279px] h-[329px] left-1/2 -translate-x-1/2 -translate-y-1/2">
             <Image
-                class="rounded-2xl w-full h-full" 
+                class="w-full h-full" 
                 src={componentData.componentData.product_card_image}
                 alt={'product-section-image'}
             >
         </div>
-        <div class=" relative left-[170px] top-9 w-[277px] max-h-[338px] overflow-y-scroll no-scrollbar ">
-            <h5 class=" text-white font-bold text-[32px]">{componentData.componentData.product_card_name}</h5>
-            <div class=" text-white font-bold text-base text-justify" id="cardContent">{componentData.componentData.product_card_content}</div>
+        <div class="text-center relative top-[175px] w-full max-h-[223px] overflow-hidden">
+            <h5 class=" text-white font-bold text-3xl mb-2">{componentData.componentData.product_card_name}</h5>
+            <p class=" text-white max-h-[166px] font-bold text-base text-justify mx-3 overflow-y-scroll no-scrollbar">{componentData.componentData.product_card_content}</p>
         </div>
     </div>
 </div>
