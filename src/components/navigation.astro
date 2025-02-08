@@ -45,7 +45,7 @@ interface Linkdata{
                         <template x-for="data in navlist" :key="data.id">
                             <a class="font-Inter font-bold text-xl text-white" x-text="data.title" x-bind:href="data.link"></a>
                         </template>
-                        <div class="w-[240px]">
+                        <div class="md:hidden w-[240px]">
                             <ContactBtn btnContent="Entre em contato"/>
                         </div>
                     </div>

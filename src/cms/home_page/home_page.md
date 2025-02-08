@@ -25,6 +25,37 @@ home_service_header_card:
       do setor de resíduos sólidos e contribuir para uma operação mais
       sustentável e eficiente.
     background_image: ../../../src/assets/container_baner_image.png
+home_chorume_service_card:
+  button_content: Saiba mais
+  button_link: /
+  card_data:
+    - card_name: Osmose Reversa
+      card_title: "Container para filtração chorume ou aterro sanitário: Osmose Reversa"
+      card_content: A osmose reversa é uma tecnologia eficiente no tratamento de
+        chorume, destacando-se pela simplicidade e alta capacidade de
+        purificação. O processo consiste na aplicação de alta pressão para
+        forçar a passagem de água através de uma membrana semipermeável,
+        separando a solução mais concentrada da menos concentrada. Essa membrana
+        retém contaminantes, como metais, bactérias e compostos químicos,
+        permitindo que apenas a água purificada passe.
+      card_image: ../../../src/assets/Osmose Reversa.webp
+    - card_name: Ultrafiltração
+      card_title: "Container para filtração chorume ou aterro sanitário: Ultrafiltração"
+      card_content: uma tecnologia de ultrafiltração desenvolvida para o tratamento de
+        águas residuais industriais ou municipais, purificação de águas de rios
+        ou barragens poluídas, assim como para a limpeza adicional de efluentes
+        e/ou águas já tratadas. Ele é composto por um sistema de filtração
+        membranar que pode ser classificado como um sistema submergível com
+        fibra oca orgânica com operação de fora para o interior
+      card_image: ../../../src/assets/Ultrafiltração.png
+    - card_name: Nanofiltração
+      card_title: "Container para filtração chorume ou aterro sanitário: Nanofiltração"
+      card_content: É um processo de separação por membranas que se situa entre a
+        ultrafiltração e a osmose reversa em termos de retenção de partículas.
+        Ela utiliza membranas com poros que variam entre 1 a 10 nanômetros (nm).
+        Essa faixa de tamanho de poros permite que a nanofiltração seja eficaz
+        na remoção de íons divalentes (como cálcio e magnésio)
+      card_image: ../../../src/assets/nanofiltração.png
 home_process_card:
   card_subtitle: Como Trabalhamos
   card_title: Nosso Processo

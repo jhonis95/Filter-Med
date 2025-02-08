@@ -1,25 +1,71 @@
 ---
 import ContactBtn from './contactBtn.astro';
-import { Image } from "astro:assets";
-const navdata=Astro.props;
-const text="A osmose reversa é uma tecnologia eficiente no tratamento de chorume, destacando-se pela simplicidade e alta capacidade de purificação. O processo consiste na aplicação de alta pressão para forçar a passagem de água através de uma membrana semipermeável, separando a solução mais concentrada da menos concentrada. Essa membrana retém contaminantes, como metais, bactérias e compostos químicos, permitindo que apenas a água purificada passe."
+const {cardData}=Astro.props;
 ---
-<section class="bg-accent rounded-xl w-[1647px] h-[583px] flex flex-col gap-[70px] justify-center">
-    <div class=" flex gap-[137px] w-full justify-center text-secondary font-Jakarta font-bold">
-        <button class="text-3xl">Osmose Reversa</button>
-        <button class="text-3xl">Ultrafiltração</button>
-        <button class="text-3xl">Nanofiltração</button>
+<section 
+    class="bg-accent rounded-xl w-fit h-fit px-[13px] py-[6px] md:py-[32px] md:px-[39px] xl:py-[56px] xl:px-[77px] flex flex-col gap-[30px] xl:gap-[70px] justify-center"
+    x-data={`{
+        cards:[${cardData.card_data.map((data:any,index:number)=>{return `{card_name:'${data.card_name}',card_title:'${data.card_title}',card_content:'${data.card_content}',card_image:'${data.card_image.src}',id:${index}}`})}],
+        selected:{
+            card_name:'${cardData.card_data[0].card_name}',card_title:'${cardData.card_data[0].card_title}',card_content:'${cardData.card_data[0].card_content}',card_image:'${cardData.card_data[0].card_image.src}',id:${0}
+        },
+        startX:0,
+        touchstart(e){
+            startX = e.touches[0].clientX;
+        },
+        touchend(e){
+            let endX = e.changedTouches[0].clientX;
+            let diff = endX - startX;
+            if (diff > 50) {
+                this.selected.id==0?this.selected=this.cards[this.cards.length-1]:this.selected=this.cards[this.selected.id-1]
+                } else if (diff < -50) {
+                this.selected.id==this.cards.length-1?this.selected=this.cards[0]:this.selected=this.cards[this.selected.id+1]
+            }
+        },
+        mobile:false,
+        setMobile(){
+            if(document.documentElement.clientWidth<768){
+                return this.mobile=true
+            }else{
+                return this.mobile=false
+            }
+        }
+    }`}
+    x-cloak
+    id="test"
+    x-on:touchstart="mobile?touchstart:''"
+    x-on:touchend="mobile?touchend:''"
+    x-init=" setMobile(), touchstart, touchend "
+    @resize.window.debounce="setMobile()"
+>
+    <div class="hidden md:flex gap-[90px] xl:gap-[137px] w-full justify-center text-secondary font-Jakarta font-bold">
+        <template x-for="card in cards" :key="card.id">
+            <button x-on:click={`selected = cards[card.id]`} class="text-2xl xl:text-3xl" x-text="card.card_name"></button>
+        </template>
     </div>
-    <div class=" flex gap-[80px] justify-center font-Jakarta">
-        <img class=" rounded-md w-[592px] h-[363px]" src="https://ast-ambiente.com.br/wp-content/uploads/2024/10/nano1-1536x828.png" alt="testalt"/>
-        <div class="flex flex-col gap-[50px] max-w-[820px]">
+    <div class=" flex flex-col xl:flex-row gap-[30px] xl:gap-[80px] justify-center items-center font-Jakarta">
+        <img 
+            class=" rounded-md hidden md:inline md:w-[506px] md:h-[310px] xl:w-[592px] xl:h-[363px]" 
+            x-bind:src="selected.card_image" 
+            x-bind:alt="selected.card_name"
+        />
+        <div class="flex flex-col gap-[30px] xl:gap-[50px] max-w-[310px] md:max-w-[723px] xl:max-w-[820px]">
             <div class="flex flex-col gap-[30px]">
-                <h4 class="font-bold w-[526px] text-3xl">Container para filtração chorume ou aterro sanitário: Osmose Reversa</h4>
-                <p class=" text-justify text-lg">{text}</p>
+                <div class=" flex w-full justify-center xl:justify-start">
+                    <h4 x-text="selected.card_title" class="font-bold text-center xl:text-left max-w-[526px] text-lg md:text-2xl xl:text-3xl"></h4>
+                </div>
+                <p x-text="selected.card_content" class=" text-justify text-xs md:text-base xl:text-lg"></p>
             </div>
             <div class="flex justify-center">
-                <ContactBtn btnContent="Saiba mais"/>
+                <a href={cardData.button_link}>
+                    <ContactBtn btnContent={cardData.button_content}/>
+                </a>
             </div>
         </div>
+    </div>
+    <div class=" md:hidden flex justify-center gap-2">
+        <template x-for="card in cards" :key="card.id">
+            <div x-bind:class="card.id==selected.id?'rounded-full w-2 h-2 bg-secondary':'rounded-full min-w-2 min-h-2 bg-white'"></div>
+        </template>
     </div>
 </section>

@@ -18,6 +18,16 @@ const home_page = defineCollection({
             card_content:z.string(),
             background_image:image()
         })),
+        home_chorume_service_card:z.object({
+            button_content:z.string(),
+            button_link:z.string(),
+            card_data:z.array(z.object({
+                card_name:z.string(),
+                card_title:z.string(),
+                card_content:z.string(),
+                card_image:image()
+            }))
+        }),
         home_process_card:z.object({
             card_subtitle:z.string(),
             card_title:z.string(),
