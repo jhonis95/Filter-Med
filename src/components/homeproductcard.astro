@@ -4,17 +4,17 @@ import { Image } from "astro:assets";
 ---
 
 <div>
-    <div class=" bg-primary w-[468px] h-[415px] rounded-xl relative">
-        <div class=" absolute w-[279px] h-[329px] left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div class=" bg-primary max-w-[320px] h-[315px]  md:max-w-[468px] md:h-[415px] rounded-xl relative">
+        <div class=" absolute max-w-[190px] h-[224px] md:w-[279px] md:h-[329px] left-1/2 -translate-x-1/2 -translate-y-1/2">
             <Image
                 class="w-full h-full" 
                 src={componentData.componentData.product_card_image}
                 alt={'product-section-image'}
             >
         </div>
-        <div class="text-center relative top-[175px] w-full max-h-[223px] overflow-hidden">
-            <h5 class=" text-white font-bold text-3xl mb-2">{componentData.componentData.product_card_name}</h5>
-            <p class=" text-white max-h-[166px] font-bold text-base text-justify mx-3 overflow-y-scroll no-scrollbar">{componentData.componentData.product_card_content}</p>
+        <div class="text-center relative top-[134px] md:top-[175px] w-full max-h-[223px] overflow-hidden">
+            <h5 class=" text-white font-bold text-2xl md:text-3xl mb-2">{componentData.componentData.product_card_name}</h5>
+            <p class=" text-white max-h-[96px] md:max-h-[166px] font-bold text-xs md:text-base text-justify mx-3 overflow-y-scroll no-scrollbar">{componentData.componentData.product_card_content}</p>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@ import ContactBtn from './contactBtn.astro';
 const {cardData}=Astro.props;
 ---
 <section 
-    class="bg-accent rounded-xl w-fit h-fit px-[13px] py-[6px] md:py-[32px] md:px-[39px] xl:py-[56px] xl:px-[77px] flex flex-col gap-[30px] xl:gap-[70px] justify-center"
+    class="esconder bg-accent rounded-xl w-fit h-fit px-[13px] py-[6px] md:py-[32px] md:px-[39px] xl:py-[56px] xl:px-[77px] flex flex-col gap-[30px] xl:gap-[70px] justify-center"
     x-data={`{
         cards:[${cardData.card_data.map((data:any,index:number)=>{return `{card_name:'${data.card_name}',card_title:'${data.card_title}',card_content:'${data.card_content}',card_image:'${data.card_image.src}',id:${index}}`})}],
         selected:{

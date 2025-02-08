@@ -63,7 +63,7 @@ const homePageData = await getCollection("home_page");
 		</section>
 
 		<section class="esconder flex h-fit w-full justify-center"	>
-			<div class="flex flex-wrap w-[1647px] justify-center gap-y-44 gap-x-52 mt-[150px]">
+			<div class="flex flex-wrap w-[1647px] justify-center gap-y-32 mt-[100px] md:gap-y-44 gap-x-52 md:mt-[150px]">
 				{
 					homePageData[0].data.home_product_cards.map((data:any)=>{
 						return <Homeproductcard componentData={data}/>
