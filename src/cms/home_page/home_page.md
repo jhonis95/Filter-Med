@@ -25,9 +25,21 @@ home_service_header_card:
       do setor de resíduos sólidos e contribuir para uma operação mais
       sustentável e eficiente.
     background_image: ../../../src/assets/container_baner_image.png
+home_process_card:
+  card_subtitle: Como Trabalhamos
+  card_title: Nosso Processo
+  card_content: Compreendemos as especificidades do projeto para desenvolvemos uma
+    estratégia otimizada para atender aos requisitos do projeto, só assim vamos
+    para a escolha e instalação garantindo que o sistema opere de forma
+    eficiente. Oferecemos suporte contínuo e serviços de manutenção para
+    assegurar a durabilidade e eficiência do sistema.
+  card_button_text: Entre em contato
+  card_image: ../../../src/assets/group-pic.png
+first_section_title: Serviços
+first_section_subtitle: Containers com filtros para filtração chorume ou aterro sanitário
 home_chorume_service_card:
   button_content: Saiba mais
-  button_link: /
+  button_link: /sevice
   card_data:
     - card_name: Osmose Reversa
       card_title: "Container para filtração chorume ou aterro sanitário: Osmose Reversa"
@@ -56,18 +68,6 @@ home_chorume_service_card:
         Essa faixa de tamanho de poros permite que a nanofiltração seja eficaz
         na remoção de íons divalentes (como cálcio e magnésio)
       card_image: ../../../src/assets/nanofiltração.png
-home_process_card:
-  card_subtitle: Como Trabalhamos
-  card_title: Nosso Processo
-  card_content: Compreendemos as especificidades do projeto para desenvolvemos uma
-    estratégia otimizada para atender aos requisitos do projeto, só assim vamos
-    para a escolha e instalação garantindo que o sistema opere de forma
-    eficiente. Oferecemos suporte contínuo e serviços de manutenção para
-    assegurar a durabilidade e eficiência do sistema.
-  card_button_text: Entre em contato
-  card_image: ../../../src/assets/group-pic.png
-first_section_title: Serviços
-first_section_subtitle: Containers com filtros para filtração chorume ou aterro sanitário
 home_service_cards:
   - service_name: Container prontos para o serviço
     service_image: ../../../src/assets/containerimg3.png
@@ -75,6 +75,27 @@ home_service_cards:
     service_image: ../../../src/assets/containerimg2.png
   - service_name: Calibrados e ajustados sobre medida
     service_image: ../../../src/assets/containerimg1.png
+first_section_second_subtitle: Filtro de óleo para restaurantes
+home_oil_service_section:
+  oil_service_image: ../../../src/assets/filter_oleo.png
+  title: Conheça nossas soluções
+  paragraphs:
+    - paragraph_content: Auxiliamos sua empresa na escolha e implementação da operação
+        de filtragem mais adequada à sua necessidade. A qualidade dos alimentos
+        fritos e a economia do óleo/gordura de fritura estão diretamente ligadas
+        ao filtro (meio filtrante) utilizado.
+    - paragraph_content: Melhore a eficiência da sua cozinha, encante seus clientes e
+        cuide do meio ambiente com nossos produtos. Somos o parceiro ideal para
+        o sucesso do seu restaurante!
+  bullet_points:
+    - bullet_point_content: "Economia garantida: Reduza custos prolongando o uso do óleo."
+    - bullet_point_content: "Qualidade superior: Mantenha seus alimentos frescos e
+        livres de resíduos."
+    - bullet_point_content: "Sustentabilidade: Menos desperdício, mais eficiência."
+    - bullet_point_content: "Fácil utilização: Filtros práticos que se adaptam a
+        qualquer equipamento."
+  button_text: Saiba mais
+  button_link: /service
 second_section_title: Produtos
 second_section_subtitle: Filtros de placas e lenticulares
 home_product_cards:

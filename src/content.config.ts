@@ -37,6 +37,19 @@ const home_page = defineCollection({
         }),
         first_section_title:z.string(),
         first_section_subtitle:z.string(),
+
+        home_oil_service_section:z.object({
+            oil_service_image:image(),
+            title:z.string(),
+            paragraphs:z.array(z.object({
+                paragraph_content:z.string()
+            })),
+            bullet_points:z.array(z.object({
+                bullet_point_content:z.string()
+            })),
+            button_text:z.string(),
+            button_link:z.string()
+        }),
         home_service_cards:z.array(z.object({
             service_name:z.string(),
             service_image:image()

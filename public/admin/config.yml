@@ -39,7 +39,18 @@ collections:
           fields:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card content", name: "card_content", widget: "text"}
-            - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+            - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}      
+        - label: "home process card"
+          name: "home_process_card" 
+          widget: "object"
+          fields:
+            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
+            - {label: "card title", name: "card_title", widget: "string"}
+            - {label: "card content", name: "card_content", widget: "text"}
+            - {label: "card button text", name: "card_button_text", widget: "string"}
+            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+        - {label: "first section title", name: "first_section_title", widget: "string"}
+        - {label: "first section subtitle", name: "first_section_subtitle", widget: "string"}
         - label: "home chorume service card"
           name: "home_chorume_service_card"
           widget: "object"
@@ -53,24 +64,34 @@ collections:
                 - {label: "card name", name: "card_name", widget: "string"}
                 - {label: "card title", name: "card_title", widget: "string"}
                 - {label: "card content", name: "card_content", widget: "text"}
-                - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}       
-        - label: "home process card"
-          name: "home_process_card" 
-          widget: "object"
-          fields:
-            - {label: "card subtitle", name: "card_subtitle", widget: "string"}
-            - {label: "card title", name: "card_title", widget: "string"}
-            - {label: "card content", name: "card_content", widget: "text"}
-            - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
-        - {label: "first section title", name: "first_section_title", widget: "string"}
-        - {label: "first section subtitle", name: "first_section_subtitle", widget: "string"}
+                - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"} 
         - label: "home service cards"
           name: "home_service_cards" 
           widget: "list"
           fields:
             - {label: "service name", name: "service_name", widget: "string"}
             - {label: "service image", name: "service_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+
+        - {label: "first section second subtitle", name: "first_section_second_subtitle", widget: "string"}
+        - label: "home oil service section"
+          name: "home_oil_service_section"
+          widget: "object"
+          fields:
+            - {label: "oil service image", name: "oil_service_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+            - {label: "title", name: "title", widget: "string"}
+            - label: "paragraphs"
+              name: "paragraphs" 
+              widget: "list"
+              fields:
+                - {label: "paragraph content", name: "paragraph_content", widget: "text"}
+            - label: "bullet points"
+              name: "bullet_points" 
+              widget: "list"
+              fields:
+                - {label: " bullet point content", name: "bullet_point_content", widget: "text"}
+            - {label: "button text", name: "button_text", widget: "string"}
+            - {label: "button link", name: "button_link", widget: "string"}
+
         - {label: "second section title", name: "second_section_title", widget: "string"}
         - {label: "second section subtitle", name: "second_section_subtitle", widget: "string"}
         - label: "home product cards"

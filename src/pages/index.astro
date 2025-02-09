@@ -55,7 +55,7 @@ const homePageData = await getCollection("home_page");
 			<p class="text-primary font-Jakarta text-center text-lg md:text-2xl xl:text-3xl font-bold min-w-[296px]">Filtro de óleo para restaurantes</p>
 		</section>
 
-		<HomeFiltroOleo/>
+		<HomeFiltroOleo Data={homePageData[0].data.home_oil_service_section}/>
 
 		<section class="esconder flex flex-col gap-7 items-center">
 			<h3 class=" text-primary font-Jakarta text-2xl md:text-3xl xl:text-5xl font-bold">{homePageData[0].data.second_section_title}</h3>
