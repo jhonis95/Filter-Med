@@ -39,7 +39,7 @@ first_section_title: Serviços
 first_section_subtitle: Containers com filtros para filtração chorume ou aterro sanitário
 home_chorume_service_card:
   button_content: Saiba mais
-  button_link: /sevice
+  button_link: /service
   card_data:
     - card_name: Osmose Reversa
       card_title: "Container para filtração chorume ou aterro sanitário: Osmose Reversa"
@@ -51,6 +51,7 @@ home_chorume_service_card:
         retém contaminantes, como metais, bactérias e compostos químicos,
         permitindo que apenas a água purificada passe.
       card_image: ../../../src/assets/Osmose Reversa.webp
+      button_link: /service_detail/osmosereversa
     - card_name: Ultrafiltração
       card_title: "Container para filtração chorume ou aterro sanitário: Ultrafiltração"
       card_content: uma tecnologia de ultrafiltração desenvolvida para o tratamento de
@@ -60,6 +61,7 @@ home_chorume_service_card:
         membranar que pode ser classificado como um sistema submergível com
         fibra oca orgânica com operação de fora para o interior
       card_image: ../../../src/assets/Ultrafiltração.png
+      button_link: /service_detail/ultraffiltracao
     - card_name: Nanofiltração
       card_title: "Container para filtração chorume ou aterro sanitário: Nanofiltração"
       card_content: É um processo de separação por membranas que se situa entre a
@@ -68,6 +70,7 @@ home_chorume_service_card:
         Essa faixa de tamanho de poros permite que a nanofiltração seja eficaz
         na remoção de íons divalentes (como cálcio e magnésio)
       card_image: ../../../src/assets/nanofiltração.png
+      button_link: /service_detail/nanofiltracao
 home_service_cards:
   - service_name: Container prontos para o serviço
     service_image: ../../../src/assets/containerimg3.png

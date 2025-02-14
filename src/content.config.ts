@@ -20,12 +20,12 @@ const home_page = defineCollection({
         })),
         home_chorume_service_card:z.object({
             button_content:z.string(),
-            button_link:z.string(),
             card_data:z.array(z.object({
                 card_name:z.string(),
                 card_title:z.string(),
                 card_content:z.string(),
-                card_image:image()
+                card_image:image(),
+                button_link:z.string(),
             }))
         }),
         home_process_card:z.object({
@@ -92,13 +92,50 @@ const service_page = defineCollection({
         headertitle:z.string(),
         subtitle:z.string(),
         background_image:image(),
-        main_content:z.string(),
-        main_image:image(),
-        section_title:z.string(),
-        service_card:z.array(z.object({
-            card_title:z.string(),
-            card_content:z.string(),
-        }))
+        oil_section:z.object({
+            introduction_section:z.object({
+                title:z.string(),
+                paragraphs:z.array(z.object({
+                    content:z.string()
+                })),
+                main_image:image()
+            }),
+            card_section:z.object({
+                title:z.string(),
+                service_card:z.array(z.object({
+                    card_title:z.string(),
+                    card_content:z.string()
+                })),
+            }),
+            call_to_action:z.object({
+                content:z.string(),
+                button_text:z.string(),
+                button_link:z.string()
+            })
+        }),
+        chorume_section:z.object({
+            introduction_section:z.object({
+                title:z.string(),
+                paragraphs:z.array(z.object({
+                    content:z.string()
+                })),
+                main_image:image()
+            }),
+            card_section:z.object({
+                title:z.string(),
+                card:z.array(z.object({
+                    card_title:z.string(),
+                    card_content:z.string()
+                })),
+            }),
+            chorume_section_detail:z.array(z.object({
+                title:z.string(),
+                content:z.string(),
+                main_image:image(),
+                button_text:z.string(),
+                button_link:z.string()
+            }))
+        }),
     })
 })
 const about_page = defineCollection({

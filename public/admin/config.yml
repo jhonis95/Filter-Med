@@ -56,7 +56,6 @@ collections:
           widget: "object"
           fields:
             - {label: "button content",name: "button_content", widget: "string"}
-            - {label: "button link",name: "button_link", widget: "string"}
             - label: "card data"
               name: card_data
               widget: "list"
@@ -64,7 +63,8 @@ collections:
                 - {label: "card name", name: "card_name", widget: "string"}
                 - {label: "card title", name: "card_title", widget: "string"}
                 - {label: "card content", name: "card_content", widget: "text"}
-                - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"} 
+                - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+                - {label: "button link",name: "button_link", widget: "string"}
         - label: "home service cards"
           name: "home_service_cards" 
           widget: "list"
@@ -141,22 +141,75 @@ collections:
         - {label: "header title", name: "headertitle", widget: "string"}
         - {label: "header subtitle", name: "subtitle", widget: "string"}
         - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
-        - {label: "main content", name: "main_content", widget: "text"}
-        - {label: "main image", name: "main_image", widget: "image"}
-        - {label: "section title", name: "section_title", widget: "string"}
-        - label: "service card"
-          name: "service_card" 
-          widget: "list"
-          fields:
-            - {label: "card title", name: "card_title", widget: "string"}
-            - {label: "card content", name: "card_content", widget: "string"}
-        - label: "product service card"
-          name: "product_service_card" 
+        - label: "oil section"
+          name:  "oil_section"
           widget: "object"
           fields:
-            - {label: "card content", name: "card_content", widget: "text"}
-            - {label: "card button text", name: "card_button_text", widget: "string"}
-            - {label: "card image", name: "card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+            - label: "introduction section"
+              name: "introduction_section"
+              widget: "object"
+              fields:
+                - {label: "title", name: "title", widget: "string"}
+                - label: "paragraphs"  
+                  name: "paragraphs"
+                  widget: "list"
+                  fields:
+                    - {label: "content", name: "content", widget: "text"}
+                - {label: "main image", name: "main_image", widget: "image"}
+            - label: "card section"
+              name: "card_section"
+              widget: "object"
+              fields:
+                - {label: "title", name: "title", widget: "string"}
+                - label: "service card"
+                  name: "service_card" 
+                  widget: "list"
+                  fields:
+                    - {label: "card title", name: "card_title", widget: "string"}
+                    - {label: "card content", name: "card_content", widget: "string"}
+            - label: "call to action"
+              name: "call_to_action"
+              widget: "object"
+              fields:
+                - {label: "content", name: "content", widget: "text"}
+                - {label: "button text", name: "button_text", widget: "string"}
+                - {label: "button link", name: "button_link", widget: "string"}
+            
+        - label: "chorume section"
+          name:  "chorume_section"
+          widget: "object"
+          fields:
+            - label: "introduction section"
+              name: "introduction_section"
+              widget: "object"
+              fields:
+                - {label: "title", name: "title", widget: "string"}
+                - label: "paragraphs"  
+                  name: "paragraphs"
+                  widget: "list"
+                  fields:
+                    - {label: "content", name: "content", widget: "text"}
+                - {label: "main image", name: "main_image", widget: "image"}
+            - label: "card section"
+              name: "card_section"
+              widget: "object"
+              fields:
+                - {label: "title", name: "title", widget: "string"}
+                - label: "card"
+                  name: "card" 
+                  widget: "list"
+                  fields:
+                    - {label: "card title", name: "card_title", widget: "string"}
+                    - {label: "card content", name: "card_content", widget: "string"}
+            - label: "chorume section detail"
+              name: "chorume_section_detail"
+              widget: "list"
+              fields:
+                - {label: "title", name: "title", widget: "string"}
+                - {label: "content", name: "content", widget: "text"}
+                - {label: "main image", name: "main_image", widget: "image"}
+                - {label: "button text", name: "button_text", widget: "string"}
+                - {label: "button link", name: "button_link", widget: "string"}
 
   - label: "About Page"
     name: "about_page"

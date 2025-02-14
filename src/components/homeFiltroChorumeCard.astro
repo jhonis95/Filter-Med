@@ -5,9 +5,9 @@ const {cardData}=Astro.props;
 <section 
     class="esconder bg-accent rounded-xl w-fit h-fit px-[13px] py-[6px] md:py-[32px] md:px-[39px] xl:py-[56px] xl:px-[77px] flex flex-col gap-[30px] xl:gap-[70px] justify-center"
     x-data={`{
-        cards:[${cardData.card_data.map((data:any,index:number)=>{return `{card_name:'${data.card_name}',card_title:'${data.card_title}',card_content:'${data.card_content}',card_image:'${data.card_image.src}',id:${index}}`})}],
+        cards:[${cardData.card_data.map((data:any,index:number)=>{return `{card_name:'${data.card_name}',card_title:'${data.card_title}',card_content:'${data.card_content}',card_image:'${data.card_image.src}',id:${index},link:'${data.button_link}'}`})}],
         selected:{
-            card_name:'${cardData.card_data[0].card_name}',card_title:'${cardData.card_data[0].card_title}',card_content:'${cardData.card_data[0].card_content}',card_image:'${cardData.card_data[0].card_image.src}',id:${0}
+            card_name:'${cardData.card_data[0].card_name}',card_title:'${cardData.card_data[0].card_title}',card_content:'${cardData.card_data[0].card_content}',card_image:'${cardData.card_data[0].card_image.src}',id:${0},link:'${cardData.card_data[0].button_link}'
         },
         startX:0,
         touchstart(e){
@@ -57,9 +57,9 @@ const {cardData}=Astro.props;
                 <p x-text="selected.card_content" class=" text-justify text-xs md:text-base xl:text-lg"></p>
             </div>
             <div class="flex justify-center">
-                <a href={cardData.button_link}>
-                    <ContactBtn btnContent={cardData.button_content}/>
-                </a>
+                <button class=" bg-secondary rounded-full shadow-xl xl:min-w-[340px] xl:min-h-[70px] ">
+                    <a class=" text-white font-Jakarta font-bold px-5 py-2 text-xl md:px-12 md:text-4xl" x-bind:href="selected.link">{cardData.button_content}</a>
+                </button>
             </div>
         </div>
     </div>
