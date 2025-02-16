@@ -42,7 +42,7 @@ oil_section:
     content: Entre em contato agora e agende uma avaliação. Vamos juntos cuidar da
       qualidade e da economia do seu restaurante!
     button_text: Veja mais sobre nossos filtros
-    button_link: /filtrodeoleo
+    button_link: /oil_filter_detail/filtro_de_oleo
 chorume_section:
   introduction_section:
     title: Containers com filtros para filtração chorume ou aterro sanitário
@@ -103,7 +103,7 @@ chorume_section:
         fibra oca orgânica com operação de fora para o interior
       main_image: ../../../src/assets/Ultrafiltração.png
       button_text: Saiba mais
-      button_link: /service_detail/ultraffiltracao
+      button_link: /service_detail/ultrafiltracao
     - title: Nanofiltração
       content: É um processo de separação por membranas que se situa entre a
         ultrafiltração e a osmose reversa em termos de retenção de partículas.

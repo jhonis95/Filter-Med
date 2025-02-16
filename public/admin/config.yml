@@ -464,3 +464,52 @@ collections:
                     fields:
                       - {label: "paragraph", name: "paragraph", widget: "string",required: false}
                   - {label: "image", name: "image", widget: "image", media_folder: "../../../src/cms/service_detail_page/images", public_folder: "../../../src/cms/service_detail_page/images",required: false}
+  
+  - label: "oil filter detail page"
+    name: "oil_filter_detail_page"
+    folder: "src/cms/oil_filter_detail_page"
+    create: true
+    slug: "{{slug}}"
+    preview_path: preview/{{slug}}
+    fields:
+      - {label: "title", name: "title", widget: "hidden", default: "oil_filter_detail_page"}
+      - {label: "header_title", name: "headertitle", widget: "string"}
+      - {label: "header_subtitle", name: "subtitle", widget: "string"}
+      - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+      - {label: "main title", name: "main_title", widget: "string"}
+      - label: "cards"
+        name: "cards"
+        widget: "list"
+        fields:
+          - {label: "name", name: "name", widget: "string"}
+          - {label: "image", name: "image", widget: "image", media_folder: "../../../src/cms/oil_filter_detail_page/images", public_folder: "../../../src/cms/oil_filter_detail_page/images"}
+          - label: "paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            fields:
+              - {label: "paragraph", name: "paragraph", widget: "text"}
+          - label: "main points"
+            name: "main_points"
+            widget: "list"
+            fields:
+              - {label: "title", name: "title", widget: "string"}
+              - label: "paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                fields:
+                  - {label: "paragraph", name: "paragraph", widget: "text"}
+          - label: "bullet points"
+            name: "bullet_points"
+            widget: "list"
+            required: false
+            fields: 
+              - {label: "content", name: "content", widget: "string"}
+      - label: "call to action"
+        name: "call_to_action"
+        widget: "object"
+        fields:
+          - {label: "content", name: "content", widget: "text"}
+          - {label: "button text", name: "button_text", widget: "string"}
+          - {label: "button link", name: "button_link", widget: "string"}
+          - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+          

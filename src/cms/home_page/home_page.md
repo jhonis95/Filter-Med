@@ -61,7 +61,7 @@ home_chorume_service_card:
         membranar que pode ser classificado como um sistema submergível com
         fibra oca orgânica com operação de fora para o interior
       card_image: ../../../src/assets/Ultrafiltração.png
-      button_link: /service_detail/ultraffiltracao
+      button_link: /service_detail/ultrafiltracao
     - card_name: Nanofiltração
       card_title: "Container para filtração chorume ou aterro sanitário: Nanofiltração"
       card_content: É um processo de separação por membranas que se situa entre a

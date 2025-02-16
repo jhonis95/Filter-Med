@@ -308,7 +308,39 @@ const service_detail = defineCollection({
         }),
     })
 })
+const oil_filter_page= defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/cms/oil_filter_detail_page" }),
+    schema:({image})=>z.object({
+        title: z.string(),
+        headertitle:z.string(),
+        subtitle:z.string(),
+        background_image:image(),
+        main_title:z.string(),
+        cards:z.array(z.object({
+            image:image(),
+            name:z.string(),
+            paragraphs:z.array(z.object({
+                paragraph:z.string()
+            })),
+            main_points:z.array(z.object({
+                title:z.string(),
+                paragraphs:z.array(z.object({
+                    paragraph:z.string()
+                })),
+            })),
+            bullet_points:z.array(z.object({
+                content:z.string()
+            })).optional()
+        })),
+        call_to_action:z.object({
+            content:z.string(),
+            button_text:z.string(),
+            button_link:z.string(),
+            background_image:image()
+        })
 
+    })
+})
 export const collections={
     home_page,
     product_page,
@@ -317,5 +349,6 @@ export const collections={
     product_detail,
     navigation_bar,
     footer_bar,
-    service_detail
+    service_detail,
+    oil_filter_page
 }

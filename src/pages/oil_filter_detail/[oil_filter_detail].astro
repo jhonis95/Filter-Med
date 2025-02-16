@@ -1,0 +1,101 @@
+---
+import Header from "../../components/header.astro";
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ContactBtn from '../../components/contactBtn.astro';
+
+export async function getStaticPaths(){
+    const oil_filter_page = await getCollection("oil_filter_page");
+    return[
+        {
+            params: {
+              oil_filter_detail: "filtro_de_oleo",
+            },
+            props:{
+                page_data:oil_filter_page[0].data
+            }
+        }
+    ]
+}
+const {page_data} =Astro.props
+---
+<Layout>
+    <Header 
+        title={page_data.headertitle} 
+        subTitle={page_data.subtitle} 
+        background={page_data.background_image}
+    />
+    <main class="flex flex-col items-center gap-7 md:gap-10 2xl:gap-[90px] mb-8 md:mb-28 mt-7 sm:mt-14 md:mt-[40px] 2xl:mt-12">
+
+        <h3 class=" text-primary font-Jakarta text-center w-[230px] md:w-full text-2xl md:text-3xl xl:text-4xl font-bold">{page_data.main_title}</h3>
+
+        {
+            page_data.cards.map((cardData)=>{
+                return(
+                    <section class="flex flex-col bg-accent items-center gap-[30px] rounded-lg font-Jakarta pt-5  md:px-10 md:py-10">
+                        <div class=" flex flex-col xl:flex-row items-center gap-6">
+                            <div class="bg-white flex justify-center items-center rounded-lg w-[295px] h-[281px] md:w-[485px] md:h-[403px]">
+                                <Image class="w-[245px] h-[231px] md:w-[385px] md:h-[303px] m-5" src={cardData.image} alt="card_image"/>                    
+                            </div>
+                            <div class=" flex flex-col gap-[30px] max-w-[556px]">
+                                <div class="flex flex-col gap-[30px] mx-3 md:m-0">
+                                    <h4 class="font-bold text-primary text-2xl text-center md:text-3xl xl:text-start">{cardData.name}</h4>
+                                    {
+                                        cardData.paragraphs.map((text)=>{
+                                            return(
+                                                <p class=" text-justify text-sm md:text-lg">{text.paragraph}</p>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col  gap-[15px] max-w-[950px] mx-3 md:m-0">
+                            {
+                                cardData.main_points.map((data)=>{
+                                    return(
+                                        <h5 class="text-xl md:text-2xl text-primary">{data.title}</h5>
+                                        <>
+                                            {
+                                                data.paragraphs.map((text)=>{
+                                                    return(
+                                                        <p class=" text-sm md:text-lg text-justify">{text.paragraph}</p>
+                                                    )
+                                                })
+                                            }
+                                        </>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div class="flex flex-col flex-wrap gap-x-[30px] lg:max-h-[294px] gap-y-[15px]">
+                            {
+                                cardData.bullet_points?(
+                                    cardData.bullet_points.map((data)=>{
+                                        return(
+                                            <div class="flex items-center gap-3 mx-3 md:gap-8 lg:max-w-[395px]">
+                                                <div class="rounded-full bg-secondary min-w-[14px] min-h-[14px]"></div>
+                                                <p class=" text-xs md:text-lg">{data.content}</p>
+                                            </div>
+                                        )
+                                    })
+                                ):""
+                            }
+                        </div>
+                    </section>
+                )
+            })
+        }
+
+        <section class="flex flex-col-reverse xl:flex-row gap-11 bg-accent md:px-16 md:py-9 rounded-xl">
+            <div class="flex flex-col gap-16 justify-center items-center">
+                <h3 class=" font-Jakarta font-bold text-2xl md:text-3xl xl:text-4xl text-center max-w-[554px]">{page_data.call_to_action.content}</h3>
+                <div>
+                    <ContactBtn btnContent={page_data.call_to_action.button_text} btnLink={page_data.call_to_action.button_link}/>
+                </div>
+            </div>
+            <Image class=" rounded-xl md:w-[532px] md:h-[341px] 2xl:w-[716px] 2xl:h-[459px]" src={page_data.call_to_action.background_image} alt="card_image"/>
+        </section>
+    </main>
+</Layout>
