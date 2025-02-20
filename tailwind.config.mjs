@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: [
+		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'./src/pages/oil_filter_detail/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'./src/pages/product_detail/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'./src/pages/service_detail/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+	],
 	theme: {
 		colors:{
 			'primary': "var(--primary)",
