@@ -17,6 +17,7 @@ home_service_header_card:
       entendemos essa necessidade, por isso oferecemos filtros de óleo
       projetados para maximizar o desempenho da sua fritadeira, prolongar a vida
       útil do óleo e garantir um sabor impecável em cada preparo.
+    link: /oil_filter_detail/filtro_de_oleo
   - card_title: Filtros para filtração de chorume ou aterro sanitário
     card_content: A gestão de resíduos em aterros sanitários é um desafio crucial
       para garantir a preservação ambiental e a segurança do solo e das águas
@@ -25,6 +26,7 @@ home_service_header_card:
       do setor de resíduos sólidos e contribuir para uma operação mais
       sustentável e eficiente.
     background_image: ../../../src/assets/container_baner_image.png
+    link: /service
 home_process_card:
   card_subtitle: Como Trabalhamos
   card_title: Nosso Processo

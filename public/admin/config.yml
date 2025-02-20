@@ -39,7 +39,8 @@ collections:
           fields:
             - {label: "card title", name: "card_title", widget: "string"}
             - {label: "card content", name: "card_content", widget: "text"}
-            - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}      
+            - {label: "background image", name: "background_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+            - {label: "link", name: "link", widget: "string"}      
         - label: "home process card"
           name: "home_process_card" 
           widget: "object"

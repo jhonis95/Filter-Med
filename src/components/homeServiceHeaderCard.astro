@@ -3,14 +3,15 @@ import { Image } from "astro:assets";
 import { getCollection } from 'astro:content';
 const homePageData = await getCollection("home_page");
 
-const cards: { title: string; content: string; image: { src: string; width: number; height: number; format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif"; }; id: string; }[]=[]
+const cards: { title: string; content: string; image: { src: string; width: number; height: number; format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif"; }; id: string; link:string }[]=[]
 
 homePageData[0].data.home_service_header_card.map((data)=>{
     cards.push({
         title:data.card_title,
         content:data.card_content,
         image:data.background_image,
-        id:`card${homePageData[0].data.home_service_header_card.indexOf(data)}`
+        id:`card${homePageData[0].data.home_service_header_card.indexOf(data)}`,
+        link: data.link
     })
 })
 ---
@@ -20,13 +21,17 @@ homePageData[0].data.home_service_header_card.map((data)=>{
             return(
                 data.id==='card0'?<div id={data.id} class="xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in">
                     <div class="text-white font-Jakarta absolute xl:relative flex flex-col gap-3 xl:items-start justify-center items-center w-full xl:ml-5 2xl:ml-[56px] z-20 xl:z-0 h-[244px] md:h-[170px]">
-                        <h4 class=" font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                        <a href={data.link}>
+                            <h4 class="underline font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                        </a>
                         <p class="text-justify text-xs sm:text-base md:w-[769px] xl:w-full mx-3 xl:mx-0">{data.content}</p>
                     </div>
                     <Image class="z-50 xl:z-0 w-full xl:w-[544px] h-[244px] md:h-[170px] xl:h-auto xl:max-h-full xl:rounded-r-xl brightness-50 xl:brightness-100" src={data.image} alt="section-img"/>
                 </div>:<div id={data.id} class=" hidden xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] gap-6 fade-in">
                     <div class="text-white font-Jakarta absolute xl:relative flex flex-col gap-3 xl:items-start justify-center items-center w-full xl:ml-5 2xl:ml-[56px] z-20 xl:z-0 h-[244px] md:h-[170px]">
-                        <h4 class="font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                        <a href={data.link}>
+                            <h4 class="underline font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                        </a>
                         <p class="text-justify text-xs sm:text-base md:w-[769px] xl:w-full mx-3 xl:mx-0">{data.content}</p>
                     </div>
                     <Image class="z-50 xl:z-0 w-full xl:w-[544px] h-[244px] md:h-[170px] xl:h-auto xl:max-h-full xl:rounded-r-xl brightness-50 xl:brightness-100" src={data.image} alt="section-img"/>

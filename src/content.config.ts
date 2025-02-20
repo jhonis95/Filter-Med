@@ -16,7 +16,8 @@ const home_page = defineCollection({
         home_service_header_card:z.array(z.object({
             card_title:z.string(),
             card_content:z.string(),
-            background_image:image()
+            background_image:image(),
+            link:z.string()
         })),
         home_chorume_service_card:z.object({
             button_content:z.string(),
