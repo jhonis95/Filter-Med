@@ -17,9 +17,9 @@ const navdata=[
 ]
 ---
 <footer class=" bg-primary w-full min-h-[328px] flex flex-col justify-around lg:justify-evenly">
-    <div class="flex flex-col gap-[73px] md:justify-center md:flex-row lg:gap-32"> <!-- lg:justify-center lg:flex-row lg:gap-32 -->
+    <div class="flex flex-col gap-[30px]  md:justify-center md:flex-row lg:gap-32"> <!-- lg:justify-center lg:flex-row lg:gap-32 -->
         <div class="flex flex-col gap-5 items-center mt-9">
-            <h3 class=" font-Inter  font-bold text-[32px] text-white xl:text-4xl">Filter Med</h3>
+            <h3 class=" font-Inter font-bold text-[32px] text-white xl:text-4xl">Filter Med</h3>
             <div class=" flex flex-row gap-4">
                 {
                     footerDataCms[0].data.footer_social_media.social_media_list.map((icon)=>{
@@ -30,8 +30,8 @@ const navdata=[
                 }
             </div>
         </div>
-        <div class="flex flex-col justify-center md:items-start gap-[73px] md:flex-row lg:gap-14">
-            <div class="flex flex-col text-white gap-6">
+        <div class="flex flex-col justify-center md:items-start gap-[30px] md:flex-row lg:gap-14">
+            <div class="flex flex-col text-white gap-3">
                 <h3 class="text-center md:text-start text-2xl font-bold font-Jakarta">{footerDataCms[0].data.footer_navigation.name}</h3>
                 {
                     navdata.map((linkdata)=>{
@@ -39,13 +39,13 @@ const navdata=[
                     })
                 }
             </div>
-            <div class="text-base text-white font-Jakarta font-bold text-center flex flex-col gap-4 md:items-start xl:text-2xl">
+            <div class="text-base text-white font-Jakarta font-bold text-center flex flex-col gap-3 md:items-start xl:text-2xl">
                 <h4 class="text-2xl font-bold font-Jakarta">{footerDataCms[0].data.footer_address.adress_title}</h4>
-                <h4>{footerDataCms[0].data.footer_address.adress_text}</h4>
-                <h4>{footerDataCms[0].data.footer_address.phone_title}</h4>
-                <h4>{footerDataCms[0].data.footer_address.phone_number}</h4>
+                <h4 class="text-base">{footerDataCms[0].data.footer_address.adress_text}</h4>
+                <h4 class="text-2xl font-bold font-Jakarta">{footerDataCms[0].data.footer_address.phone_title}</h4>
+                <h4 class="text-base">{footerDataCms[0].data.footer_address.phone_number}</h4>
             </div>
         </div>
     </div>
-    <h3 class=" font-Jakarta text-xl text-white text-center mt-9">{footerDataCms[0].data.copyright}</h3>
+    <h3 class=" font-Jakarta text-sm text-white text-center mt-9">{footerDataCms[0].data.copyright}</h3>
 </footer>
