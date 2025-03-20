@@ -60,7 +60,8 @@ const home_page = defineCollection({
         home_product_cards:z.array(z.object({
             product_card_name:z.string(),
             product_card_content:z.string(),
-            product_card_image:image()
+            product_card_image:image(),
+            link:z.string()
         }))
     })
 })

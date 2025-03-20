@@ -100,7 +100,7 @@ home_oil_service_section:
     - bullet_point_content: "Fácil utilização: Filtros práticos que se adaptam a
         qualquer equipamento."
   button_text: Saiba mais
-  button_link: /service
+  button_link: /oil_filter_detail/filtro_de_oleo
 second_section_title: Produtos
 second_section_subtitle: Filtros de placas e lenticulares
 home_product_cards:
@@ -111,6 +111,7 @@ home_product_cards:
       meios filtrantes, compreendendo folhas de filtro e módulos de filtro, cada
       um projetado para diferentes níveis de requisitos e áreas de aplicação.
     product_card_image: ../../../src/assets/versafix.png
+    link: /product_detail/filter_media
   - product_card_name: Filter Press and Hoisings
     product_card_content: Em nossa prortifolio temos Filtros Prensa, Filtros Carcaça
       para módulos lenticulares e Filtros Carcaça para cartuchos filtrantes.
@@ -126,6 +127,7 @@ home_product_cards:
       há uma solução entre esses três tipos de tecnologia de filtragem que pode
       atender às suas necessidades.
     product_card_image: ../../../src/assets/NOVOX-CP.png
+    link: /product_detail/filter_presses_and_housings
   - product_card_name: Equipamentos de Filtragem Laboratorial
     product_card_content: >-
       oferecemos uma variedade de equipamentos de filtração laboratorial
@@ -136,6 +138,7 @@ home_product_cards:
 
       Esses produtos proporcionam soluções eficientes e práticas para diversas necessidades de filtração em ambientes laboratoriais, facilitando o desenvolvimento e a otimização de processos de filtração.
     product_card_image: ../../../src/assets/SCALE-UP Test Kit.png
+    link: /product_detail/equipamentos_de_filtragem_laboratórial
   - product_card_name: Produtos Complementares
     product_card_content: Quando se trata de filtração em profundidade, existem
       vários produtos complementares que podem ajudá-lo a aprimorar o processo e
@@ -144,4 +147,5 @@ home_product_cards:
       pré-revestimento, cartuchos filtrantes e auxiliares de filtração (terra de
       diatomáceas) em nossa linha.
     product_card_image: ../../../src/assets/FILTRAP FP - FPA Filter Cartridges.png
+    link: /product_detail/produtos_complementares
 ---

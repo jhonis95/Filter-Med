@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { Image } from "astro:assets";
 const homePageData = await getCollection("home_page");
 ---
-<section class=" w-full min-h-64 pb-[174px] md:pb-0 2xl:h-4/6">
+<section class=" w-full min-h-64 md:pb-0 2xl:h-4/6">
     <div class=" relative text-white w-full xl:h-[600px] 2xl:h-[690px]">
         <Image class=" absolute w-full h-full object-cover" loading="lazy" src={homePageData[0].data.background_image} alt={'test'}/>
         <div class=" flex items-center justify-around gap-5 h-auto py-12 md:h-full md:justify-evenly flex-col md:flex-row lg:justify-center lg:gap-14 xl:gap-28">
@@ -11,7 +11,7 @@ const homePageData = await getCollection("home_page");
                 <h3 class=" text-2xl lg:text-5xl w-[250px] md:text-left lg:w-[500px] 2xl:w-[662px] 2xl:text-[64px]">{homePageData[0].data.headertitle}</h3>
                 <h4 class=" text-base lg:text-2xl max-w-[400px] md:text-justify lg:max-w-[525px] 2xl:max-w-[861px] 2xl:text-3xl">{homePageData[0].data.subtitle}</h4>
             </div>
-            <div class=" absolute bottom-[-174px] md:relative md:bottom-0">
+            <div class="hidden md:inline absolute bottom-[-174px] md:relative md:bottom-0">
                 <div class=" bg-primary rounded-lg text-center font-Jakarta font-bold flex flex-col items-center justify-center gap-4 py-3 w-[248px] max-h-[381px] lg:w-[370px] lg:p-9 2xl:w-[464px] 2xl:gap-8">
                     <h4 class=" text-base lg:text-3xl 2xl:text-[40px]">{homePageData[0].data.home_header_card.card_title}</h4>
                     <p class=" text-sm lg:text-xl 2xl:text-2xl">{homePageData[0].data.home_header_card.card_subtitle}</p>

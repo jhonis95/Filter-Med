@@ -38,7 +38,7 @@ const homePageData = await getCollection("home_page");
 
 		<HomeFiltroChorumeCard cardData={homePageData[0].data.home_chorume_service_card}/>
 
-		<section class="esconder w-full flex flex-wrap gap-6 justify-center">
+		<section class="esconder hidden w-full md:flex flex-wrap gap-6 justify-center">
 			{
 				homePageData[0].data.home_service_cards.map((data:any)=>{
 					return(

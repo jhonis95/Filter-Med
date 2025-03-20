@@ -102,6 +102,7 @@ collections:
             - {label: "product card name", name: "product_card_name", widget: "string"}
             - {label: "product card content", name: "product_card_content", widget: "text"}
             - {label: "product card image", name: "product_card_image", widget: "image", media_folder: "../../../src/assets", public_folder: "../../../src/assets"}
+            - {label: "link", name: "link", widget: "string"}  
 
   - label: "Product Page"
     name: "product_page"
