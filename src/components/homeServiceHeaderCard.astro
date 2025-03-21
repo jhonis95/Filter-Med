@@ -15,26 +15,41 @@ homePageData[0].data.home_service_header_card.map((data)=>{
     })
 })
 ---
-<section id="cardContainer" class=" w-full flex justify-center my-16">
+<section 
+    id="cardContainer" 
+    class=" w-full flex flex-col justify-center items-center gap-4 my-8"
+    x-data="{
+        mobile:false,
+        setMobile(){
+            if(document.documentElement.clientWidth<500){
+                return this.mobile=true
+            }else{
+                return this.mobile=false
+            }
+        }
+    }"
+    x-init="setMobile()"
+    @resize.window.debounce="setMobile()"
+>
     {
         cards.map((data)=>{
             return(
-                data.id==='card0'?<div id={data.id} class="xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in">
-                    <div class="text-white font-Jakarta absolute xl:relative flex flex-col gap-3 xl:items-start justify-center items-center w-full xl:ml-5 2xl:ml-[56px] z-20 xl:z-0 h-[244px] md:h-[170px]">
+                data.id==='card0'?<div id={data.id} class="bg-primary rounded-xl h-fit w-fit 2xl:w-[1386px] p-3 2xl:p-0 flex flex-col-reverse items-center lg:items-stretch lg:flex-row gap-4 lg:gap-6 fade-in">
+                    <div class="text-white font-Jakarta flex flex-col gap-3 justify-center items-center h-fit 2xl:h-[170px] max-w-[461px] sm:w-[461px] 2xl:max-w-[769px] 2xl:w-full 2xl:items-start 2xl:ml-[56px]">
                         <a href={data.link}>
-                            <h4 class="underline font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                            <h4 class="underline w-full font-bold text-xl text-center max-[330px]:text-xl sm:text-3xl">{data.title}</h4>
                         </a>
-                        <p class="text-justify text-xs sm:text-base md:w-[769px] xl:w-full mx-3 xl:mx-0">{data.content}</p>
+                        <p class="text-justify text-xs sm:text-base 2xl:w-full mx-3 2xl:mx-0">{data.content}</p>
                     </div>
-                    <Image class="z-50 xl:z-0 w-full xl:w-[544px] h-[244px] md:h-[170px] xl:h-auto xl:max-h-full xl:rounded-r-xl brightness-50 xl:brightness-100" src={data.image} alt="section-img"/>
-                </div>:<div id={data.id} class=" hidden xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] gap-6 fade-in">
-                    <div class="text-white font-Jakarta absolute xl:relative flex flex-col gap-3 xl:items-start justify-center items-center w-full xl:ml-5 2xl:ml-[56px] z-20 xl:z-0 h-[244px] md:h-[170px]">
+                    <Image class=" 2xl:w-[544px] h-auto max-h-full w-auto rounded-t-lg rounded-b-none lg:rounded-l-none lg:rounded-r-lg" src={data.image} alt="section-img"/>
+                </div>:<div id={data.id} class="hidden bg-primary rounded-xl h-fit w-fit 2xl:w-[1386px] p-3 2xl:p-0 flex-col-reverse items-center lg:items-stretch lg:flex-row gap-4 lg:gap-6 fade-in">
+                    <div class="text-white font-Jakarta flex flex-col gap-3 justify-center items-center h-fit 2xl:h-[170px] max-w-[461px] sm:w-[461px] 2xl:max-w-[769px] 2xl:w-full 2xl:items-start 2xl:ml-[56px]">
                         <a href={data.link}>
-                            <h4 class="underline font-bold text-2xl max-[330px]:text-xl sm:text-3xl text-center xl:text-left">{data.title}</h4>
+                            <h4 class="underline w-full font-bold text-xl text-center max-[330px]:text-xl sm:text-3xl">{data.title}</h4>
                         </a>
-                        <p class="text-justify text-xs sm:text-base md:w-[769px] xl:w-full mx-3 xl:mx-0">{data.content}</p>
+                        <p class="text-justify text-xs sm:text-base 2xl:w-full mx-3 2xl:mx-0">{data.content}</p>
                     </div>
-                    <Image class="z-50 xl:z-0 w-full xl:w-[544px] h-[244px] md:h-[170px] xl:h-auto xl:max-h-full xl:rounded-r-xl brightness-50 xl:brightness-100" src={data.image} alt="section-img"/>
+                    <Image class=" 2xl:w-[544px] h-auto max-h-full w-auto rounded-t-lg rounded-b-none lg:rounded-l-none lg:rounded-r-lg" src={data.image} alt="section-img"/>
                 </div>
             )
         })
@@ -64,11 +79,11 @@ homePageData[0].data.home_service_header_card.map((data)=>{
                 cardlist[i].domElement.className='hidden'
                 if(i+1==cardlist.length){
                     cardlist[0].selected=true
-                    cardlist[0].domElement.className='xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in '
+                    cardlist[0].domElement.className='bg-primary rounded-xl h-fit w-fit 2xl:w-[1386px] p-3 2xl:p-0 flex flex-col-reverse items-center lg:items-stretch lg:flex-row gap-4 lg:gap-6 fade-in '
                     break;
                 }else{
                     cardlist[i+1].selected=true
-                    cardlist[i+1].domElement.className='xl:bg-primary rounded-xl w-full h-[244px] md:h-[170px] xl:h-fit xl:w-[1386px] inline xl:flex gap-6 fade-in '
+                    cardlist[i+1].domElement.className='bg-primary rounded-xl h-fit w-fit 2xl:w-[1386px] p-3 2xl:p-0 flex flex-col-reverse items-center lg:items-stretch lg:flex-row gap-4 lg:gap-6 fade-in '
                     break;
                 }
             }
